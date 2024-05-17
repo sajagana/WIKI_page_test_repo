@@ -159,7 +159,7 @@ Which **mechanism** allows an end user to **make a request** of a network device
 
 * syslog protocol
 --------
-Refer to the exhibit. The service provider is implementing Multiprotocol Label Switching Virtual Private Network (MPLS VPN) service. Which two options indicate the specific VPN type that is implemented and how the service provider appears from the perspective of the customer? (Choose two.)
+Refer to the exhibit. The service provider is implementing **Multiprotocol Label Switching Virtual Private Network (MPLS VPN) service**. Which two options indicate the specific VPN type that is implemented and how the service provider appears from the perspective of the customer? (Choose two.)
 
 * The service provider is implementing MPLS L2VPN.
 
@@ -253,7 +253,7 @@ Which group of devices in a network receive IPv6 packets with the destination ad
 	Answer
 	The correct answer is **all IPv6 routers on all the network segments within a site**. The hexadecimal digits **“ff”** in the IPv6 address **prefix are an indication of a multicast address.** The **fourth hexadecimal digit indicates the scope**, with the number **five representing a site-local scope**. The **group ID of ::2 represents all IPv6 routers**.
 --------
-An enterprise wants to provide a global service that would be provided from an enterprise resource nearest to the user. For which three reasons does the enterprise choose to assign anycast IPv6 addresses to the relevant devices? (Choose three.)
+An enterprise wants to provide a global service that would be provided from an enterprise resource nearest to the user. For which three reasons does the **enterprise choose to assign anycast IPv6 addresses** to the relevant devices? (Choose three.)
 
 * Because all the devices configured with the IPv6 anycast address would be aware of the user session.
 
@@ -350,7 +350,7 @@ Which statement about Service Set Identifiers (SSIDs) is true?
 	Answer
 	The correct answer is **An administrator can create several SSIDs on the same access point**. An SSID is not configured by default. An administrator configures one or more SSIDs on an access point. The administrator can also decide to hide an SSID.
 --------
-What are two examples of full hypervisors? (Choose two.)
+What are two examples of **full hypervisors**? (Choose two.)
 
 * Docker
 
@@ -362,7 +362,7 @@ What are two examples of full hypervisors? (Choose two.)
 
 * **type-2 (Ans)**
 --------
-Which two of the following protocols does the distribution layer use to provide default gateway redundancy? (Choose two.)
+Which two of the following protocols does the **distribution layer use to provide default gateway redundancy**? (Choose two.)
 
 * Device Control Protocol (DCP)
 
@@ -370,14 +370,14 @@ Which two of the following protocols does the distribution layer use to provide 
 
 * Dynamic Source Routing Protocol (DSR)
 
-* **First Hop Redundancy Protocol (FHRP)
+* **First Hop Redundancy Protocol (FHRP)**
 
-* Hot Standby Router Protocol (HSRP)**
+* **Hot Standby Router Protocol (HSRP)**
 
 	Answer
 	The correct answers are **First Hop Redundancy Protocol (FHRP) and Hot Standby Router Protocol (HSRP)**. FHRP and HSRP are designated to allow two or more routers to take the role of the default gateway in the network. DCP is designed for integration, monitoring and controlling of devices in the network. DSR is a routing protocol for wireless mesh networks. DNP3 is a set of open source protocols, developed for communication mainly in equipment used by utilities such as electric and water companies.
 --------
-Which command is used to verify a default gateway configuration on a Layer 2 switch?
+Which command is used to **verify a default gateway** configuration on a Layer 2 switch?
 
 * **show interface description**
 
@@ -448,10 +448,10 @@ On SW2, verify the administrative and operational switching modes on interface E
 * Administrative mode is trunk and operational mode is trunk.
 
 	Answer
-	The correct answer is **Administrative mode is dynamic-desirable and operational mode is trunk**. Administrative mode displays what you have configured on the interface. Operational mode displays the actual status of the interface. When manually configuring access or trunking, administrative and operational mode have identical values. When you configure Dynamic Trunking Protocol (DTP) to negotiate switching status, administrative and operational mode differ. Cisco recommends disabling DTP on a switch."
+	The correct answer is **Administrative mode is dynamic-desirable and operational mode is trunk**. Administrative mode displays what you have configured on the interface. Operational mode displays the actual status of the interface. **When manually configuring access or trunking, administrative and operational mode have identical values.** When you configure Dynamic Trunking Protocol (DTP) to negotiate switching status, administrative and operational mode differ. Cisco recommends disabling DTP on a switch."
 
 
-Examine the topology and the configuration. On PC2, when you use the ping command to check connectivity to Server 1, what is the order of the devices that packets traverse? **Need to find the answer.**
+Examine the topology and the configuration. On PC2, when you use the ping command to check connectivity to Server 1, what is the order of the devices that packets traverse?
 
 * PC2 > SW1 > SW2 > R1 > SW2 > Server1
 
@@ -459,7 +459,7 @@ Examine the topology and the configuration. On PC2, when you use the ping comman
 
 * PC2 > SW2 > SW1 > R1 > Server1
 
-* PC2 > SW2 > SW1 > R1 > SW1 > Server1
+* **PC2 > SW2 > SW1 > R1 > SW1 > Server1**
 
 
 Which interfaces on SW1 are trunk interfaces?
@@ -473,7 +473,7 @@ Which interfaces on SW1 are trunk interfaces?
 * E0/1 and E0/3
 
 	Answer
-	The correct answer is **E0/0 and E0/3**. SW1 has four interfaces. The interfaces E0/0 and E0/3 are connected to a router and another switch, respectively. As such, those two interfaces are set up as trunk interfaces in order to carry multiple VLANs. The interfaces E0/1 and E0/2 are connected to end nodes, and are configured as access interfaces.
+	The correct answer is **E0/0 and E0/3**. SW1 has four interfaces. The interfaces E0/0 and E0/3 are connected to a router and another switch, respectively. As such, **those two interfaces are set up as trunk interfaces in order to carry multiple VLANs.** The interfaces E0/1 and E0/2 are connected to end nodes, and are configured as access interfaces.
 --------
 Which three IPv4 addresses are private? (Choose three.)
 
@@ -538,7 +538,7 @@ Which type of Cisco **switch memory location stores the MAC address table**?
 
 * read-only memory (ROM)
 --------
-Which two symptoms indicate a duplex mismatch between a client and an Ethernet switch? (Choose two.)
+Which two symptoms indicate a **duplex mismatch between a client and an Ethernet switch**? (Choose two.)
 
 * Auto-negotiation will report speed and duplex mismatch errors on the client NIC interface.
 
@@ -573,7 +573,7 @@ Which command would you use to configure a floating static route?
 
 * ip route 192.168.13.0 255.255.255.0 172.17.10.1 metric 100
 --------
-Which of the following is the correct binary representation of the third octet of the IPv4 address 172.20.170.50?
+Which of the following is the correct binary representation of the third octet of the IPv4 address 172.20.**170**.50?
 
 * 0001 1110
 
@@ -596,7 +596,7 @@ Two computers are connected to a Cisco Catalyst Layer 2 switch. PC1 
 	Answer
 	The correct answer is **Yes, the PC2 will respond to the 10.250.20.63 broadcast if both ports are operationally in access mode and the same VLAN**. The IPv4 address 10.250.20.63 is the broadcast address of the 10.250.20.0/26 subnet. A switch forward broadcast communication to all ports in a VLAN. If both ports that connect PC1 and PC2 belong to the same VLAN, then PC2 as well as other devices in the same subnet will receive the ICMP request from PC1 and respond to it.
 --------
-Which statement regarding online and offline password attacks is true?
+Which statement regarding **online and offline password attacks is true**?
 
 * **Offline attacks are more dangerous because there is no external authentication system.**
 
@@ -624,7 +624,7 @@ What are two differences between the RADIUS and TACACS+ protocols? (Choose t
 	Answer
 	The correct answers are **RADIUS combines authentication and authorization, while TACACS+ implements two separate processes and RADIUS is a UDP based protocol.** TACACS+ is a TCP based protocol. RADIUS is an open standard that combines authentication and authorization services into a single process. TACACS+ is a Cisco proprietary security mechanism that can be used only for authorization and accounting while using another method of authentication. TACACS+ uses the Transmission Control Protocol (TCP) for all three services.
 --------
-Which feature of PVST+ is not available in RSTP?
+Which feature of **PVST+ is not available in RSTP**?
 
 * fast convergence on topology changes
 
@@ -645,7 +645,7 @@ In Cisco **PVST+, how many root ports per VLAN are allowed on a device**?
 * 32
 
 	Answer
-	The correct answer is 1. This port exists on non-root bridges. Only one root port is allowed per switch or per VLAN in Cisco PVST+. The root port forwards traffic toward the root bridge.
+	The correct answer is 1. This port exists on non-root bridges. **Only one root port is allowed per switch or per VLAN in Cisco PVST+.** The root port forwards traffic toward the root bridge.
 --------
 The lab is prepared with the devices that are represented in the topology diagram. All devices have their basic configurations in place, including host names and IPv4 addresses. The SRV2 server is a DNS server for both departments. The domain names of the devices are equal to their host names. Note that static routing is implemented between the routers to ensure connectivity between the network segments.
 
@@ -662,7 +662,7 @@ Which line in the preconfigured access list 10 on router R1 will cause the ping 
 
 * access-list 10 deny 10.0.0.0 0.255.255.255
 
-* **access-list 10 deny 10.10.1.0 0.0.0.255 (Ans)**
+* **access-list 10 deny 10.10.1.0 0.0.0.255 (Ans)** Note: ACL uses Wildcard masks that is opposite of the IP.
 
 * access-list 10 deny any
 
@@ -775,7 +775,7 @@ Ans:
 	SW3(config)# vlan 10,20,30
 	SW3(config-vlan)# end
 --------
-On a Cisco device, what is the default destination for syslog logging messages?
+On a Cisco device, what is the **default destination for syslog logging** messages?
 
 * **console line (Ans)**
 
@@ -802,7 +802,7 @@ Which three SNMP messages are sent from an SNMP agent to an SNMP manager? (Choos
 	Answer
 	The correct answers are **InformRequest, Response, and Trap**. GetRequest, GetNextRequest and SetRequest are SNMP messages that an SNMP manager sends to an SNMP agent.
 --------
-Which two Microsoft Windows commands will display the DNS server address configured on the host? (Choose two.)
+Which two Microsoft Windows commands will display the **DNS server address configured** on the host? (Choose two.)
 
 * ipconfig
 
@@ -853,7 +853,7 @@ Refer to the exhibit. The administrator has configured Hot Standby Router Protoc
 	Answer
 	The correct answer is **PC1 will be able to reach remote networks while R1 is operational**. Because of the explicit default gateway configuration, the ARP table of PC1 has the default gateway IPv4 mapped to the R1 MAC address, and not to the virtual IP address of the HSRP group. When R1 fails, the PC1 ARP table will not be updated, and PC1 will not be able to reach R2, which would take over the role of the default gateway.
 --------
-For which network entity is the OSPF designated router/backup designated router (DR/BDR) selection performed?
+For which network entity is the **OSPF designated router/backup designated router (DR/BDR) selection performed**?
 
 * **for each multi-access segment**
 
@@ -866,20 +866,20 @@ For which network entity is the OSPF designated router/backup designated router 
 	Answer
 	The correct answer is **for each multi-access segment**. The DR/BDR election is not made per area, per OSPF version, or per transmission state of the link.
 --------
-Which command would you use to configure a router ID on a Cisco router?
+Which command would you **use to configure a router ID on a Cisco router**?
 
 * R1 (config-router)# ip router-id ip-address
 
-* R1 (config-router)# router-id ip-address
+* **R1 (config-router)# router-id ip-address**
 
 * R1 (config)# ip router-id ip-address
 
 * R1 (config)# router-id ip-address
 
 	Answer
-	The correct answer is R1 (config-router)# router-id ip-address. For the network device administrator to configure a router ID on a router, the router-id ip-address command is used. The ip router-id ip-address, ip router-id ip-address, and router-id ip-address commands do not configure router IDs.
+	The correct answer is **R1 (config-router)# router-id ip-address**. For the network device administrator to configure a router ID on a router, the router-id ip-address command is used. The ip router-id ip-address, ip router-id ip-address, and router-id ip-address commands do not configure router IDs.
 --------
-Which two attack categories does the smurf attack belong to? (Choose two.)
+Which two attack categories does the **smurf attack** belong to? (Choose two.)
 
 * **amplification (Ans)**
 
@@ -891,7 +891,7 @@ Which two attack categories does the smurf attack belong to? (Choose
 
 * **reflection (Ans)**
 --------
-What is a way of mitigating social engineering attacks?
+What is a way **of mitigating social engineering attacks**?
 
 * Avoiding making copies of files on external memory devices.
 
@@ -901,7 +901,7 @@ What is a way of mitigating social engineering attacks?
 
 * **Training users about correct security behaviors. (Ans)**
 --------
-After the Cisco IOS Software image is loaded and started, from which three components can the device load its configuration? (Choose three.)
+After the Cisco IOS **Software image is loaded and started, from which three components can the device load its configuration**? (Choose three.)
 
 * DHCP server
 
@@ -930,7 +930,7 @@ What can you conclude based on the messages?
 
 * The TFTP server URL is incorrect.
 
-* The configuration file is not found on the TFTP server.
+* **The configuration file is not found on the TFTP server.**
 
 	Answer
 	The correct answer is The configuration file is not found on the TFTP server. By default, the router first attempts to load the startup configuration from the NVRAM. If the startup configuration file does not exist in NVRAM, the router searches for a TFTP server. If the router detects that it has an active link, it sends a broadcast searching for a configuration file across the active link. No specific TFTP URL is used. If the router does not find the configuration source, it will display the error console messages.
@@ -963,7 +963,7 @@ Protect the access to the console by requiring a password to access the console.
 
 
 
-From PC1, connect to SW1 using Telnet with the password Cisco111!. Which password did you use to access the privileged EXEC mode on SW1? **Need to find the answer**
+From PC1, connect to SW1 using Telnet with the password Cisco111!. Which password did you use to access the privileged EXEC mode on SW1?
 
 * Cisco111!
 
@@ -971,7 +971,7 @@ From PC1, connect to SW1 using Telnet with the password Cisco111!. Which passwor
 
 * CiscoAdm1!
 
-* CiscoSW1!
+* **CiscoSW1!**
 
 * CiscoTech1!
 
@@ -986,10 +986,10 @@ On R1, at the command prompt, issue the exit command as many times as necessary 
 * **password is not required**
 
 Answer
-The correct answer is password is not required. When accessing the USER exec mode, no password is required.
+The correct answer is password is not required. **When accessing the USER exec mode, no password is required.**
 
 
-Which number represents the default encryption type of the protected password used to restrict access to the privileged EXEC mode?
+Which number represents the **default encryption type of the protected password** used to restrict access to the **privileged EXEC mode**?
 
 * **4**
 
@@ -1000,10 +1000,10 @@ Which number represents the default encryption type of the protected password us
 * 9
 
 	Answer
-	The correct answer is 4. The enable secret is always stored in a protected fashion in the configuration file. Cisco IOS Software on routers supports several encryption types. On production routers, you will most likely find encryption type 8 or type 9. Using the default encryption type 4, which represents the Secure Hashing Algorithm 2 (SHA-2) protection, is not recommended due to security risks. Use the show running-config command to reveal the encryption type used for enable secret.
+	The correct answer is **4**. The enable secret is always stored in a protected fashion in the configuration file. Cisco IOS Software on routers supports several encryption types. **On production routers, you will most likely find encryption type 8 or type 9.** Using the default encryption type 4, which represents the Secure Hashing Algorithm 2 (SHA-2) protection, is not recommended due to security risks. Use the show running-config command to reveal the encryption type used for enable secret.
 
 
-Examine the Device Access table in the Job Aid. There are four users configured on SW2. The SW2 switch console line access is set to privilege level 5. Presuming command privileges are set to default, which username should you use to be able to change the SW2 configuration?
+Examine the Device Access table in the Job Aid. There are four users configured on SW2. The SW2 switch console line access is set to privilege level 5. Presuming command **privileges are set to default, which username should you use to be able to change the SW2 configuration**?
 
 * admin
 
@@ -1028,10 +1028,10 @@ From PC1, connect to SW2 using Telnet and verify the console line configuration.
 * 67 seconds
 
 	Answer
-	The correct answer is 60 minutes and 7 seconds. The exec-timeout command specifies the minutes and seconds that define the timeout, after which an inactive user is automatically disconnected from the console. This prevents users from remaining connected to a console port when they leave a station. Using the exec-timeout 0 0 command disables the timeout; this should not be used in a production environment because it is not a secure practice.
+	The correct answer is 60 minutes and 7 seconds. The exec-timeout command specifies the minutes and seconds that define the timeout, after which an inactive user is automatically disconnected from the console. This prevents users from remaining connected to a console port when they leave a station. Using the **exec-timeout 0 0 command disables the timeout;** this should not be used in a production environment because it is not a secure practice.
 
 
-From PC2, connect to SW2 using Telnet. Examine the running configuration. Which time zone is set?
+From PC2, connect to SW2 using Telnet. Examine the running configuration. **Which time zone is set?**
 
 * CET
 
@@ -1042,9 +1042,9 @@ From PC2, connect to SW2 using Telnet. Examine the running configuration. Which 
 * PST
 
 	Answer
-	The correct answer is LJUB. When you issue the show running-config command, the outup displays the clock timezone LJUB 8 0. You can obtain the same information using the show clock command.
+	The correct answer is LJUB. When you issue the show running-config command, the outup displays the clock timezone LJUB 8 0. You can obtain the same information using the **show clock** command.
 --------
-What are two field names corresponding to the IPv4 header field and the IPv6 header field that contain Differentiated Services Code Point (DSCP) markings? (Choose two.)
+What are two field names corresponding to the **IPv4 header field and the IPv6 header field that contain Differentiated Services Code Point (DSCP) markings?** (Choose two.)
 
 * flow control
 
@@ -1061,7 +1061,7 @@ What are two field names corresponding to the IPv4 header field and the IPv6 hea
 	Answer
 	The correct answers are traffic class and type of service (ToS). In the original RFC definitions of the ToS field, IP precedence was a 3-bit sub-field. The initial definition of the ToS field has been changed to include the flow control field. The offset field is the IPv4 header field used when packets are fragmented. The flow label IPv6 header field can be used to label a set of packets belonging to the same flow and does not contain DSCP markings.
 --------
-Which three of the following application characteristic values are determined in the service level specification phase when designing the quality of service (QoS) policy of a network? (Choose three.)
+Which three of the following application characteristic values are determined in the **service level specification** phase **when designing the quality of service (QoS)** policy of a network? (Choose three.)
 
 * generated data flows
 
@@ -1078,7 +1078,7 @@ Which three of the following application characteristic values are determined in
 	Answer
 	The correct answers are required bandwidth, tolerable jitter, and tolerable packet loss. When you specify the service levels for a class of traffic, you define specific values for delay and jitter, packet loss tolerance, required bandwidth, and time sensitivity. After the implementation of the QoS policy, the performance of your network can then be measured and evaluated against the specified service levels. You should identify the data flows generated by the application prior to determining service levels, in the first phase of policy design. Required responsiveness and response criticality are performed within the business audit phase, which precedes service-level specification.
 --------
-Which statement regarding a small office/home office (SOHO) of a remote worker is correct?
+Which statement regarding a **small office/home office (SOHO)** of a remote worker is correct?
 
 * **It is a LAN that includes both wireless and wired network devices.**
 
@@ -1089,7 +1089,7 @@ Which statement regarding a small office/home office (SOHO) of a remote worker i
 * It typically uses dark fiber to connect to the main office.
 
 	Answer
-	The correct answer is It is a LAN that includes both wireless and wired network devices. The SOHO connectivity to other enterprise network segments can be established when required. To connect to other segments, SOHO networks usually use public internet, which they access via broadband connection. Since SOHO networks are typically small and consist of only a small number of devices, such as a computer and a printer, they do not need to follow the three-tier architecture model to ensure network operation.
+	The correct answer is **It is a LAN that includes both wireless and wired network devices**. The SOHO connectivity to other enterprise network segments can be established when required. To connect to other segments, SOHO networks usually use public internet, which they access via broadband connection. Since SOHO networks are typically small and consist of only a small number of devices, such as a computer and a printer, they do not need to follow the three-tier architecture model to ensure network operation.
 --------
 What is the network ID of the IPv6 address 2001:db8:deca:abce:45eb:27ff:feba:fa38/48?
 
@@ -1102,9 +1102,9 @@ What is the network ID of the IPv6 address 2001:db8:deca:abce:45eb:27ff:fe
 * 2001:db8:deca:abce::
 
 	Answer
-	The correct answer is 2001:db8:deca::. Each hexadecimal character represents 4 binary bits. The first 12 characters correspond to 48 bits. 2001:db8:deca:abce:: would have the /64 prefix, 2001:db8:: would have the /32 prefix, and 2001: would have the /16 prefix.
+	The correct answer is 2001:db8:deca::. **Each hexadecimal character represents 4 binary bits**. **The first 12 characters correspond to 48 bits.** 2001:db8:deca:abce:: would have the /64 prefix, 2001:db8:: would have the /32 prefix, and 2001: would have the /16 prefix.
 --------
-BR2# show ip route
+**BR2# show ip route**
 <... output omitted ...>
 
 Gateway of last resort is 172.16.2.3 to network 0.0.0.0
@@ -1120,7 +1120,8 @@ D     192.168.1.0/24 [90/2323456] via 172.16.2.1, 00:00:22, Ethernet0/1
 C        192.168.2.0/24 is directly connected, Loopback0
 L        192.168.2.1/32 is directly connected, Loopback0
 D*EX  0.0.0.0/0 [170/7289856] via 172.16.2.3, 00:00:22, Ethernet0/0
-Refer to the exhibit. Router BR2 receives a packet with the destination IPv4 address of 172.16.5.20. Based on the routing table, what would the router do with the packet?
+
+Refer to the exhibit. **Router BR2 receives a packet with the destination IPv4 address of 172.16.5.20**. Based on the routing table, what would the router do with the packet?
 
 * **Forward it out of interface Ethernet0/0. (Ans)**
 
@@ -1130,7 +1131,7 @@ Refer to the exhibit. Router BR2 receives a packet with the destination IPv4
 
 * It will discard the packet.
 --------
-Refer to the exhibit. It represents the Cisco Enterprise Architecture model. In this model, where is the firewall located?
+Refer to the exhibit. It represents the Cisco Enterprise Architecture model. **In this model, where is the firewall located?**
 
 * between the edge router and the core switch
 
@@ -1140,7 +1141,7 @@ Refer to the exhibit. It represents the Cisco Enterprise Architecture model. In 
 
 * **between the internet and the edge router (Ans)**
 --------
-What are two reasons for choosing Transport Layer Security (TLS) over IP Security (IPsec) encryption? (Choose two.)
+What are two reasons for **choosing Transport Layer Security (TLS) over IP Security (IPsec)** encryption? (Choose two.)
 
 * IPsec encrypts the IP packet, resulting in lesser application-level security.
 
@@ -1170,7 +1171,7 @@ Telnet is enabled on remote access lines
 
 remote access lines are configured for password-only login, with the password Cisco111
 
-access list SSHACCESS
+**access list SSHACCESS**
 
 You will not be able to access the console of the R1 router directly. However, you will be able to access it from other devices in the topology, as instructed.
 
@@ -1180,11 +1181,11 @@ Using Telnet to access R1, configure SSH with the following parameters:
 
 key size of 2048 bits
 
-domain name example.com
+**domain name example.com**
 
 login authentication must be performed against the locally stored user information
 
-create an entry in the local database for one user, using the username AdminPC2, maximum privilege level, and password Cisco123
+create an entry in the local database for one user, using the username **AdminPC2, maximum privilege level, and password Cisco123**
 
 Examine the access list configuration on R1:
 
@@ -1192,7 +1193,7 @@ From PC2, access the R1 router using SSH. Apply the configured access list so th
 
 ########
 
-From PC2, use SSH to access R1. Use AdminPC2 as the username and Cisco123 as the password. What is the IPv4 address of the loopback interface?
+From PC2, use SSH to access R1. Use AdminPC2 as the username and Cisco123 as the password. **What is the IPv4 address of the loopback interface?**
 
 * 10.10.2.1
 
@@ -1203,7 +1204,7 @@ From PC2, use SSH to access R1. Use AdminPC2 as the username and Cisco123 as the
 * 10.10.5.1
 
 	Answer
-	The correct answer is 10.10.3.1. If you issue the show ip interface brief command, you will see that there are two interfaces configured. Ethernet0/0 has the IPv4 address 10.10.1.1 and the loopback0 interface has the IPv4 address 10.10.3.1.
+	The correct answer is 10.10.3.1. If you issue the **show ip interface brief** command, you will see that there are two interfaces configured. Ethernet0/0 has the IPv4 address 10.10.1.1 and the **loopback0 interface has the IPv4 address 10.10.3.1.**
 
 ###########
 
@@ -1277,7 +1278,7 @@ Refer to the exhibit. Which two options are common IPsec or SSL VPN implementa
 	Answer
 	The correct answers are option 1 and option 5. An IPsec Tunnel VPN is typically established between two network devices, connecting two or more remote networks. An SSL VPN is typically established between a client and a network device. DMVPN and IPsec VTI VPN are typically established between network devices.
 --------
-Which two statements about the Dynamic Multipoint Virtual Private Network (DMVPN) are true? (Choose two.)
+Which two statements about the **Dynamic Multipoint Virtual Private Network (DMVPN)** are true? (Choose two.)
 
 * **DMVPN creates hub-to-spoke tunnels.**
 
@@ -1292,7 +1293,7 @@ Which two statements about the Dynamic Multipoint Virtual Private Network (DMV
 	Answer
 	The correct answers are DMVPN creates hub-to-spoke tunnels and DMVPN creates spoke-to-spoke tunnels. After building the hub-and-spoke VPNs, the spokes can establish direct spoke-to-spoke tunnels, based on the information they obtain from the hub.
 --------
-Which three protocols use UDP? (Choose three.)
+Which three protocols use **UDP**? (Choose three.)
 
 * **DHCP**
 
@@ -1307,7 +1308,7 @@ Which three protocols use UDP? (Choose three.)
 	Answer
 	The correct answers are DHCP, SNMP, and TFTP. DHCP is a network management protocol used on UDP/IP networks whereby a DHCP server dynamically assigns an IP address and other network configuration parameters to each device on a network. TFTP is used to transfer configuration files, Cisco IOS images, and other files between systems. SNMP is an application layer protocol that facilitates the exchange of management information between network devices. FTP is a connection-oriented service that uses TCP to transfer files between systems. HTTPS uses TCP for distributed, collaborative hypermedia information systems.
 --------
-Which IPv6 network prefix is only intended for local links and cannot be routed?
+Which **IPv6 network prefix is only intended for local links and cannot be routed**?
 
 * ::ffff/80
 
@@ -1317,7 +1318,7 @@ Which IPv6 network prefix is only intended for local links and cannot be routed?
 
 * **fe80::/10 (Ans)**
 --------
-What are two characteristics of an anycast IPv6 address? (Choose two.)
+What are two characteristics of an **anycast IPv6 address**? (Choose two.)
 
 * It can be assigned to a host (end-user devices).
 
@@ -1332,7 +1333,7 @@ What are two characteristics of an anycast IPv6 address? (Choose two.)
 	Answer
 	The correct answers are It can be assigned to multiple nodes and It is assigned from the unicast IPv6 address space. Anycast IPv6 addresses are syntactically indistinguishable from unicast IPv6 addresses, and they do not have a dedicated prefix assigned. Anycast IPv6 addresses cannot be used by hosts, and they must not be used as the source address of an IPv6 packet.
 --------
-Which fields does the 802.1Q header add to an Ethernet frame?
+Which fields does the **802.1Q header add to an Ethernet frame**?
 
 * CRC
 
@@ -1355,7 +1356,7 @@ When configuring a trunk port on a Cisco switch, which VLAN ranges can be used t
 	Answer
 	The correct answer is extended and standard. A trunk port is a member of all VLANs by default, including extended-range VLANs, but membership can be limited by configuring the allowed-VLAN list.
 --------
-Which of the following network devices defines a broadcast domain and a collision domain on every one of its ports?
+Which of the following network devices defines a **broadcast domain and a collision domain on every one of its ports**?
 
 * bridge
 
@@ -1368,7 +1369,7 @@ Which of the following network devices defines a broadcast domain and a collisio
 	Answer
 	The correct answer is router. Switches and bridges create separate collision domains on their ports, but do not limit the broadcast domain to only one port. The broadcast domain on a switch includes all the ports in one VLAN. The hub extends both the collision and broadcast domains to all its ports.
 --------
-Which three device types can benefit from Power over Ethernet (PoE) connectivity? (Choose three.)
+Which three device types can **benefit from Power over Ethernet (PoE) connectivity**? (Choose three.)
 
 * access switches
 
@@ -1380,7 +1381,7 @@ Which three device types can benefit from Power over Ethernet (PoE) connectivity
 
 * **wireless access points (Ans)**
 --------
-What are the two main WLAN deployment types? (Choose two.)
+What are the two main **WLAN deployment types**? (Choose two.)
 
 * **centralized (Ans)**
 
@@ -1392,7 +1393,7 @@ What are the two main WLAN deployment types? (Choose two.)
 
 * Zero Touch Provisioning (ZTP)
 --------
-Which 802.11 frame is a control frame?
+Which **802.11 frame is a control frame**?
 
 * association request
 
@@ -1402,7 +1403,7 @@ Which 802.11 frame is a control frame?
 
 * beacon
 --------
-Which cloud service model offers customers the most control over their cloud-hosted services?
+Which **cloud service model offers customers the most control over their cloud-hosted services?**
 
 * Function as a Service (FaaS)
 
@@ -1413,9 +1414,9 @@ Which cloud service model offers customers the most control over their cloud-hos
 * Software as a Service (SaaS)
 
 	Answer
-	The correct answer is Infrastructure as a Service (IaaS). IaaS is a cloud service model where a customer rents or purchases computing, storage, and network resources. The customer is responsible for resource specification and operating system management. In FaaS, PaaS, and SaaS, the customer does not have control over machine resources or the operating system.
+	The correct answer is **Infrastructure as a Service (IaaS)**. IaaS is a cloud service model where a customer rents or purchases computing, storage, and network resources. The customer is responsible for resource specification and operating system management. In FaaS, PaaS, and SaaS, the customer does not have control over machine resources or the operating system.
 --------
-Which three layers does the hierarchical three-tier model include? (Choose three.)
+Which three layers does the **hierarchical three-tier model include**? (Choose three.)
 
 * **access (Ans)**
 
@@ -1427,7 +1428,7 @@ Which three layers does the hierarchical three-tier model include? (Choose three
 
 * network
 --------
-Which command is used to set 192.168.1.1 as the default gateway on a Layer 2 switch?
+Which command is used to set **192.168.1.1 as the default gateway** on a Layer 2 switch?
 
 * **Switch(config)# ip default-gateway 192.168.1.1 (Ans)**
 
@@ -1524,7 +1525,7 @@ Which Windows Command Prompt command do you use to view the IP address of a host
 
 * show ip address
 --------
-Which three statements about IPv4 addresses are true? (Choose three.)
+Which three statements about **IPv4 addresses** are true? (Choose three.)
 
 * **8.0.0.0 is a public address.**
 
@@ -1567,7 +1568,7 @@ Which two symptoms are characteristic of a duplex mismatch? (Choose two.)
 	Answer
 	The correct answers are The half-duplex side of the link will experience increased collision rates and The full-duplex side of the link will have a large number of CRC errors. The full-duplex side of the link does not detect any collisions, since Carrier Sense Multiple Access with Collision Detection (CSMA/CD) is disabled on the full-duplex side of the link. The connections with a duplex mismatch are typically operational, but they operate poorly. When used to send a larger amount of data, the TCP data transfer would provoke collisions and trigger TCP retransmissions, which slows down the transfer.
 --------
-When the store-and-forward switching method is in use, which part of the Ethernet frame is used to perform error checking using cyclic redundancy check (CRC)?
+When the **store-and-forward switching method is in use, which part of the Ethernet frame is used to perform error checking using cyclic redundancy check (CRC)?**
 
 * **All frame fields, except the FCS field in the trailer.**
 
@@ -1593,7 +1594,7 @@ After receiving an Ethernet frame, a switch examines the destination MAC address
 	Answer
 	The correct answer is in broadcast, multicast, and unicast communication. An Ethernet switch forwards a frame out of all ports except the incoming port when the intended recipients are all devices in a network, like in broadcast communication. It also forwards a frame out of all ports except the incoming port when communication is sent to a specific group of hosts, which is the case in multicast communications. In unicast communication, the switch will forward the frame out of all ports except the incoming port only when it does not have the destination MAC address in its MAC table.
 --------
-Which command would you use to configure a floating static route?
+Which command would you use to configure a **floating static route?**
 
 * ip route static 192.168.13.0 255.255.255.0 100
 
@@ -1617,7 +1618,7 @@ For an administrator to be able to access the Layer 2 switch S1 from the interne
 * static route to 209.168.200.254/27
 
 	Answer
-	The correct answer is default gateway to 192.168.3.254. For Switch S1 to be able to replay and respond as the administrator manages it, it must have a default gateway set. On a Layer 2 switch, you cannot configure routes, since IP routing is not enabled. For the switch virtual interface to work, the VLAN must be associated and active on at least one physical port.
+	The correct answer is default gateway to 192.168.3.254. For **Switch S1 to be able to replay and respond as the administrator manages it, it must have a default gateway set.** On a Layer 2 switch, you cannot configure routes, since IP routing is not enabled. For the switch virtual interface to work, the VLAN must be associated and active on at least one physical port.
 --------
 When a router is calculating the network portion of an IPv4 address, which bitwise operation is performed on the IPv4 address and the subnet mask?
 
@@ -1673,7 +1674,7 @@ What are two differences between the RADIUS and TACACS+ protocols? (Choose t
 	Answer
 	The correct answers are RADIUS combines authentication and authorization, while TACACS+ implements two separate processes and RADIUS is a UDP based protocol. TACACS+ is a TCP based protocol. RADIUS is an open standard that combines authentication and authorization services into a single process. TACACS+ is a Cisco proprietary security mechanism that can be used only for authorization and accounting while using another method of authentication. TACACS+ uses the Transmission Control Protocol (TCP) for all three services.
 --------
-How many switch ports are designated ports on a root bridge?
+How **many switch ports are designated ports on a root bridge?**
 
 * **all of them (Ans)**
 
@@ -1692,6 +1693,7 @@ What is the purpose of the blocking state of ports in STP (Spanning Tree Protoco
 * **To prevent path loops. (Ans)**
 
 * To prevent unauthorized usage of unused ports.
+
 --------
 *********
 
@@ -1736,6 +1738,9 @@ What is the IP address of the R2 interface connecting to R1?
 * **192.168.3.2 (Ans)**
 
 * 192.168.3.3
+
+Answer
+The correct answer is 192.168.3.2. By issuing the **show cdp neighbors detail** command on R1, you are able to get the IPv4 address of R2’s interface connecting to R1.
 
 ##########
 
@@ -1857,7 +1862,7 @@ In order to allow SNMP traffic to flow throughout the network, which two communi
 	Answer
 	The correct answers are UDP to port 161 and UDP to port 162. SNMP uses the UDP transport mechanism to retrieve and send management information. The SNMP manager polls the SNMP agents and queries the MIB via SNMP agents on UDP port 161. The SNMP agent can also send triggered messages called traps to the SNMP manager, on UDP port 162.
 --------
-Which three SNMP messages are sent from an SNMP agent to an SNMP manager? (Choose three.)
+Which **three SNMP messages are sent from an SNMP agent to an SNMP manager**? (Choose three.)
 
 * GetRequest
 
@@ -1887,7 +1892,7 @@ A client issues a DNS request to its local DNS server. The local DNS server does
 	Answer
 	The correct answer is the client's local DNS server. When the local DNS server cannot find the queried domain in its database, which indicates that the local server is not authoritative for this domain, it will query the authoritative root DNS server for the top-level (root) domain. The root DNS server directs the query to the DNS server for the first subdomain of the queried domain name. The query directing process continues until the local server reaches the authoritative subdomain DNS server. The authoritative subdomain DNS server resolves the initially queried domain name and replies to the local DNS server. This is how the local DNS server gets the resolved IP address. It is then the local DNS who sends the response to the client.
 --------
-Which command would you use to verify the number of excluded addresses on a router configured as a DHCP server?
+Which command would you use to **verify the number of excluded addresses on a router configured as a DHCP server**?
 
 * show ip dhcp bindings
 
@@ -1907,7 +1912,7 @@ Routers communicate First Hop Redundancy Protocol (FHRP) information between eac
 
 * VLAN tagging
 --------
-When using Hot Standby Router Protocol (HSRP) for gateway redundancy, which address is used for the gateway on hosts?
+When using **Hot Standby Router Protocol (HSRP) for gateway redundancy**, which address is used for the gateway on hosts?
 
 * active
 
@@ -1920,7 +1925,7 @@ When using Hot Standby Router Protocol (HSRP) for gateway redundancy, which addr
 	Answer
 	The correct answer is virtual. HSRP provides gateway redundancy by sharing IP and MAC addresses between redundant gateways. The protocol consists of virtual IP and MAC addresses that the routers belonging to the same HSRP group share between each other.
 --------
-Where does a router that runs OSPFv2, and that has neighbor adjacencies established, store link-state advertisements (LSAs)?
+Where does a router that runs **OSPFv2**, and that has neighbor adjacencies established, **store link-state advertisements** (LSAs)?
 
 * **LSDB**
 
@@ -1933,7 +1938,7 @@ Where does a router that runs OSPFv2, and that has neighbor adjacencies establis
 	Answer
 	The correct answer is LSDB. An LSA is a type of packet containing information about adjacent routers and networks that it is connected to. A router stores LSAs in the link-state database (LSDB), which is then used for the calculation of optimal paths through the network.
 --------
-Which algorithm is used to calculate the optimal path to a given destination from data stored in a link-state database (LSDB)?
+Which **algorithm is used to calculate the optimal path** to a given destination from data stored in a link-state database (LSDB)?
 
 * Rivest, Shamir, and Adleman (RSA)
 
@@ -1988,7 +1993,7 @@ What can you conclude based on the messages?
 	Answer
 	The correct answer is The configuration file is not found on the TFTP server. By default, the router first attempts to load the startup configuration from the NVRAM. If the startup configuration file does not exist in NVRAM, the router searches for a TFTP server. If the router detects that it has an active link, it sends a broadcast searching for a configuration file across the active link. No specific TFTP URL is used. If the router does not find the configuration source, it will display the error console messages.
 --------
-What does the term per-hop behavior (PHB) signify?
+What does the term **per-hop behavior (PHB)** signify?
 
 * a set of node requirements for compliance with the DiffServ model
 
@@ -2129,7 +2134,7 @@ In the lab network, which SSHACCESS access list implementation would correctly l
 
 * inbound direction on the Ethernet0/2 interface on SW1
 
-* inbound direction on the vty lines on R1
+* **inbound direction on the vty lines on R1**
 
 * outbound direction on the Ethernet0/1 interface on SW2
 
@@ -2140,7 +2145,7 @@ In the lab network, which SSHACCESS access list implementation would correctly l
 
 Examine the configuration on SW2. Based on the information in the configuration, use Telnet from PC1 to access the SW2 switch. Which message is displayed upon successful access?
 
-* Access for authorized users only. Proceed with caution.
+* **Access for authorized users only. Proceed with caution.**
 
 * Only authorized access to this device is allowed!
 
@@ -2165,22 +2170,22 @@ In the Cisco Software-Defined Access solution, which three network element
 ############
 
 --------
-Refer to the exhibit. The service provider is implementing Multiprotocol Label Switching Virtual Private Network (MPLS VPN) service. Which two options indicate the specific VPN type that is implemented and how the service provider appears from the perspective of the customer? (Choose two.)
+Refer to the exhibit. The service provider is implementing **Multiprotocol Label Switching Virtual Private Network (MPLS VPN)** service. Which two options indicate the specific VPN type that is implemented and how the service provider appears from the perspective of the customer? (Choose two.)
 
 * The service provider is implementing MPLS L2VPN.
 
-* The service provider is implementing MPLS L3VPN.
+* **The service provider is implementing MPLS L3VPN.**
 
 * The service provider is implementing MPLS VPLS.
 
-* The service provider network can be represented as a router from the customer perspective.
+* **The service provider network can be represented as a router from the customer perspective.**
 
 * The service provider network can be represented as a switch from the customer perspective.
 
 	Answer
 	The correct answers are The service provider is implementing MPLS L3VPN. and The service provider network can be represented as a router from the customer perspective.
 --------
-Which two statements about the Dynamic Multipoint Virtual Private Network (DMVPN) are true? (Choose two.)
+Which two statements about the **Dynamic Multipoint Virtual Private Network (DMVPN)** are true? (Choose two.)
 
 * **DMVPN creates hub-to-spoke tunnels.**
 
@@ -2210,7 +2215,7 @@ Which three protocols use UDP? (Choose three.)
 	Answer
 	The correct answers are DHCP, SNMP, and TFTP. DHCP is a network management protocol used on UDP/IP networks whereby a DHCP server dynamically assigns an IP address and other network configuration parameters to each device on a network. TFTP is used to transfer configuration files, Cisco IOS images, and other files between systems. SNMP is an application layer protocol that facilitates the exchange of management information between network devices. FTP is a connection-oriented service that uses TCP to transfer files between systems. HTTPS uses TCP for distributed, collaborative hypermedia information systems.
 --------
-Which IPv6 network prefix is only intended for local links and cannot be routed?
+Which **IPv6 network prefix is only intended for local links and cannot be routed**?
 
 * ::ffff/80
 
@@ -2220,7 +2225,7 @@ Which IPv6 network prefix is only intended for local links and cannot be routed?
 
 * **fe80::/10 (Ans)**
 --------
-What are two characteristics of an anycast IPv6 address? (Choose two.)
+What are two characteristics of an **anycast IPv6 address**? (Choose two.)
 
 * It can be assigned to a host (end-user devices).
 
@@ -2262,7 +2267,7 @@ Which three device types can benefit from Power over Ethernet (PoE) connectivity
 
 * **wireless access points (Ans)**
 --------
-Which of the following network devices defines a broadcast domain and a collision domain on every one of its ports?
+Which of the following **network devices defines a broadcast domain and a collision domain on every one of its ports**?
 
 * bridge
 
@@ -2451,18 +2456,18 @@ Which two symptoms are characteristic of a duplex mismatch? (Choose two.)
 
 * **The full-duplex side of the link will have a large number of CRC errors. (Ans)**
 --------
-When the store-and-forward switching method is in use, which part of the Ethernet frame is used to perform error checking using cyclic redundancy check (CRC)?
+When the **store-and-forward switching method is in use**, which part of the Ethernet frame is used to perform error checking using cyclic redundancy check (CRC)?
 
-* All frame fields, except the FCS field in the trailer.
+* **All frame fields, except the FCS field in the trailer.**
 
 * The destination MAC address in the header, and the FCS field in the trailer.
 
-* **The frame check sequence (FCS) field in the trailer. (Ans)**
+* The frame check sequence (FCS) field in the trailer.
 
 * The source MAC address in the header, and the FCS field in the trailer.
 
 --------
-On Cisco routers, routing for IPv6 is not enabled by default. Which command should you use to enable IPv6 routing?
+On Cisco routers, routing for IPv6 is not enabled by default. Which command should you use **to enable IPv6 routing**?
 
 * ipv6 enable
 
@@ -2472,7 +2477,7 @@ On Cisco routers, routing for IPv6 is not enabled by default. Which command shou
 
 * **ipv6 unicast-routing (Ans)**
 --------
-On a Cisco router, which command should you use to display the IPv6 routing table?
+On a Cisco router, which command should you use to display the **IPv6 routing table**?
 
 * show ipv6 neighbors
 
@@ -2519,9 +2524,9 @@ Refer to the exhibit. In an 802.1X implementation, what are the roles of the
 * A: supplicant, B: client device, C: authentication server
 
 	Answer
-	The correct answer is A: supplicant, B: authenticator, C: authentication server. A supplicant is a workstation with 802.1X-compliant client software. An authenticator acts as a proxy between the supplicant and an authentication server. An authentication server authenticates supplicants connecting to a switch port.
+	The correct answer is **A: supplicant, B: authenticator, C: authentication server.** A supplicant is a workstation with 802.1X-compliant client software. An authenticator acts as a proxy between the supplicant and an authentication server. An authentication server authenticates supplicants connecting to a switch port.
 --------
-In an enterprise environment, which guideline should be implemented to manage passwords securely, and why?
+In an enterprise environment, which guideline should be **implemented to manage passwords securely, and why**?
 
 * A centralized password repository should be avoided, because it is a single point of failure.
 
@@ -2584,7 +2589,7 @@ On SW2, when you see the summary information for aggregated link. What is the st
 
 * down (D)
 
-* Layer2 - In use (SU)
+* **Layer2 - In use (SU)**
 
 * stand-alone (I)
 
@@ -2592,7 +2597,7 @@ On SW2, when you see the summary information for aggregated link. What is the st
 
 Issue the ping command from PC1 to PC2. What is the path that packets traverse? Need to find the answer
 
-* SW1 > SW3 > SW2
+* **SW1 > SW3 > SW2**
 
 * SW1 > SW3 > SW4 > SW2
 
@@ -2709,9 +2714,9 @@ Refer to the exhibit. The administrator has configured Hot Standby Router Protoc
 	Answer
 	The correct answer is **PC1 will be able to reach remote networks while R1 is operational**. Because of the explicit default gateway configuration, the ARP table of PC1 has the default gateway IPv4 mapped to the R1 MAC address, and not to the virtual IP address of the HSRP group. When R1 fails, the PC1 ARP table will not be updated, and PC1 will not be able to reach R2, which would take over the role of the default gateway.
 --------
-For which network entity is the OSPF designated router/backup designated router (DR/BDR) selection performed? Need to find the answer
+For which network entity is the OSPF designated router/backup designated router (DR/BDR) selection performed?
 
-* for each multi-access segment
+* **for each multi-access segment**
 
 * for each OSPF router ID
 
@@ -2721,7 +2726,7 @@ For which network entity is the OSPF designated router/backup designated router 
 --------
 Where does a router that runs OSPFv2, and that has neighbor adjacencies established, store link-state advertisements (LSAs)? Need to find the answer
 
-* LSDB
+* **LSDB**
 
 * Neighbors table
 
@@ -2751,7 +2756,7 @@ Which two attack categories does the smurf attack belong to? (Choose
 
 * **reflection**
 --------
-After the Cisco IOS Software image is loaded and started, from which three components can the device load its configuration? (Choose three.)
+After the Cisco IOS **Software image is loaded and started**, from which three components can the device load its configuration? (Choose three.)
 
 * DHCP server
 
@@ -2817,7 +2822,7 @@ Which command is used to assign IPv6 addresses to PC1 and PC2?
 	Answer
 	The correct answer is **ipv6 address autoconfig default**. The ipv6 address autoconfig command enables autoconfiguration for IPv6 address assignment only, but the default route is not injected into the routing table. The ipv6 address dhcp command requires a DHCP server to be installed. The ipv6 address 2001:db8:0:1::/64 eui-64 and ipv6 address 2001:db8:0:2::/64 eui-64 commands manually configure the IPv6 address prefix, where the host portion of the IPv6 address is calculated from the EUI-64 method.
 
-Which IPv6 address is assigned to the SRV1 server? Need to find the answer
+Which IPv6 address is assigned to the SRV1 server?
 
 * 2001:db8:0:3::1/128
 
@@ -2830,7 +2835,7 @@ Which IPv6 address is assigned to the SRV1 server? Need to find the answer
 	Answer
 	The correct answer is 2001:DB8:0:3::31/64. This is the first available IPv6 address after the IPv6 address assigned to SW3 VLAN 1 (2001:dbB8:0:3::30/64). The IPv6 subnet mask should be the same as assigned to SW3 VLAN1 (/64).
 
-Use the show ipv6 route command, examine the routing table on the R1 router. What is the next-hop IPv6 address to the 2001:db8:0:2::/64 network? Need to find the answer
+Use the show ipv6 route command, examine the routing table on the R1 router. What is the next-hop IPv6 address to the 2001:db8:0:2::/64 network?
 
 * 2001:db8:0:2::2
 
@@ -2841,9 +2846,9 @@ Use the show ipv6 route command, examine the routing table on the R1 router. Wha
 * fe80::a8bb:ccff:fe00:6d00
 
 	Answer
-	The correct answer is fe80::2. The next-hop IPv6 address is a link-local IPv6 address of R2 Ethernet0/2. You have manually configured link-local IPv6 addresses on all R2 router interfaces to fe80::2.
+	The correct answer is **fe80::2.** The next-hop IPv6 address is a link-local IPv6 address of R2 Ethernet0/2. You have manually configured link-local IPv6 addresses on all R2 router interfaces to fe80::2.
 
-Use the shutdown command, disable the R2 Ethernet0/2 interface. What is the next-hop IPv6 address to the 2001:DB8:0:2::/64 network when examining the IPv6 routing table on the R1 router? Need to find the answer
+Use the shutdown command, disable the R2 Ethernet0/2 interface. What is the next-hop IPv6 address to the 2001:DB8:0:2::/64 network when examining the IPv6 routing table on the R1 router?
 
 * 2001:db8:0:2::2
 
@@ -2854,9 +2859,9 @@ Use the shutdown command, disable the R2 Ethernet0/2 interface. What is the next
 * fe80::a8bb:ccff:fe00:6d00
 
 	Answer
-	The correct answer is fe80::3. Since you have disabled the link between R1 and R2, the routing protocol calculates a new path from R1 router to the 2001:db8:0:2::/64 network. The next-hop IPv6 address is a link-local IPv6 address of R3 Ethernet0/1. You have manually configured link-local IPv6 addresses on all R3 router interfaces to fe80::3.
+	The correct answer is **fe80::3**. Since you have disabled the link between R1 and R2, the routing protocol calculates a new path from R1 router to the 2001:db8:0:2::/64 network. The next-hop IPv6 address is a link-local IPv6 address of R3 Ethernet0/1. You have manually configured link-local IPv6 addresses on all R3 router interfaces to fe80::3.
 
-What is the IPv6 default gateway address for the SW2 switch? Need to find the answer
+What is the IPv6 default gateway address for the SW2 switch?
 
 * 2001:db8:0:1::1
 
@@ -2904,7 +2909,7 @@ Which three of the following application characteristic values are determined in
 	Answer
 	The correct answers are **required bandwidth, tolerable jitter, and tolerable packet loss**. When you specify the service levels for a class of traffic, you define specific values for delay and jitter, packet loss tolerance, required bandwidth, and time sensitivity. After the implementation of the QoS policy, the performance of your network can then be measured and evaluated against the specified service levels. You should identify the data flows generated by the application prior to determining service levels, in the first phase of policy design. Required responsiveness and response criticality are performed within the business audit phase, which precedes service-level specification.
 --------
-When a network handles Voice over IP (VoIP) packets differently than HTTP packets, which network feature is implemented?
+When a **network handles Voice over IP (VoIP) packets differently than HTTP packets**, which network feature is implemented?
 
 * fault tolerance
 
@@ -2917,7 +2922,7 @@ When a network handles Voice over IP (VoIP) packets differently than HTTP packet
 	Answer
 	The correct answer is quality of service. Quality of service (QoS) includes tools, mechanisms, and architectures that allow you to control how and when network resources are used by applications. QoS is especially important for prioritizing traffic when the network is congested. Scalability ensures that a network can easily accommodate more users and data transmission requirements, while security indicates how well the network is defended from potential threats. Fault tolerance indicates how resilient the network is in case of failure.
 --------
-Which statement is true regarding subnet 192.168.1.64/26?
+Which statement is true regarding **subnet 192.168.1.64/26**?
 
 
 * The broadcast address of this subnet is 192.168.1.95.
@@ -2943,11 +2948,11 @@ Which network capability ensures that an endpoint, such as an IP phone, connects
 * VLAN
 
 	Answer
-	The correct answer is 802.1x. VLANs segment the network, and ACLs limit traffic flows, but both must be manually configured on edge interfaces if additional mechanisms are not in place. DHCP provides network parameters based on VLAN membership, but doesn’t ensure any security.
+	The correct answer is **802.1x**. VLANs segment the network, and ACLs limit traffic flows, but both must be manually configured on edge interfaces if additional mechanisms are not in place. DHCP provides network parameters based on VLAN membership, but doesn’t ensure any security.
 
 
 --------
-What are the three tasks of an Intrusion Prevention System (IPS)? (Choose three.)
+What are the three tasks of an **Intrusion Prevention System (IPS)**? (Choose three.)
 
 
 * **blocking suspicious activity**
@@ -3016,7 +3021,7 @@ What is the maximum stratum level that you can configure on a Cisco device?
 On the SW switch, display the established NTP associations. What is the value displayed in the address column?
 
 
-* ** *~198.51.100.2 (Ans)**
+* ***~198.51.100.2 (Ans)**
 
 
 * *198.51.100.2
@@ -3028,10 +3033,10 @@ On the SW switch, display the established NTP associations. What is the value di
 * 198.51.100.2
 
 	Answer
-	The correct answer is *~198.51.100.2. An asterisk (*) next to a configured peer represents that the device is synced to this peer and using it as the master clock. A tilde (~) next to a configured peer represents that this is a configured master server.
+	The correct answer is *~198.51.100.2. An asterisk (*)* next to a configured peer represents that the device is synced to this peer and using it as the master clock. A tilde (~) next to a configured peer represents that this is a configured master server.
 
 --------
-What are two valid IPv6 address scopes for a unique local IPv6 address? (Choose two.)
+What are **two valid IPv6 address scopes for a unique local IPv6 address**? (Choose two.)
 
 
 * global
@@ -3203,7 +3208,7 @@ Which interfaces on SW1 are trunk interfaces?
 * E0/0 and E0/1
 
 
-* E0/0 and E0/3
+* **E0/0 and E0/3**
 
 
 * E0/1 and E0/2
@@ -3277,7 +3282,7 @@ When creating and maintaining the MAC address table, which two activities does a
 
 
 --------
-When configuring an IPv4 static route pointing to the next-hop IPv4, which command should you use?
+When configuring an IPv4 static route pointing to the **next-hop IPv4**, which command should you use?
 
 
 * **ip route 172.16.1.0 255.255.255.0 172.16.2.1**
@@ -3365,7 +3370,7 @@ On SW2, when you see the summary information for aggregated link. What is the st
 Issue the ping command from PC1 to PC2. What is the path that packets traverse?
 
 
-* SW1 > SW3 > SW2
+* **SW1 > SW3 > SW2**
 
 
 * SW1 > SW3 > SW4 > SW2
@@ -3387,7 +3392,7 @@ Refer to the exhibit. The figure represents the topology resulting from STP calc
 * VLAN 10
 
 
-* VLAN 20
+* **VLAN 20**
 
 
 * VLAN 99
@@ -3418,7 +3423,7 @@ Which command should you use to access SRV1 from SRV2 using Telnet?
 * telnet 198.51.100.2 23
 
 
-* telnet 198.51.100.2 2323
+* **telnet 198.51.100.2 2323**
 
 When you use Telnet to connect from SRV2 to the IP 198.51.100.2 and port 2323, what message should you get?
 
@@ -3429,7 +3434,7 @@ When you use Telnet to connect from SRV2 to the IP 198.51.100.2 and port 2323, w
 * Password required, but none set
 
 
-* Welcome!
+* **Welcome!**
 
 
 * Please log in!
@@ -3442,7 +3447,7 @@ On PC1, issue the ping command to verify connectivity to SRV2. What is the resul
 * .....
 
 
-* U.U.U
+* **U.U.U**
 
 
 * !.!.!
@@ -3453,7 +3458,7 @@ On PC1, issue the ping command to verify connectivity to SRV2. What is the resul
 Examine the routing table on R2. What does the subnet 209.165.202.128/27 in the static entry refer to?
 
 
-* SRV1 to R1 public segment
+* **SRV1 to R1 public segment**
 
 
 * R1 to R2 public segment
@@ -3468,7 +3473,7 @@ Examine the routing table on R2. What does the subnet 209.165.202.128/27 in the 
 
 
 --------
-Which part of the Open Shortest Path First (OSPF) process is omitted if two routers are connected with a point-to-point link?
+Which part of the Open Shortest Path First (OSPF) process is omitted **if two routers are connected with a point-to-point link?**
 
 
 * **Designated router/Border designated router (DR/BDR) election**
@@ -3499,7 +3504,7 @@ What is a way of mitigating social engineering attacks?
 * Assigning administration privileges only to people with technical knowledge.
 
 
-* Training users about correct security behaviors.
+* **Training users about correct security behaviors.**
 
 
 --------
@@ -3582,7 +3587,7 @@ From PC1, connect to SW1 using Telnet with the password Cisco111!. Which passwor
 * CiscoAdm1!
 
 
-* CiscoSW1!
+* **CiscoSW1!**
 
 
 * CiscoTech1!
@@ -3599,12 +3604,12 @@ On R1, at the command prompt, issue the exit command as many times as necessary 
 * CiscoR1!
 
 
-* password is not required
+* **password is not required**
 
 Which number represents the default encryption type of the protected password used to restrict access to the privileged EXEC mode?
 
 
-* 4
+* **4**
 * 5
 * 8
 * 9
@@ -3615,12 +3620,12 @@ Examine the Device Access table in the Job Aid. There are four users configured 
 * admin
 * monitor
 * operator
-* superadmin
+* **superadmin**
 
 From PC1, connect to SW2 using Telnet and verify the console line configuration. How long can a user be inactive while still connected to the console of SW2?
 
 
-* 60 minutes and 7 seconds
+* **60 minutes and 7 seconds**
 * 60 minutes within 7 days
 * 67 minutes
 * 67 seconds
@@ -3629,7 +3634,7 @@ From PC2, connect to SW2 using Telnet. Examine the running configuration. Which 
 
 
 * CET
-* LJUB
+* **LJUB**
 * MDT
 * PST
 
@@ -4226,13 +4231,10 @@ After the Cisco IOS Software image is loaded and started, from which three compo
 --------
 On R1, at the command prompt, issue the exit command as many times as necessary until you get the "Press RETURN to get started" prompt. Which password do you have to type to access the USER exec mode?
 * Cisco123!
-* **Cisco333!**
+* Cisco333!
 * CiscoR1!
-* password is not required
+* **password is not required**
 
-	Cisco333!
-	-
-	When accessing the USER exec mode, the system will prompt you for a password. You must enter the password configured for the console line.
 --------
 Which number represents the default encryption type of the protected password used to restrict access to the privileged EXEC mode?
 * **4**
