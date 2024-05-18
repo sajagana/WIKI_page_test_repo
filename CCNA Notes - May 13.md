@@ -1631,149 +1631,77 @@ Refer to the exhibit. It represents the Cisco Enterprise Architecture model. In 
 Which three are the **most reliable network practices used in Networking?** (Choose three.)
 
 * **automated systems testing**
-
-
 * copying and pasting configuration from a text editor to a device
-
-
 * manual system testing
-
-
 * **using programmability tools to automate network configuration**
-
-
 * **using version controls for all configuration changes**
 ---------
 What is the MAC address of the interface that autoconfigures itself to the IPv6 address of fe80::2a3:C2ff:fefc:4a5d?
 
 * **00:a3:c2:fc:4a:5d**
-
-
 * 02:a3:c2:fc:4a:5d
-
-
 * 02:a3:c2:ff:fe:fc
-
-
 * 2a:3c:2f:ff:ec:4a
-
-
 * c2:ff:fe:fc:4a:5d
 
 Answer
 The correct answer is **00:a3:c2:fc:4a:5d**. Autoconfiguration employs the modified EUI-64 format in order to determine the interface ID portion of the address. **The modified EUI-64 format uses the MAC address. The last 24 bits of the MAC address are preserved and become the last 24 bits of the autoconfigured IPv6 address**. **The first 24 bits of the MAC address have the seventh bit inverted**. Also, the **"fffe" sequence is appended to the end of the modified first 24 bits of the MAC address.** This new **40-bit structure is followed by the last 24 bits of the MAC address to form the IPv6 interface ID.**
-
-
 ---------
 Which IPv6 network prefix is only intended for local links and cannot be routed?
 
-
 * ::ffff/80
-
-
 * 2001::/3
-
-
 * fc00::/7
-
-
 * **fe80::/10**
 ---------
 Why are the SSH and HTTPS protocols preferred for management traffic?
 
-
 * Because more detailed logging is possible.
-
-
 * **Because they encrypt the management traffic.**
-
-
 * Because they provide single sign-on capabilities.
-
-
 * Because they prevent unauthorized logins.
 ---------
 Refer to the exhibit. PC_A wants to communicate with PC_B, which resides on a different network. The hosts are connected via a router that acts as the default gateway for both. The ARP tables on all three devices are empty. When PC_A sends the first frame, which two things happen in the process? (Choose two.)
 
-
-
 * PC_A broadcasts the frame intended for PC_B.
-
-
 * **PC_A sends a broadcast ARP request looking for the MAC address of the router.**
-
-
 * **The router adds an IPv4 address to the MAC address's mapping for PC_A to its ARP table**.
-
-
 * The router drops the packet after checking for the mapping of PC_B's IP address.
-
-
 * The router receives a frame with its own MAC and mismatched IP address, and drops it.
 
 Answer
 The correct answers are **PC_A sends a broadcast ARP request looking for the MAC address of the router** and **The router adds an IPv4 to the MAC address's mapping for PC_A to its ARP table**. Since PC_A does not have a destination MAC address for the IP address of host B, it first acquires this information using ARP. The ARP request is broadcast, and the router and all other devices on the same network segment receive the ARP request. Only the router responds to it with its own MAC address.
 ---------
-
 A device **running a Windows OS has the IP address 169.254.254.254.** Which of the following statements is true?
 
-
 * **The address is automatically configured by the device itself.**
-
-
 * The device is reachable via the internet.
-
-
 * The IP address is used to communicate with the default gateway.
-
-
 * The IP address is a loopback address.
 
 Answer
 The correct answer is **The address is automatically configured by the device itself**. **The address space 169.254.0.0/16 is reserved for link-local IPv4 addresses**. **An end-device that supports IPv4 link-local addresses self-assigns an IPv4 address from the 169.254.0.0/16 range, when the address is not specified otherwise.** The link-local IPv4 address can be used only for local network connectivity and will not be routed.
-
-
 ---------
 After receiving an Ethernet frame, a **switch examines the destination MAC address**, and **forwards the frame out of all ports except the incoming port**. In which communication types can this behavior occur?
 
-
 * in broadcast and multicast communication
-
-
 * in broadcast communication
-
-
 * **in broadcast, multicast, and unicast communication**
-
-
 * in unicast communication
 
 Answer
 The correct answer is in **broadcast, multicast, and unicast communication**. An Ethernet switch forwards a frame out of all ports except the incoming port when the intended recipients are all devices in a network, like in broadcast communication. It also forwards a frame out of all ports except the incoming port when communication is sent to a specific group of hosts, which is the case in multicast communications. In unicast communication, the switch will forward the frame out of all ports except the incoming port only when it does not have the destination MAC address in its MAC table.
-
-
 ---------
 When using the modified **EUI-64 format to create the interface ID of an IPv6 unicast address, which two portions of the Ethernet MAC are used unchanged**? (Choose two.)
 
-
 * Organizational Unique Identifier (OUI) octets
-
-
 * **network interface card (NIC) specific octets**
-
-
 * the universal/local bit
-
-
 * **the unicast/multicast bit**
-
-
 * the protocol type octet
 
 Answer
 The correct answers are **network interface card (NIC) specific octets** and **the unicast/multicast bit**. In an Ethernet MAC address structure, there is no specific type octet. The universal/local bit is the second-least significant bit in the MAC address. In the modified EUI-64 format, it is inverted. As this bit is part of the OUI octets, inverting it changes the value of the OUI octets as well.
-
-
 ---------
 Refer to the exhibit. **Which of the routes is a floating static route?**
 
@@ -1798,20 +1726,12 @@ S     192.168.33.0/24 [1/0] via 172.16.2.1
 D        209.165.200.224 [90/307200] via 172.16.2.1, 00:03:01, Ethernet0/0
 
 * route to network 10.8.0.0/13
-
-
 * route to network 172.16.1.0/30
-
-
 * **route to network 192.168 16.0/24**
-
-
 * route to network 192.168.33.0/24
 
 Answer
 The correct answer is **route to network 192.168.16.0/24**. **A floating static route is a static route with an administrative distance greater than the default value of 1**. **In the example we have two static routes, the route to network 192.16.33.0/24 has the default administrative distance**, and is therefore not floating static. The other two options are routes sourced from elsewhere, in this case from the EIGRP routing protocol, as indicated by the "D" protocol code.
-
-
 ---------
 Which command would you use to configure a router ID on a Cisco router?
 * R1 (config-router)# ip router-id ip-address
@@ -1830,16 +1750,12 @@ Which three of the following application characteristic values are determined in
 * response criticality
 * **tolerable jitter**
 * **tolerable packet loss**
-
 ---------
-After receiving a dynamic host protocol (DHCP) discover message from a client with an IP address of 0.0.0.0 , how does the DHCP server respond?
+After receiving a dynamic host protocol (DHCP) discover message from a client with an IP address of **0.0.0.0** , how does the DHCP server respond?
 
-A DHCP offer message is sent to 255.255.255.255
+**A DHCP offer message is sent to 255.255.255.255**
 
-Answer explanation: The next action in the DHCP message chain is offer, and the server
-responds to this with a broadcast to all hosts on a subnet. The address used is
-255.255.255.255 since the host that sent the initial discovery does not have an IP address
-yet.
+Answer explanation: The next action in the **DHCP message chain is offer, and the server responds to this with a broadcast to all hosts on a subnet.** The address used is 255.255.255.255 since the host that sent the initial discovery does not have an IP address yet.
 ---------
 An engineer needs to provide a connection for the internet service provider (ISP) to allow
 for internet connectivity and wide area network (WAN) access for the corporate backbone
@@ -1847,35 +1763,31 @@ private network in a newly deployed branch office. The ISP has provided a Multip
 Label Switching (MPLS) connection at the demark point. What device would enable them
 to meet the requirements?
 
-Router
-Answer explanation: Routers are used to create internetworks by connecting networks
-together and routing traffic between them. Enterprise grade routers support many connection
+**Router**
+
+Answer explanation: **Routers are used to create internetworks by connecting networks together and routing traffic between them.** Enterprise grade routers support many connection
 types such as MPLS.
-
-
 ---------
-A client has enabled DHCP Snooping on the switches, and it detects a violation. What will
+A client has enabled **DHCP Snooping on the switches**, and it detects a violation. What will
 happen next?
 
-The packet will be dropped, and an event will be generated that contains the text
-DHCP_SNOOPING in the log message
+**The packet will be dropped, and an event will be generated that contains the text DHCP_SNOOPING in the log message**
 
-Answer explanation: DHCP Snooping is a security feature. It prevents denial of service. So, it
-will drop the packet as soon as a violation is detected, and the generated text will be
-DHCP_SNOOPING.
+Answer explanation: DHCP Snooping is a security feature. It prevents denial of service. **So, it will drop the packet as soon as a violation is detected, and the generated text will be DHCP_SNOOPING.**
 ---------
 An engineer needs to configure a series of switchports so that the computers connected
 to them have access only to engineering resources, while ensuring that the IP phones
 connected to those ports are segmented away from engineering resources. Which
 sequence of commands would the engineer use to accomplish this goal?
 
-config t
-interface range fa0/1 - 09
-switcport mode access
-switchport access vlan 50
-switchport voice vlan 40
-exit
-copy run start
+Ans:
+	config t
+	interface range fa0/1 - 09
+	switcport mode access
+	switchport access vlan 50
+	switchport voice vlan 40
+	exit
+	copy run start
 
 Answer explanation: To have segmentation for voice and data traffic on the same access
 port, while preventing access to other segments of the network on the same switch, the port
@@ -1883,39 +1795,21 @@ must be configured as an access port and must also have a voice VLAN configured 
 configuration allows the engineer to accomplish this for a range of switchports intended to be
 used for an engineering department’s resources.
 ---------
-Two routers, R1 and R2, are connected to each other directly. You are trying to connect to
-R2 from R1 remotely using TELNET, but the connection is failing. A portion of the config
-on R2 is given. Assuming everything else has been configured correctly, what might be
-preventing the connection from working? Portion of config on R2:
-line con 0 exec-timeout 0 0 privilege level 15 logging synchrono
-line vty 0 4 exec-timeout 5 0
-password cisco login local transport input ssh end
+Which of the folliwing is used to **create a new switched virtual interface (SVI) and then place a series of ports in the virtual local area network (VLAN)** associated with it?
 
-Answer explanation: If you want to prevent non-SSH connections, add the transport input
-ssh command under the lines to limit the router to SSH connections only. Straight (non-ssh)
-Telnets are refused. As this is a remote connection, it will use the VTY lines, which have been
-configured to use SSH.
----------
+**spanning-tree vlan 1 root priority 36864**
 
-Which of the folliwing is used to create a new switched virtual interface (SVI) and then
-place a series of ports in the virtual local area network (VLAN) associated with it?
-
-spanning-tree vlan 1 root priority 36864
 Answer explanation: Spanning tree root priorities increase in increments of 4096 and must
-fall in the range of 0 to 61440. 36864 is an increment of 4096.
-
-
+fall in the range of 0 to 61440. **36864 is an increment of 4096.**
 ---------
-Which of the following could an engineer use to influence the OSPF metric value for a
-route?
+Which of the following could an engineer use to **influence the OSPF metric value for a route?**
 
-The interface bandwidth subcommand
+**The interface bandwidth subcommand**
+
 Answer explanation: Adjusting the bandwidth value of an interface using the bandwidth
 subcommand does not actually affect the available bandwidth the router sends data over an
 interface. It will affect the metric value of OSPF for a given route as bandwidth is used to
 directly determine the metric value.
-
-
 ---------
 A user is trying to send a POST call to URI
 https://sandboxdnac.cisco.com/dna/system/api/v1/auth/token. In
@@ -1930,47 +1824,37 @@ error. What is causing the error? Error:
 </body>
 </html>
 
-The username or password is incorrect
-Answer explanation: 401 means "unauthorized"; the user does not have valid authentication
+**The username or password is incorrect**
+
+Answer explanation: **401 means "unauthorized"**; the user does not have valid authentication
 credentials for the target resource.
-
-
 ---------
-Which command will create a static default route for packets that do not match a more
-specific route?
+Which command will create a **static default route for packets that do not match a more specific route?**
 
-Ip route 0.0.0.0 0.0.0.0 GigabitEthernet 0/0/0
-Answer explanation: A static route configured with all zeros and given an interface signifies a
-default route for all traffic that does not match a more specific route in the layer 3 devices
-routing table. In this case, all traffic that does not match a more specific route will be sent to
+**ip route 0.0.0.0 0.0.0.0 GigabitEthernet 0/0/0**
+
+Answer explanation: A **static route configured with all zeros and given an interface signifies a default route for all traffic that does not match a more specific route in the layer 3 devices routing table.** In this case, all traffic that does not match a more specific route will be sent to
 interface Gigabit Ethernet 0/0/0.
 
 
 ---------
-A network technician is addressing a problem where a Windows desktop computer cannot
-access a network file share due to a firewall. The technician wants to verify that the
-desktop's IP address has been permitted. Which command should the technician execute
-on the desktop to check the current IP address?
+A network technician is addressing a problem where a **Windows desktop computer cannot access a network file share due to a firewall.** The technician wants to verify that the desktop's IP address has been permitted. Which command should the technician execute on the desktop to check the current IP address?
 
-ipconfig
-Answer explanation: ipconfig will show a summary of interfaces on a Windows system,
+**ipconfig**
+
+Answer explanation: **ipconfig** will show a summary of interfaces on a Windows system,
 including assigned IPv4 and IPv6 addresses.
-
-
 ---------
 An engineer is troubleshooting an employee's laptop issue and wants to ensure the switch
-is correctly forwarding traffic. The engineer does not see an entry for the laptop's MAC
-address in the CAM table, even though the laptop was connected to the network just a
-day ago. Which switching concept explains this absence?
+is correctly forwarding traffic. **The engineer does not see an entry for the laptop's MAC address in the CAM table, even though the laptop was connected to the network just a day ago. Which switching concept explains this absence?**
 
-Aging
-Answer explanation: Aging describes the function of removing old entries from the CAM
-table after the configured amount of time has elapsed.
+**Aging**
 
-
+Answer explanation: **Aging describes the function of removing old entries from the CAM table after the configured amount of time has elapsed.**
 ---------
-The following is a part of a wireshark trace, which is related to IPSec. Which phase of the
+The following is a part of a wireshark trace, **which is related to IPSec**. Which phase of the
 IPSec process does this trace match? Wireshark trace:
+
 Internet Security Association and Key Management Protocol
 Initiator SPI: a00b8ef0902bb8ec
 Responder SPI: e47a591fd057587f
@@ -1982,27 +1866,22 @@ Message ID: 0x635a2e6a
 Length: 60
 Encrypted Data (32 bytes)
 
-IKE Phase 2
+**IKE Phase 2**
 Answer explanation: This is the correct answer as the Exchange type is Quick Mode (32).
-
-
 ---------
-An engineer is troubleshooting an issue where the native virtual local area network (VLAN)
-on a trunk port is dropping traffic. What command can they use on both switches to
+An engineer is **troubleshooting an issue where the native virtual local area network (VLAN)on a trunk port is dropping traffic**. What command can they use on both switches to
 confirm the native VLAN for each switch?
 
-show interfaces trunk
+**show interfaces trunk**
+
 Answer explanation: This command gives several outputs about the trunking status of a
 switch. This includes the native VLAN for each trunk displayed. By running this command on
 each switch the engineer can see the native VLAN for each side of the trunk.
-
-
 ---------
-Ansible is being used in a network for configuration and management automation. Which
-of the following are true statements regarding Ansible? Select all that apply.
+Ansible is being used in a network for configuration and management automation. **Which of the following are true statements regarding Ansible?** Select all that apply.
 
-Ansible utilizes the concept of playbooks to execute the configuration
-Ansible uses SSH for remote device communication
+* **Ansible utilizes the concept of playbooks to execute the configuration**
+* **Ansible uses SSH for remote device communication**
 
 Answer explanation: Ansible Playbooks are lists of tasks that automatically execute for a
 specified inventory or group of hosts. One or more Ansible tasks can be combined to make a
@@ -2012,130 +1891,110 @@ order in which they are written.
 Answer explanation: SSH is a critical piece in any Ansible-managed and controlled
 infrastructure because Ansible relies on it to perform actions on the hosts.
 ---------
-A network engineer is designing a wired network to connect all servers and network
-equipment in a data center. Which topology would she use to minimize network latency
+A network engineer is designing a **wired network to connect all servers and network equipment in a data center.** Which topology would she use to minimize network latency
 and network distance between hosts?
 
-Spine-leaf
+**Spine-leaf**
 
-Answer explanation: A spine-leaf topology connects all hosts to Top of Rack (ToR) switches
-which then connect to core switches. This design minimizes network latency and network
+Answer explanation: A **spine-leaf topology connects all hosts to Top of Rack (ToR) switches which then connect to core switches**. This design minimizes network latency and network
 distance as all hosts are two hops away from each other.
 ---------
-When configuring a WLAN with WPA2 PSK in the Cisco Wireless LAN Controller GUI,
-which TWO formats are available to select? Select all that apply.
+When configuring a **WLAN with WPA2 PSK in the Cisco Wireless LAN Controller GUI, which TWO formats are available to select? Select all that apply.**
 
-HEX
-ASCII
-
+* **HEX**
+* **ASCII**
 
 Answer explanation: The key format options available are ASCII and HEX.
 Answer explanation: The key format options available are ASCII and HEX.
 ---------
-The output of the command show ip route is shown below. What does the C code
+The output of the command show ip route is shown below. What does the **C** code
 signify in the first directly connected line?
+
 Gateway of last resort is not set
 192.168.1.0/24 is variably subnetted, 2 subnets, 2 masks
-C 192.168.1.0/24 is directly connected, GigabitEthernet0/0/0
+**C 192.168.1.0/24 is directly connected, GigabitEthernet0/0/0**
 L 192.168.1.11/32 is directly connected, GigabitEthernet0/0/0
 S 192.168.2.0/24 is directly connected, GigabitEthernet0/0/0
 
-The route is connected to the router
+**The route is connected to the router**
+
 Answer explanation: A connected route is one that has a corresponding layer 3 network
 device directly connected to the router that the show ip route command was issued on.
 directly connected and C codes are generated for subnets that are directly
 connected to the router itself.
-
-
 ---------
 If a route is configured using the following series of commands, where will the layer 3
-device send a packet destined to the subnet 10.10.0.0 255.255.0.0 as its next
-hop? Commands:
-interface loopback 1
-ip address 10.10.2.3 255.255.0.0
-exit
-interface gig0/0/0
-ip address 10.10.2.11 255.255.0.0
-exit
-ip route 10.10.0.0 255.255.0.0 10.10.2.12
-ip route 10.10.2.3 255.255.255.255 10.10.2.2
-end
-copy run start
+device send a packet destined to the subnet 10.10.0.0 255.255.0.0 as its next hop? Commands:
 
-To the interface associated with the address 10.10.2.12 as its next hop
-Answer explanation: The layer 3 device is configured to use 10.10.2.12 as its next hop and
-would route the packets for 10.10.0.0/16 through the interface associated with that in its
+	interface loopback 1
+	ip address 10.10.2.3 255.255.0.0
+	exit
+	interface gig0/0/0
+	ip address 10.10.2.11 255.255.0.0
+	exit
+	ip route 10.10.0.0 255.255.0.0 10.10.2.12
+	ip route 10.10.2.3 255.255.255.255 10.10.2.2
+	end
+	copy run start
+
+**To the interface associated with the address 10.10.2.12 as its next hop**
+
+Answer explanation: The **layer 3 device is configured to use 10.10.2.12 as its next hop and would route the packets for 10.10.0.0/16** through the interface associated with that in its
 routing table.
-
-
 ---------
-An engineer has been asked to disable Cisco Discovery Protocol (CDP) and Link Layer
-Discover Protocol (LLDP) on a port that links to a partner switch. The switch should still be
-able to use CDP and LLDP on other ports to ensure power delivery and device discovery.
+An engineer has been asked to **disable Cisco Discovery Protocol (CDP) and Link Layer Discover Protocol (LLDP)** on a port that links to a partner switch. **The switch should still be able to use CDP and LLDP on other ports to ensure power delivery and device discovery.**
 Which commands should the engineer run to accomplish this task?
 
-config t
-interface gig 0/1/0
-no cdp enable
-no lldp transmit
-no lldp receive
-exit
-copy running-config startup-config
+Ans:
+	config t
+	interface gig 0/1/0
+	no cdp enable
+	no lldp transmit
+	no lldp receive
+	exit
+	copy running-config startup-config
+
 Answer explanation: This set of commands will allow for LLDP and CDP to run on a Cisco
 switch on other ports, but will disable it on the interface which is being configured.
-
-
 ---------
-An engineer has been tasked with adding a backup route using IPv6 to reach a service.
+An engineer has been tasked with adding a **backup route using IPv6 to reach a service.**
 What should the engineer do to accomplish this?
 
-Add a static route with an administrative distance greater than that used by the routing
-protocol
-Answer explanation: A static router with a greater administrative distance or floating static
-route would provide an additional way of reaching a network if the routing protocol was
-unaware of it for some reason. This prevents the static route from being the primary way of
+**Add a static route with an administrative distance greater than that used by the routing protocol**
+
+Answer explanation: **A static router with a greater administrative distance or floating static route would provide an additional way of reaching a network if the routing protocol was unaware of it for some reason.** This prevents the static route from being the primary way of
 reaching the subnet as all static routes are given an administrative distance of 1 by default.
-
-
 ---------
 A software engineer is tasked with developing a sophisticated logging and alerting
 application for a custom data center. This application needs to reliably send information.
-Which network protocol should be used in application to guarantee reliable data packet
-delivery and retransmission?
+**Which network protocol should be used in application to guarantee reliable data packet delivery and retransmission?**
 
-Transmission Control Protocol (TCP)
+**Transmission Control Protocol (TCP)**
+
 Answer explanation: TCP is a protocol designed to provide windowing, reliable transmision
 of data, and is connection-oriented.
-
-
 ---------
-Which component of a wireless network infrastructure uses a single cable connected to
-an access port on a switch to provide routing for data and management traffic at layer 3?
+Which **component of a wireless network infrastructure uses a single cable connected to an access port on a switch to provide routing for data and management traffic at layer 3?**
 
-Lightweight Access Point
-Answer explanation: A lightweight access point in local mode uses a layer 3 connection over
-an access port on a switch to connect to a WLC using a CAPWAP tunnel. Traffic is routed
+**Lightweight Access Point**
+
+Answer explanation: **A lightweight access point in local mode uses a layer 3 connection over an access port on a switch to connect to a WLC using a CAPWAP tunnel.** Traffic is routed
 between the two devices to provide data and management connectivity.
 ---------
-An engineer has been given instructions to mitigate a security threat that uses the default
-virtual local area network (VLAN) on Cisco switches. To mitigate the possibility of an
-attack, he has been instructed to remove the functionality of the default VLAN. Which of
-the following does he need to type in the command line of the switch to achieve his
-assignment?
+An engineer has been given **instructions to mitigate a security threat that uses the default virtual local area network (VLAN) on Cisco switches.** To mitigate the possibility of an attack, he has been instructed to remove the functionality of the default VLAN. Which of the following does he need to type in the command line of the switch to achieve his assignment?
 
-config t
-interface vlan 1
-shutdown
-exit
-copy running-config startup-config
-Answer explanation: This shuts down the switched virtual interface (SVI) and makes the
-virtual local area network (VLAN) associated with it unable to pass traffic. VLAN 1 cannot be
-deleted on Cisco switches but putting it in the shutdown state should mitigate the attack.
+	config t
+	interface vlan 1
+	shutdown
+	exit
+	copy running-config startup-config
 
+Answer explanation: This **shuts down the switched virtual interface (SVI) and makes the virtual local area network (VLAN) associated with it unable to pass traffic**. **VLAN 1 cannot be deleted on Cisco switches but putting it in the shutdown state should mitigate the attack.**
 ---------
 Output of the show ip route command is given. According to this output, which of
 the following denotes the next-hop packet destined for a host with the IP address of
 192.168.23.10? Output:
+
 10.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
 C 10.13.24.5/32 is directly connected, Loopback5
 O 10.15.24.0/24 [110/65] via 192.168.6.2, 00:09:42, Serial0/1/0
@@ -2145,27 +2004,25 @@ L 192.168.10.1/32 is directly connected, Loopback1
 O 192.168.13.1/32 [110/2] via 192.168.1.11, 00:25:21, GigabitEthe
 O 192.168.23.0/24 [110/65] via 192.168.6.2, 00:15:28, Serial0/1/0
 
-192.168.6.2
-Answer explanation: A packet sent to the address of 192.168.23.10 will travel over the
-192.168.23.0/24 network given that there is not a more specific route
+**192.168.6.2**
+
+Answer explanation: **A packet sent to the address of 192.168.23.10 will travel over the 192.168.23.0/24 network given that there is not a more specific route**
 
 
 ---------
-Which of the following commands is used to configure a network address translation
-(NAT) router with a one-to-one mapping between a private and public IP address?
+Which of the following commands is used to configure a **network address translation (NAT) router with a one-to-one mapping between a private and public IP address**?
 
-ip nat inside static 192.168.1.12 64.24.76.10
+**ip nat inside static 192.168.1.12 64.24.76.10**
+
 Answer explanation: This will configure a single private IP address to map to a single public
 IP address. This is known as static mapping and is used when there is a need for a single
 device with a private IP to use a public IP provided for address translation purposes
-
-
-
 ---------
-A packet is sent to host 8.12.64.54 and routed through a router with the following
+A packet is sent to host **8.12.64.54** and routed through a router with the following
 output of the show ip route command. What next-hop-address is the packet sent
 to? Output:
-Gateway of last resort is 192.168.12.10 to network 0.0.0.0
+
+**Gateway of last resort is 192.168.12.10 to network 0.0.0.0**
 10.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
 C 10.12.16.4/32 is directly connected, Loopback4
 S 10.15.24.0/24 [89/0] via 192.168.12.10
@@ -2184,63 +2041,362 @@ C 192.168.23.0/24 is directly connected, GigabitEthernet0/0/0
 L 192.168.23.5/32 is directly connected, GigabitEthernet0/0/0
 S* 0.0.0.0/0 [1/0] via 192.168.12.10
 
-192.168.12.10
-Answer explanation: The gateway of last resort is set to send packets via 192.168.12.10. Since
+**192.168.12.10**
+
+Answer explanation: The **gateway of last resort is set to send packets via 192.168.12.10**. Since
 the 8.0.0.0 network has no route in the routing table it will default to the gateway of last
 resort to send the packet on.
-
-
 ---------
 An engineer needs to collect and store all information about device state changes. This
 includes information about any configuration changes that were made to the network
 devices and the administrators who made these changes. What can the engineer do to
 ensure this information is collected and stored properly?
 
-Answer 4 Correct
-Use the logging host command flag with the appropriate logging trap level to ensure
-that the network devices record events that happen remotely
+**Use the logging host command flag with the appropriate logging trap level to ensure that the network devices record events that happen remotely**
+
 Answer explanation: The host syntax configures a syslog server to send configured log traps
 to. This would store the logs generated for the level that is configured to be sent to the syslog
 server. Using traps configured at the correct level, the syslog server will store and allow for
 network administrators to access the logs for troubleshooting and investigations.
-
-
 ---------
-
-A system administrator is configuring IPv6 on the external interface of a web server and
-wants to ensure traffic from the Internet can be routed to the server. Which type of
+A system administrator is configuring **IPv6 on the external interface of a web server and wants to ensure traffic from the Internet can be routed to the server.** Which type of
 Unicast address should be configured on the interface?
 
-Global
+**Global**
 
-Answer explanation: IPv6 global unicast addresses are routable IP addresses similar to
-public IPv4 addresses.
-
+Answer explanation: IPv6 **global unicast addresses are routable IP addresses similar to public IPv4 addresses.**
 ------------
-Which of the following commands creates a network route on a layer 3 device for the
-10.0.10.0/24 subnet?
+Which of the following **commands creates a network route on a layer 3 device for the 10.0.10.0/24 subnet**?
 
-ip route 10.0.10.0 255.255.255.0 10.0.10.5
-Answer explanation: This creates a static route for the network 10.0.10.0/24 that is routed
-via the IP address 10.0.10.5 for its next hop.
-
+* **ip route 10.0.10.0 255.255.255.0 10.0.10.5**
+Answer explanation: This creates a static route for the network 10.0.10.0/24 that is routed via the IP address 10.0.10.5 for its next hop.
 -------------
+What are the **benefits of using network automation**? Select all that apply.
 
-What are the benefits of using network automation? Select all that apply.
-
-Faster changes with more reliable results
-Reduced operational costs
-
+* **Faster changes with more reliable results**
+* **Reduced operational costs**
 
 Answer explanation: Network automation allows administrators to make changes to the
 network quickly and consistently, reducing the risk of human error and ensuring that changes
 are applied consistently across the network. This helps to minimize downtime and improves
 the reliability of the network.
 
-
-
 Answer explanation: Automation enables you to reduce manual, tedious, and repetitive work,
 which in turn lowers operating costs.
-
-
 -------------
+When **troubleshooting a dynamic host configuration protocol (DHCP)**, an engineer sees a message on a wire capture that states “DHCP offer from 192.168.10.24 to 255.255.255.255." If all is working properly, what message should the engineer see next?
+
+**A DHCP request from host 0.0.0.0**
+
+Answer explanation: **DHCP messages happen in an order often referred to by the acronym DORA, which stands for discover, offer, request, acknowledge.**
+---------
+When running the command **switchport trunk encapsulation dot1q** on a newly deployed switch, an engineer receives **the error % Invalid input detected at '^' marker**. What should he do to prevent this error in the future?
+
+**Remove the command switchport trunk encapsulation dot1q from the cutsheet**
+
+Answer explanation: The **error occurs because by default all new Cisco equipment uses 802.1q for the trunking protocol and ISL has been deprecated.** Removing the command would keep the error from occurring again as there is no option to use any other protocol than 802.1q.
+-----------
+A network engineer is designing a wired network for a small company's main campus. Which network topology would she use to minimize the number of core switches needed while still allowing flexibility for expansion?
+
+**Two-tier**
+
+Answer explanation: **The two-tier, or collapsed core, topology reduces costs by combining the core and distribution layers. This allows for a smaller number of core switches, reducing cost, but allowing for expansion over time.**
+------------
+Which of the following are **Layer 2 security options when configuring a WLAN controller?**
+Select all that apply.
+
+* **Static WEP**
+* **802.1x**
+* **WPA+WPA2**
+
+Static WEP
+Answer explanation: WLANs with the same SSID must have unique Layer 2 security policies
+so that clients can make a WLAN selection based on the information advertised in beacon
+and probe responses. The available Layer 2 security policies are Static WEP.
+
+802.1x
+Answer explanation: WLANs with the same SSID must have unique Layer 2 security policies
+so that clients can make a WLAN selection based on the information advertised in beacon
+and probe responses. The available Layer 2 security policies are 802.1X.
+
+WPA+WPA2
+Answer explanation: WLANs with the same SSID must have unique Layer 2 security policies
+so that clients can make a WLAN selection based on the information advertised in beacon
+and probe responses. The available Layer 2 security policies are WPA+WPA2.
+----------
+Which of the **following are network management features performed by both traditional network management software and DNA Center?** Select all that apply.
+
+**Device installation (day 0), configuration (day 1), and monitoring (day n) operations Answer explanation: Both methods provide ways to install, configure, and monitor the device operations.**
+
+**Network device discovery**
+
+Answer explanation: Network device discovery is provided by both management methods.
+----------
+Output of the command show ip route is given. In this output, **which route is the default route?** Output:
+	O 192.168.10.1/32 [110/2] via 192.168.1.10, 00:46:50, GigabitEthe
+	192.168.12.0/24 is variably subnetted, 2 subnets, 2 masks
+	C 192.168.12.0/24 is directly connected, GigabitEthernet0/0/1
+	L 192.168.12.10/32 is directly connected, GigabitEthernet0/0/1
+	192.168.13.0/24 is variably subnetted, 2 subnets, 2 masks
+	C 192.168.13.0/24 is directly connected, Loopback1
+	L 192.168.13.1/32 is directly connected, Loopback1
+	S* 0.0.0.0/0 is directly connected, GigabitEthernet0/0/1
+
+**S* 0.0.0.0/0 is directly connected, GigabitEthernet0/0/1**
+
+Answer explanation: The **S*** in the routing table code signifies a **static route that is the candidate default route for the layer 3 device.** A route of all zeros for the network identifier and subnet mask is the default route for a layer 3 device and any packets that do not match a more specific route are sent to that route. By default, a layer 3 device drops packets if there is no default route created.
+----------
+Output of the show ip route command is given. According to this output, to which IP address will a packet from the **IP address of 192.168.1.12 and a subnet mask of 255.255.255.0 be sent?** 
+Output:
+	Gateway of last resort is not set
+	O 192.168.1.0/24 [110/65] via 192.168.6.1, 02:03:49, Serial0/1/0
+	192.168.6.0/24 is variably subnetted, 2 subnets, 2 masks
+	C 192.168.6.0/30 is directly connected, Serial0/1/0
+	L 192.168.6.2/32 is directly connected, Serial0/1/0
+	192.168.10.0/32 is subnetted, 1 subnets
+	O 192.168.10.1/32 [110/65] via 192.168.6.1, 02:03:49, Serial0/1/0
+	192.168.13.0/32 is subnetted, 1 subnets
+	O 192.168.13.1/32 [110/66] via 192.168.6.1, 02:03:49, Serial0/1/0
+	192.168.15.0/27 is subnetted, 1 subnets
+	O 192.168.15.0/27 [110/66] via 192.168.6.1, 02:03:49, Serial0/1/0
+
+**/24**
+
+Answer explanation: A /24 CIDR notation corresponds with a 255.255.255.0 dotted decimal
+notion subnet mask.
+----------
+Which of the following commands is used to **configure a network address translation (NAT) router with a one-to-one mapping between a private and public IP address?**
+
+**ip nat inside static 192.168.1.12 64.24.76.10**
+
+Answer explanation: This will configure a single private IP address to map to a single public
+IP address. This is known as static mapping and is used when there is a need for a single
+device with a private IP to use a public IP provided for address translation purposes
+----------
+Which **command would correctly configure the IPv6 address on a router interface using the EUI-64** (Extended Unique Identifier) format for the interface ID?
+
+**Router(config-if)# ipv6 address 2001:0db8:19ab:1::/64 eui-64**
+
+Answer explanation: This command correctly sets the IPv6 address using the EUI-64 format on an interface.
+----------
+To explain the **data center network segment she works in, an architect describes each service, the unified communications server (UCS), and how they connect to leafs of the application centric infrastructure (ACI).** Which of the following describes the network components that connect to the leafs?
+
+**Endpoint**
+
+Answer explanation: **Endpoints in an ACI deployment are the physical and virtual devices that connect to the ACI leafs**. **Endpoints can also refer to end user devices like IP phones, laptops, smartphones, and tablets.**
+----------
+A topology is given in which C1 is the router on customer site 1, and C2 is the router on customer site 2. ISP1, ISP2, and ISP3 constitute the Internet. The routing table on ISP2 and the GRE tunnel config on C1 and C2 routers are also given. Based on this information and assuming that all components are correctly configured, **why will the tunnel interface on C1 be unable to ping the tunnel interface on C2?** Topology: <144
+_
+stem
+_
+1 "PC1 is
+connected to router C1 on customer site 1. PC2 is connected to router C2 on customer
+site 2. C1 and C2 can communicate with each other over the internet which in this case
+comprises of ISP1,ISP2 and ISP3. ISP1 IP : 8.8.10.1/24 (G0/0/0) and 8.8.8.2/24 (G0/0/1)
+ISP2 IP : 8.8.8.1/24 (G0/0/0) and 8.8.9.1/24 (G0/0/1) ISP3 IP : 8.8.9.2/24 (G0/0/0) and
+8.8.11.1/24 (G0/0/1) C1 IP : 10.1.3.1/24 (Tun0) and 10.1.1.1/24 (G0/0/0) C2 IP : 10.1.3.2/24
+(Tun0) and 10.1.2.1/24 (G0/0/0)"
+
+> Routing table on ISP2:
+8.0.0.0/8 is variably subnetted, 6 subnets, 2 masks
+8.8.8.0/24 is directly connected, GigabitEthernet0/0/0
+8.8.8.1/32 is directly connected, GigabitEthernet0/0/0
+8.8.9.0/24 is directly connected, GigabitEthernet0/0/1
+8.8.9.1/32 is directly connected, GigabitEthernet0/0/1
+8.8.10.0/24 [20/0] via 8.8.8.2, 00:00:00
+8.8.11.0/24 [20/0] via 8.8.9.2, 00:00:00
+
+ISP2#
+	GRE tunnel config on C1 router:
+	interface Tunnel0
+	ip address 10.1.3.1 255.255.255.0
+	mtu 1476
+	tunnel source GigabitEthernet0/0/1
+	tunnel destination 8.8.11.2
+	
+	GRE tunnel config on C2 router:
+	interface Tunnel0
+	ip address 10.1.3.2 255.255.255.0
+	mtu 1476
+	tunnel source GigabitEthernet0/0/0
+	tunnel destination 8.8.10.2
+
+**Standard IP access list 2 10 permit any**
+
+Answer explanation: Here, we are using inverse mask. The IP address here is irrelevant as we
+are asking it to not match with any octet, so any IP address will be allowed.
+
+----------
+An engineer is trying to determine **why a serial interface is not electing a designated router (DR) and backup designated router (BDR) in an OSPF-routed network.** They run the following command and get the following output. Why does the link not have a DR and BDR? Command and output:
+
+\	**Router#sh ip ospf interface serial 0/1/0**
+	Serial0/1/0 is up, line protocol is up
+	Internet address is 192.168.6.2/30, Area 0
+\	Process ID 1, Router ID 1.1.1.1, **Network Type POINT-TO-POINT**, Cos
+\	Transmit Delay is 1 sec, State **POINT-TO-POINT,**
+	Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmi
+	Hello due in 00:00:03
+	Index 1/1, flood queue length 0
+	Next 0x0(0)/0x0(0)
+	Last flood scan length is 1, maximum is 1
+	Last flood scan time is 0 msec, maximum is 0 msec
+	Neighbor Count is 1, Adjacent neighbor count is 1
+	Adjacent with neighbor 192.168.10.1
+	Suppress hello for 0 neighbor(s)
+
+**This interface is a point-to-point link**
+
+Answer explanation: The link is in a point-to-point state, which tells OSPF to stop sending
+link state advertisement broadcast frames and to disable the DR/BDR election process,
+which shortens the convergence time between the two routers.
+----------
+A network engineer is **documenting information about all the areas of a small OSPF network, including the process ID, area, and authentication type.** Which of the following commands can she use on each router to gather the required information?
+
+**show ip ospf**
+
+Answer explanation: The process ID, area, and authentication type are all shown under the
+show ip ospf command. This will allow the engineer to gather the required information
+from each router.
+----------
+What happens **when a packet arrives at a router but has multiple routes that it can use to arrive at its destination?**
+
+**The route with the longest prefix is chosen**
+
+Answer explanation: Routers use the longest match or most specific route to determine
+where a packet with overlapping routes is sent. Generally this infers a host route and a
+network route exist that overlap.
+----------
+An engineer has received complaints of **slow connectivity or constant disconnect from the third floor of the main campus building he works in**. An active heatmap of the floor shows that the area where this is occurring has no coverage. What action can the engineer perform to restore connectivity for the employees?
+
+**Deploy a new or replace the existing access point (AP) in that location**
+
+Answer explanation: Access points contain one or more antennas and provide wireless connectivity to devices. Adding an access point is an effective way to increase, or improve, the coverage of a wireless network.
+----------
+Which **spanning tree ports state is a switchport in, if it is a root port and passing traffic?**
+
+**Forwarding**
+
+Answer explanation: The forwarding state allows traffic to pass for a port and is the state
+that forwards frames over a root or designated port. If a BPDU hello is no longer received on a
+root port after, the MaxAge time has passed, then it is placed in a blocking state and spanning
+tree convergence process begins.
+----------
+An engineer has been asked to **enable Cisco Discovery Protocol (CDP) globally** on a switch and **disable it from running on all but those ports dedicated to phones and access points**. Which commands should the engineer run to accomplish this task?
+
+Answer:
+	config t
+	cdp run
+	interface range gig 0/1/0 - 14
+	no cdp enable
+	exit
+	copy running-config startup-config
+
+Answer explanation: This would achieve the required results for the engineer. **The cdp run command will enable cdp globally and then the interface range command will allow them to apply the no cdp enable command to all the interfaces that they do not want cdp to run on.**
+----------
+An engineer has been assigned a task to **verify that a port-channel has been configured and is up.** Entering the following commands returns the following output, which shows the port-channel on both sides of the group is in the down state. **What is the issue causing the port-channel not to form**? Commands and output:
+
+	Switch1#sh etherchannel summary
+	----omitted for brevity----
+	Number of channel-groups in use: 1
+	Number of aggregators: 1
+	Group Port-channel Protocol Ports
+	------+-------------+-----------+--------------------------------
+	1 Po1(SD) PAgP Fa0/1(I) Fa0/2(I) Fa0
+	-----------------------------
+
+	Switch2#sh etherchannel summary
+	----omitted for brevity----
+	Number of channel-groups in use: 1
+	Number of aggregators: 1
+	Group Port-channel Protocol Ports
+	------+-------------+-----------+--------------------------------
+	1 Po1(SD) LACP Fa0/1(I) Fa0/2(I)
+
+**The protocols used to form the port-channel are different**
+
+Answer explanation: In the output on **switch1, it states that PAgP** is the protocol used, **while LACP is used on switch2**. Using the same protocol on both should allow the port-channel to form.
+----------
+A network engineer is monitoring switch traffic in the morning as hybrid workers are plugging in their laptops to the network. The **engineer notices an initial burst of traffic that does not repeat**. Which switching function is likely responsible for this initial burst?
+
+**Flooding**
+
+Answer explanation: **Flooding means forwarding a frame to all active interfaces if the destination is not found in the switch's CAM table.** This occurs when devices are first plugged into the network, or when they come back onto the network after having been disconnected.
+----------
+Router 1 is already configured properly, and the two routers being connected are part of **area zero which uses the 10.10.10.0/24 network.** Which sequence of commands would result in a pair of routers that are directly connected exchanging OSPF routing information?
+
+Answer:
+	config t
+	interface loopback 1
+	ip address 1.1.1.1
+	no shutdown
+	exit
+	router ospf 1
+	network 10.10.10.0 255.255.255.0 area 0
+	end
+	copy run start
+
+Answer explanation: The configuration will create a network with an area associated with it, **a loopback interface with an IP address that is in an up-up state to stand in place of a router ID, and a process ID for OSPF.** The other router would have similar information and share the same area of one of its configured networks.
+----------
+**An engineer has received a new wireless LAN controller (WLC) and needs to configure some basic connectivity on it so that its management options are available over the network**. Which type of connection will the engineer use to connect to the WLC from their laptop?
+
+**Console**
+
+Answer explanation: A **console connection allows an engineer to use a console cable to directly connect their laptop to a device, in this case the WLC,** to make configurations on it out-of-band of the network.
+----------
+An engineer needs to ensure that the **clock for a group of routers is configured to automatically update to daylight savings time.** Which sequence of commands should she use to accomplish this?
+
+* **clock timezone EST -5**
+* **clock summer-time EDT recurring**
+
+Answer explanation: **This will set the time zone for the clocks on the routers to US Eastern Standard Time. It will also set the router to automatically use the default of the US daylight savings time rules to adjust to US Eastern Daylight Time.**
+----------
+Two routers, R1 and R2, are connected to each other directly. **You are trying to connect to R2 from R1 remotely using TELNET,** but the connection is failing. A portion of the config on R2 is given. Assuming everything else has been configured correctly, what might be preventing the connection from working? Portion of config on R2:
+	line con 0 exec-timeout 0 0 privilege level 15 logging synchrono
+	line vty 0 4 exec-timeout 5 0
+	password cisco login local transport input ssh end
+
+**Vty lines have been configured to use ssh protocol and not telnet**
+
+Answer explanation: If you want to prevent non-SSH connections, add the transport input ssh command under the lines to limit the router to SSH connections only. Straight (non-ssh) Telnets are refused. As this is a remote connection, it will use the VTY lines, which have been configured to use SSH.
+----------
+There is a requirement to secure the given topology based on the given traffic flows.
+**Which of the following ACL show outputs contains the correct configuration?**
+Topology:
+
+PC1 and PC2 connected to Switch 0 which in turn is connected to Router1. HTTP server 1 and HTTP
+server 2 connect to Router1 via Switch1. Then , Router1 is also connected to 3 web servers and a PC over
+the internet PC1 IP : 10.1.2.101 PC2 IP : 10.1.2.102 HTTP server 1 IP : 10.1.1.100 HTTP server 2 IP : 10.1.1.101
+Traffic flows:
+	PC1 IP: 10.1.2.101
+	PC2 IP: 10.1.2.102
+	HTTP server 1 IP: 10.1.1.100
+	HTTP server 2 IP: 10.1.1.101
+	Use access list number 100
+	Inside PC1 can only access the HTTP server 1 using HTTP on subnet 10.1.1.0/24
+	Inside PC2 can only access the HTTP server 2 using HTTPS on subnet 10.1.1.0/24
+
+**Router1 #sh access-lists Extended IP access list 100 10 permit tcp host 10.1.2.101 host 10.1.1.100 eq www 20 permit tcp host 10.1.2.102 host 10.1.1.101 eq 443**
+
+Answer explanation: Here, 10.1.2.101 will reach 10.1.1.100 over port 80/www , and 10.1.2.102 will reach 10.1.1.101 over port 443, which satisfies the requirement.
+----------
+What command is used to **secure a remote terminal** so that a passphrase must be entered to gain access to the configuration mode of a router or switch after the remote user has successfully logged on using secure shell (SSH)?
+
+**enable secret Cisco123**
+Answer explanation: This command is used to secure the virtual terminal (VTY) lines so that
+a remote administrator needs to enter a second device passphrase once they access a
+network device. This command uses plain text to store the phrase, but can be encrypted by
+using password encryption.
+----------
+What **happens to a packet when a router has multiple routes with the same administrative distance for the destination that the packet is sent to?**
+
+**The router will choose the route with the lowest metric**
+Answer explanation: The **lowest metric like the lowest AD** is the next option a router uses to determine the best path to send a packet.
+----------
+
+----------
+
+----------
+
+----------
+
+----------
