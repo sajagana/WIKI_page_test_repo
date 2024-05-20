@@ -39,7 +39,7 @@ SW# write memory
 Wait for some time to check the startum value of the R2.
 
 
-After configuring R2 and SW to synchronize their clocks directly to R1, what are the stratum levels of R2 and SW?
+# Q1: After configuring R2 and SW to synchronize their clocks directly to R1, what are the stratum levels of R2 and SW?
 
 Ans: 
    R2# show ntp status
@@ -47,20 +47,21 @@ Ans:
 
    The correct answer is The R2 stratum level is 2 and the SW stratum level is 2. Because both R2 and SW are synchronizing time directly with R1, they both have the same stratum value. **Because R1 has a stratum value of 1, R2 and SW increment their values by one (to 2).**
 
-What is the maximum stratum level that you can configure on a Cisco device?
+# Q2: What is the maximum stratum level that you can configure on a Cisco device?
 
 Ans:
    R2# conf t
    R2# ntp master ? it will display the allowed startum value.
-   15
+   
+   The correct answer is **15**
 
-On the SW switch, display the established NTP associations. What is the value displayed in the address column?
+# Q3: On the SW switch, display the established NTP associations. What is the value displayed in the address column?
 
 Ans:
-   SW# show ntp associations
+   **SW# show ntp associations**
 
    The correct answer is __*~198.51.100.2__. An asterisk (*) next to a configured peer represents that the device is synced to this peer and using it as the master clock. A tilde (~) next to a configured peer represents that this is a configured master server.
---
+
 ------------- 1 ends -----------
 
 ------------- 2 -----------
@@ -77,8 +78,7 @@ Configure VLANs and trunking.
 
 Do not change the default configuration on the Ethernet0/3 interface on SW2.
 
-When configuring devices and verifying device configurations, use the information provided in the documentation, that is in the topology figure and Job Aids.
-
+# Q1: When configuring devices and verifying device configurations, use the information provided in the documentation, that is in the topology figure and Job Aids.
 
 Configuration Steps:
 
@@ -97,21 +97,15 @@ SW1# int eth0/1
 SW1# switchport mode trunk
 SW1# switchport trunk allowed vlan 65
 
-
-
-
 VLAN - 65
 PC1 - Eth0/0 - 192.168.65.11 - SW1 eth0/1
 
 PC2 - Eth0/0 - 192.168.65.12 - SW2 eth0/1
 
-
-
 SW1# conf t
 SW1# int eth0/1
 SW1# switchport mode trunk
 SW1# switchport trunk allowed vlan 80
-
 
 VLAN - 80
 SV1 - Eth0/0 - 192.168.65.21 - SW1 eth0/2
@@ -122,36 +116,32 @@ SV2 - Eth0/0 - 192.168.65.22 - SW2 eth0/2
 then finally try to ping each others.
 
 
-When you examine the MAC address table on SW2, which VLAN does MAC aa-aa-aa-aa-22-22 belong to?
+# Q1: When you examine the MAC address table on SW2, which VLAN does MAC aa-aa-aa-aa-22-22 belong to?
 
 Answer
-The correct answer is 65. The MAC address aa-aa-aa-aa-22-22 belongs to PC2 and as such is a member of VLAN 65. VLAN 80 contains both server nodes. VLAN 1001 is not present in this lab topology and VLAN 1005 is a reserved FDDI/Token Ring VLAN.
+The correct answer is **65**. The MAC address aa-aa-aa-aa-22-22 belongs to PC2 and as such is a member of VLAN 65. VLAN 80 contains both server nodes. VLAN 1001 is not present in this lab topology and VLAN 1005 is a reserved FDDI/Token Ring VLAN.
 
 
-On SW2, verify the administrative and operational switching modes on interface Ethernet0/3. Which statement correctly describes the administrative mode and operational mode values?
+# Q2: On SW2, verify the administrative and operational switching modes on interface Ethernet0/3. Which statement correctly describes the administrative mode and operational mode values?
 
 **show interface eth0/3 switchport**
 
-show 
 Answer:
-   The correct answer is Administrative mode is dynamic-desirable and operational mode is trunk. Administrative mode displays what you have configured on the interface. Operational mode displays the actual status of the interface. 
-
+   The correct answer is **Administrative mode is dynamic-desirable and operational mode is trunk**. Administrative mode displays what you have configured on the interface. Operational mode displays the actual status of the interface. 
    **When manually configuring access or trunking, administrative and operational mode have identical values. When you configure Dynamic Trunking Protocol (DTP) to negotiate switching status, administrative and operational mode differ. Cisco recommends disabling DTP on a switch."**
 
-Examine the topology and the configuration. On PC2, when you use the ping command to check connectivity to Server 1, what is the order of the devices that packets traverse?
+# Q3: Examine the topology and the configuration. On PC2, when you use the ping command to check connectivity to Server 1, what is the order of the devices that packets traverse?
 
    Ans: **PC2 > SW2 > SW1 > R1 > SW1 > Server1**
 
-
-Which interfaces on SW1 are trunk interfaces?
+# Q4: Which interfaces on SW1 are trunk interfaces?
 
 Answer
-The correct answer is E0/0 and E0/3. SW1 has four interfaces. The interfaces E0/0 and E0/3 are connected to a router and another switch, respectively. As such, those two interfaces are set up as trunk interfaces in order to carry multiple VLANs. The interfaces E0/1 and E0/2 are connected to end nodes, and are configured as access interfaces.
+The correct answer is **E0/0 and E0/3**. SW1 has four interfaces. The interfaces E0/0 and E0/3 are connected to a router and another switch, respectively. As such, those two interfaces are set up as trunk interfaces in order to carry multiple VLANs. The interfaces E0/1 and E0/2 are connected to end nodes, and are configured as access interfaces.
 
 ------------- 2 ends -----------
 
 ------------- 3 begins -----------
-
 
 In this task you will configure link aggregation and examine its effects on STP topology. The network devices are pre-configured with basic connectivity parameters and Rapid Per VLAN Spanning Tree Protocol Plus (Rapid PVSTP+) to prevent traffic loops. The topology consists of three segments: workstations, servers, and connecting segment. All devices have their basic configurations in place, including hostnames and IP addresses.
 
@@ -319,8 +309,6 @@ SWx(config-if)# spanning-tree guard root
 Replace `[interface-id]` with the actual interface identifier.
 
 By following these steps, SW3 will be configured as the root switch for VLAN 20, and SW1 will be configured as the root switch for VLAN 10. Remember that STP changes can take effect over several seconds or minutes due to STP timers, so allow sufficient time for the STP topology to converge.
-
-
 
 ------------- 3 ends -----------
 
@@ -505,6 +493,8 @@ Ethernet0/3 is down, line protocol is down (**err-disabled**)
 
 # Qus3: What is the Security Violation counter for the Ethernet 0/3 interface on SW1?
 
+**The correct answer is 1.**
+
 SW1#show port-security interface eth0/3
 Port Security              : Enabled
 Port Status                : Secure-shutdown
@@ -520,6 +510,9 @@ Last Source Address:Vlan   : aabb.cc00.0a00:1
 **Security Violation Count**  : **1**
 
 # Qus4: What is the port-security status of the Ethernet 0/1 interface on SW1?
+
+The correct answer is **Secure-up**.
+
 After configuring the port security on SW1 on the port that is connected to PC1, what is the port-security status of the Ethernet 0/1 interface. The interface status will be **Secure-up**.
 
 # Qus5: Verify the line protocol status of the Ethernet0/3 port on SW1. How would you correct the issue?
@@ -551,7 +544,7 @@ Connect SW2 and check the cdp status.
    % CDP is not enabled
    SW2#
 
-**because CDP is globally disabled on SW2**
+Ans: **because CDP is globally disabled on SW2**
 
 When the CDP is enabled on a device:
    SW1#show cdp
@@ -563,7 +556,7 @@ When the CDP is enabled on a device:
 
 # Qus2: What is the IP address of the R2 interface connecting to R1?
 
-   The correct answer is 192.168.3.2. By issuing the show cdp neighbors detail command on R1, you are able to get the IPv4 address of R2’s interface connecting to R1.
+   The correct answer is **192.168.3.2**. By issuing the show cdp neighbors detail command on R1, you are able to get the IPv4 address of R2’s interface connecting to R1.
 
 **R1#show cdp neighbors detail**
 **% CDP is not enabled**
@@ -653,9 +646,6 @@ Holdtime : 156 sec
 
 ------------- 7 begins -----------
 
-
-
-
 You have been given the task of administering a network that is running dynamic routing protocols, in this case the OSPFv2 routing protocol. The previous administrator has already configured OSPF on R4, as well as the parameters for the election of the designated router and the backup designated router in the multi-access segment.
 
 In order to complete the routing configuration in the network, perform the following tasks:
@@ -690,8 +680,6 @@ Correct Ans: **The OSPF area is configured incorrectly on R4.**
 ------------- 7 ends -----------
 
 ------------- 8 begins -----------
-
-
 
 Consult the topology diagram and address table to understand the network connectivity and addressing. Not all systems are initially configured with IPv6 addresses. OSPFv3 is configured between routers.
 
@@ -746,6 +734,7 @@ interface Ethernet0/0
 ------------- 8 ends -----------
 
 ------------- 9 begins -----------
+
 Devices in the IT department are pre-configured.
 
 Router R2 is a DHCP server and provides IP addresses to multiple network segments in Department A.
@@ -770,50 +759,134 @@ The correct answer is 10.10.1.53. In real networks, **the gateway address is usu
 
 # Qus2: What is the lease time for the assigned IP address on PC2?
 
-
 * 1 second
-
-
 * **1 minute**
-
-
 * 1 hour
-
-
 * 1 day
-
-
 
 # Qus3: What is the IPv4 address of the DNS server assigned by DHCP to PC1?
 
-
 * 10.10.1.1
-
-
 * 198.51.100.1
-
-
 * 203.0.113.1
-
-
 * **203.0.113.30**
 
 ------------- 9 ends -----------
 
+------------- 10 begins -----------
+In this task you will use variable length subnet masking (VLSM) to determine the addressing scheme for the network represented by the topology.
 
+The topology consists of four segments: segment A, segment B, segment C, and segment D.
 
+You are assigned the 172.16.31.0/24 address space.
 
+The first subnet from this address space is already determined using VLSM. The first subnet is 172.16.31.0/29 and is assigned to segment A.
+
+All addressing in segment A is pre-configured on all devices. Examine the configurations of devices in segment A.
+
+There are two addressing mistakes in the pre-configuration. Find the two mistakes, note them down, and correct them. If correcting requires you to change IPv4 addressing, use the first available IPv4 address.
 
 Perform the following tasks:
 
+From the assigned address space, allocate the second available VLSM segment to segment B so that it can accommodate five end devices. Note that the first available segment was already used for segment A (172.16.31.0/29).
+
+On R2, configure the Ethernet0/1 interface with the last available IPv4 address in the chosen segment.
+
+On PC1, configure the Ethernet0/0 interface with the first available IPv4 address in the chosen segment.
+
+On PC1, configure the default gateway.
+
+Continue with VLSM subnetting and allocate the next available VLSM segment to segment C. Choose the subnet size so that it exactly meets addressing requirements as represented by the topology.
+
+On R1, configure Ethernet0/2 interface with the first available IPv4 address from the chosen VLSM segment.
+
+On R4, configure Ethernet0/0 interface on R4 with the last available IPv4 address from the chosen VLSM segment.
 
 
+# Q1: Examine the configurations of the devices in segment A. Which two address configuration mistakes were made? (Choose two.)
+
+* **The IPv4 address was incorrect on R1.**
+* The IPv4 address was incorrect on R2.
+* The IPv4 address was incorrect on R3.
+* The subnet mask was incorrect on R1.
+* **The subnet mask was incorrect on R3.**
+
+# Q2: On PC1, which address did you configure as the default gateway?
+
+* 172.16.31.7
+* 172.16.31.8
+* **172.16.31.14**
+* 172.16.31.15
+
+# Q3: What is the broadcast address of segment B?
+
+* 172.16.31.7
+* 172.16.31.8
+* **172.16.31.15**
+* 172.16.31.16
+
+# Q4: How many end devices can be addressed in segment D?
+
+* 6
+* 14
+* **30**
+* 62
+
+# Q5: On R4, issue the ping command sourced from the address allocated to the interface E0/0 and test connectivity to the internet test address. What is the resulting output?
 
 
-------------- 4 begins -----------
+* Ping is not successful because an ACL is blocking traffic.
+* Ping is not successful because IP routing is not enabled on R4.
+* Ping is partially successful (30%).
+* **Ping is successful (80-100%).**
 
+------------- 10 ends -----------
+
+------------- 11 begins -----------
+In this task you will configure link aggregation and examine its effects on STP topology. The network devices are pre-configured with basic connectivity parameters and Rapid Per VLAN Spanning Tree Protocol Plus (Rapid PVSTP+) to prevent traffic loops. The topology consists of three segments: workstations, servers, and connecting segment. All devices have their basic configurations in place, including hostnames and IP addresses.
+
+Carefully examine the device configurations. There are some mistakes in the interface configuration on network devices. First, find the mistakes and correct them. Then, perform the following configuration tasks, and answer the questions.
+
+Create EtherChannel links between the switches using the Link Aggregation Control Protocol (LACP).
+
+Configure the switches so SW3 is the root switch for VLAN 20 and SW1 is the root switch for VLAN 10.
+
+Ensure there is full connectivity within each VLAN (that is, you can successfully issue the ping command between PC1 and PC2, between SRV1 and SRV2, and between switches).
+
+# Q1: On SW4, which port is the STP root port for VLAN 20?
+
+* Eth1/0
+* Po14
+* Po24
+* **Po34**
+
+# Q2: On SW2, when you see the summary information for aggregated link. What is the status code or flags of the port channel Po23?
+
+* down (D)
+* **Layer2 - In use (SU)**
+* stand-alone (I)
+* suspended (s)
+
+# Q3: Issue the ping command from PC1 to PC2. What is the path that packets traverse?
+
+* **SW1 > SW3 > SW2**
+* SW1 > SW3 > SW4 > SW2
+* SW1 > SW4 > SW2
+* SW1 > SW4 > SW3 > SW2
+
+# Q4: Refer to the exhibit. The figure represents the topology resulting from STP calculations after configuring the Layer 2 EtherChannel. Which VLAN does the topology in the exhibit represent?
+
+* VLAN 1
+* VLAN 10
+* **VLAN 20**
+* VLAN 99
+
+------------- 11 ends -----------
+
+------------- 12 begins -----------
 The lab is prepared with the devices that are represented in the topology diagram. All devices have their basic configurations in place, including hostnames and IP addresses. Static routing is configured on all devices.
 
+Perform the following tasks:
 
 On R1, configure port forwarding so that Telnet connections to SRV1 are possible from outside networks. For the public IPv4 address, use the IPv4 address of the Ethernet 0/3 interface. For the publicly accessible port, use 2323.
 
@@ -821,45 +894,113 @@ Ensure that traffic from the 10.10.2.0/24 subnet is dynamically translated, usin
 
 Ensure that traffic from the 10.10.1.0/24 subnet is translated to the IPv4 address of the Ethernet 0/3 interface on R1.
 
+Note
+The devices in the topology may take 2 to 3 minutes to boot up and become accessible. Also, there will be significant response to the first interface NAT command because R1 will need to initiate an internal NVI to support NAT.
 
-------------- 4 ends -----------
+# Q1: Which command should you use to access SRV1 from SRV2 using Telnet?
 
-------------- 5 begins -----------
+* telnet 10.10.2.20 23
+* telnet 10.10.2.20 2323
+* telnet 198.51.100.2 23
+* **telnet 198.51.100.2 2323**
 
+# Q2: When you use Telnet to connect from SRV2 to the IP 198.51.100.2 and port 2323, what message should you get?
 
-This lab tests your knowledge about basic security configuration of the device management plane. IP addressing on all devices is already configured.
+* % Connection refused by remote host
+* Password required, but none set
+* **Welcome!**
+* Please log in!
 
-The SW2 switch in the topology has already been configured. You will have no direct access to this device, however, you can access it remotely from other devices in the topology.
+# Q3: On PC1, issue the ping command to verify connectivity to SRV2. What is the result that you see?
 
-SW2 already has a local database of user credentials. The Device Access table provides detailed information.
+* .....
+* **U.U.U**
+* !.!.!
+* !!!!!
 
-In the task, you will configure the SW1 switch and the R1 router.
+# Q5: Examine the routing table on R2. What does the subnet 209.165.202.128/27 in the static entry refer to?
 
-On SW1, perform the following tasks:
+* **SRV1 to R1 public segment**
+* R1 to R2 public segment
+* R2 to SRV2 public segment
+* SRV1 to R1 private segment
+------------- 12 ends -----------
 
-Restrict access to the privileged EXEC mode. Configure the protected password CiscoSW1! using the default encryption type. Configure the unprotected password Cisco123! and ensure it is obfuscated in the configuration file (that is, it does not show in the plain text).
+------------- 13 begins -----------
+The devices are connected as pictured in the topology diagram. Currently, all devices have IPv4 addresses configured. SW1 and SW2 also have VLAN configurations. However, there are configuration issues. You should verify the existing configurations of SW1 and SW2.
 
-Define two users in the local database, using the following credentials:
+When configuring the device or verifying device configurations, use the documentation provided in the Job Aids.
 
-username => password => privilege level
-TECH => CiscoTech1! => default
-ADMIN => CiscoAdm1! => 15
+Perform the following tasks:
 
+Verify the configurations on SW1 and SW2 and answer questions 1, 2, and 3.
 
-On R1, perform the following tasks:
+Correct the deliberately introduced configuration mistakes on switches SW1 and SW2 using the answers to questions 1, 2, and 3 as guidelines. After modifying the configurations, answer question 4.
 
-Restrict access to the privileged EXEC mode. Configure the protected password CiscoR1! using the default encryption type.
+On SW3, configure what is necessary to ensure full connectivity within VLAN 65 and VLAN 80. In other words, make sure that there is connectivity between the PC1 and PC2, and between Server1 and Server2. Answer questions 5 and 6.
 
-Configure the unprotected password Cisco123! and ensure it is obfuscated in the configuration file.
+VLAN     Name
 
-Protect the access to the console by requiring a password to access the console. Set the console password to Cisco333!.
+65       Users1
 
+13       Users2
 
-enable secret cisco
+80       Servers
 
-enable password cisco
+# Q1: Examine the initial switch configuration. Which VLAN does Server1 belong to?
 
-username admin secret cisco
+* 13
+* **60**
+* 65
+* 80
 
+Answer
+The correct answer is 60. Server1 is connected to SW1 Ethernet0/2. The initial SW1 configuration shows that the interface Ethernet0/2 belongs to VLAN 60. To ensure connectivity in VLAN 80, you need to change SW1 Ethernet0/2 from VLAN 60 to VLAN 80.
 
-------------- 5 ends -----------
+# Q2: Examine the initial SW1 configuration. What is the name of VLAN 60?
+
+* **5ervers**
+* Servers
+* Users1
+* Users2
+
+# Q3: What are the physical layer and data layer status codes of the Ethernet0/2 interface on the SW1 switch?
+
+* The physical layer status code is administratively down and the data layer status code is administratively down.
+* **The physical layer status code is administratively down and the data layer status code is down.**
+* The physical layer status code is down and the data layer status code is down.
+* The physical layer status code is up and the data layer status code is up.
+
+# Q4: After you have resolved VLAN configuration issues on all switches, test connectivity from PC1 to Server1, Server2, PC2, and PC3on PC1 using the ping command. What are the results of the ping connectivity tests from PC1?
+
+* The connectivity test is successful to PC2 and to PC3.
+* **The connectivity test is successful to PC2 and unsuccessful to Server2.**
+* The connectivity test is successful to PC3 and unsuccessful to Server2.
+* The connectivity test is successful to Server2 and unsuccessful to PC2.
+
+# Q5: Examine the running configurations of switches. Notice that the SW1 and SW3 running configurations display VLAN information, like the one shown in the example output below. Why are there no VLANs listed in the SW2 running configuration?
+
+   vlan 13
+   name Users2
+   !      
+   vlan 65   
+   name Users1
+   !         
+   vlan 80   
+   name Servers
+
+* SW2 has no VLANs configured, but SW1 and SW3 have VLANs 13, 65, and 80 configured.
+* **SW2 is configured as VTP mode Server or Client, but SW1 and SW3 are configured as VTP mode Transparent.**
+* SW2 is configured as VTP mode Transparent, but SW1 and SW3 are configured as VTP mode Server or Client
+* This is a Cisco IOS software bug and is easily resolved by reloading SW1.
+
+# Q6: After you have resolved VLAN connectivity, what is the expected result of the following ping command issued on Server2?
+**Sample command:**
+   ping 255.255.255.255 repeat 2
+
+* one response from Server1 (192.168.80.1) and one response from PC1 (192.168.65.1)
+* **two responses from Server1 (192.168.80.1)**
+* two responses from Server1 (192.168.80.1) and two responses from PC1 (192.168.65.1)
+* two responses from an unknown host (255.255.255.255)
+
+------------- 13 ends -----------
