@@ -1,5 +1,6 @@
 # Native VLAN VLAN 1:
----------------------
+
+----------
 
 1. Default VLAN: **All switch ports are assigned to VLAN 1 by default** when the switch is first set up. This means that without any additional configuration, all ports can communicate with each other as they are on the same network.
 
@@ -20,7 +21,8 @@ Switch(config-if)# switchport trunk native vlan <VLAN-ID>
 Here `<VLAN-ID>` is the VLAN number you want to assign as the native VLAN for the trunk port.
 
 # Loopback Address:
--------------------
+
+----------
 
 - **IPv4:** The default localhost address for IPv4 is **`127.0.0.1`**. **The entire range `127.0.0.0` to `127.255.255.255` is reserved for loopback purposes**, meaning that any address within this block will loop back to the local machine. However, `127.0.0.1` is the most commonly used address for testing purposes.
 
@@ -39,7 +41,8 @@ Router(config-if)# no shutdown
 In this example, `loopback 0` is the logical name of the loopback interface, `192.168.1.1` is the IP address assigned, and `255.255.255.0` is the subnet mask. The `no shutdown` command is used to ensure that the interface is active, although loopback interfaces are not actually shut down like physical interfaces.
 
 # Multicast Address:
---------------------
+
+----------
 - **224.0.0.0 to 224.0.0.255**: Reserved for **local network control and maintenance multicast traffic**. These addresses are not forwarded by routers and are meant for local segment (subnet) multicast traffic. For example, 224.0.0.1 is the all-hosts multicast group, which reaches all multicast-capable hosts on the local network segment.
 - **224.0.1.0 to 238.255.255.255**: **Globally scoped addresses used for multicast applications and services that are reachable across the internet**.
 - **239.0.0.0 to 239.255.255.255**: **Reserved for organization-local scope, used within an individual organization or a site and not intended to be routed across the internet**.
@@ -51,7 +54,8 @@ The IPv6 multicast address range starts with the prefix FF00::/8. Similar to IPv
 - **FF02::2**: All routers address, **which targets all routers on the local network segment.**
 
 # Broadcast Address:
---------------------
+
+----------
 
 **IPv4 Broadcast Addresses:**
 **IPv4 supports broadcast addresses,** which are **used to send traffic to all hosts on a local network segment**. The **default IPv4 broadcast address is typically the last address in the subnet.** For example, if the subnet is **192.168.1.0/24 (with a subnet mask of 255.255.255.0), the broadcast address would be 192.168.1.255**. When a packet is sent to this address, it is delivered to all hosts in the subnet.
@@ -59,7 +63,8 @@ The IPv6 multicast address range starts with the prefix FF00::/8. Similar to IPv
 Broadcasting is a less efficient method of sending the same data to all hosts on a network because it can lead to unnecessary traffic and congestion. **Therefore, while IPv4 includes a broadcast mechanism, IPv6 does not.**
 
 # Default Broadcast MAC Address:
---------------------------------
+
+----------
 
 **The default broadcast MAC address, which is recognized by all networked devices, is `FF:FF:FF:FF:FF:FF`**. This address is used to send frames to all devices on the local network segment (broadcast domain) in an Ethernet network. When a device's network interface sees a frame with a destination MAC address of `FF:FF:FF:FF:FF:FF`, it knows that the frame is a broadcast and processes it accordingly.
 
@@ -68,7 +73,8 @@ Broadcasting is a less efficient method of sending the same data to all hosts on
 In Cisco devices, like other vendors' network equipment, the broadcast MAC address is not configurable—it is a universal constant in Ethernet networking and does not vary from one manufacturer to another. **It's important to note that layer 2 broadcasts are limited to the local broadcast domain and are not routed across different subnets or VLANs**.
 
 # IPv4 Class Ranges:
---------------------
+
+----------
 
 **Class A:**
 **- First bit is "0"**
@@ -99,7 +105,8 @@ In Cisco devices, like other vendors' network equipment, the broadcast MAC addre
 - Usage: Reserved for experimental purposes, research, or future use. This class is not used in public networks.
 
 # Octet to Binary Conversion:
-------------------------------
+
+----------
 
 1. **Memorize Common Conversions**:
    Certain numbers and their binary equivalents are more common than others (e.g., multiples of 16, 32, 64, etc.). Memorizing these can save time:
@@ -131,7 +138,8 @@ Powers of 2: 128  64   32   16    8    4    2    1
 ```
 
 # Protocols and Services and Port Numbers:
-------------------------------------------
+
+----------
 
 **TCP Protocols:**
 - FTP (File Transfer Protocol): Ports 20 (Data Transfer) and 21 (Control Commands)
@@ -165,7 +173,8 @@ Powers of 2: 128  64   32   16    8    4    2    1
 - SIP (Session Initiation Protocol): Port 5060 (TCP or UDP), Port 5061 (SIP over TLS)
 
 # OSPF and usage of OSPF:
--------------------------
+
+----------
 
 OSPF, or Open Shortest Path First, is a dynamic routing protocol used for routing Internet Protocol (IP) packets within a single routing domain, such as an autonomous system. It is a link-state routing protocol that uses cost as its metric, which is often a measure of the hop count or the bandwidth on the link. OSPF is standardized by the Internet Engineering Task Force (IETF) and defined in RFC 2328 for IPv4 and RFC 5340 for IPv6.
 
@@ -202,7 +211,8 @@ Router(config-router)# network 192.168.2.0 0.0.0.255 area 1
 In this example, the router is configured to participate in OSPF process ID 1. It advertises two networks, 192.168.1.0/24 in area 0 (backbone area) and 192.168.2.0/24 in area 1.
 
 # OSI Layers
-------------
+
+----------
 
 
 1. **Layer 1: Physical Layer**
@@ -243,7 +253,8 @@ In this example, the router is configured to participate in OSPF process ID 1. I
    - **Purpose**: To provide network services to the applications of the user, such as email, file transfer, and terminal emulation.
 
 # IPv4 Reserved Addresses
--------------------------
+
+----------
 
 
 1. **Private Address Ranges (RFC 1918)**:
@@ -281,7 +292,8 @@ In this example, the router is configured to participate in OSPF process ID 1. I
    - `203.0.113.0` to `203.0.113.255` (203.0.113.0/24)
 
 # IPv6 Reserved Addresses
--------------------------
+
+----------
 
 
 1. **Unspecified Address**:
@@ -319,7 +331,8 @@ In this example, the router is configured to participate in OSPF process ID 1. I
    - `fec0::/10`: Initially intended for addresses local to a site. These addresses have been deprecated in favor of Unique Local Addresses (ULA).
 
 # Available Subnet and Host Addresses Calulation:
--------------------------------------------------
+
+----------
 
 **Number of Available Subnets**:
 If you are subnetting a larger network into smaller subnets, the formula to calculate the number of available subnets is:
@@ -352,7 +365,8 @@ There are 32 bits in an IPv4 address, so if 26 are used for the network portion,
 So, each subnet has 62 usable host addresses.
 
 # Steps to Network and Broadcast Addresses:
---------------------------------------------
+
+----------
 
 1. **Calculate the Network Address**:
    - Convert the IPv4 address and its subnet mask to binary.
@@ -410,7 +424,8 @@ https://www.calculator.net/ip-subnet-calculator.html?cclass=any&csubnet=28&cip=1
 IPv4 Subnet Calculator Result:
 
 | IP Address:             | 192.168.1.10                        |
-| ----------------------- | ----------------------------------- |
+
+----------
 | Network Address:        | 192.168.1.0                         |
 | Usable Host IP Range:   | 192.168.1.1 - 192.168.1.14          |
 | Broadcast Address:      | 192.168.1.15                        |
@@ -435,7 +450,8 @@ IPv4 Subnet Calculator Result:
 All 16 of the Possible /28 Networks for 192.168.1.*
 
 | Network Address | Usable Host Range             | Broadcast Address: |
-| --------------- | ----------------------------- | ------------------ |
+
+----------
 | 192.168.1.0     | 192.168.1.1 - 192.168.1.14    | 192.168.1.15       |
 | 192.168.1.16    | 192.168.1.17 - 192.168.1.30   | 192.168.1.31       |
 | 192.168.1.32    | 192.168.1.33 - 192.168.1.46   | 192.168.1.47       |
@@ -471,7 +487,7 @@ All 16 of the Possible /28 Networks for 192.168.1.*
 * Common Internet File System (CIFS)
 * DHCP
 
----------
+----------
 
 Switches have the following features and functions:
 
@@ -586,10 +602,11 @@ MMF and SMF Characteristics:
 		Longer distances
 		More expensive
 
--------------
+----------
 Which two connections were traditionally made by using crossover cables? (Choose two.)
 	switch-to-switch and router-to-router
--------------
+
+----------
 
 # IPv6 Basic Configuration:
 
@@ -630,10 +647,12 @@ Configuring and verifying basic IPv6 connectivity on a Cisco device involves sev
    Router# ping ipv6 2001:db8::2
    ```
    If the ping is successful, it indicates that basic IPv6 connectivity is functioning properly.
-------------
+
+----------
 
 # Link Aggregation Sample Config:
----------------------------------
+
+----------
 
 
 Configuring **link aggregation using EtherChannel on a Cisco switch involves bundling several physical Ethernet links to form a single logical link to provide higher bandwidth and redundancy**. EtherChannel can be configured to use either the Port Aggregation Protocol (PAgP), which is Cisco proprietary, or the Link Aggregation Control Protocol (LACP), which is an IEEE standard (802.3ad).
@@ -693,7 +712,8 @@ Here's a basic step-by-step guide to configure EtherChannel using LACP on a Cisc
    Look for the `Port-channel1` in the output and make sure the status is `P`, which stands for 'in port-channel', and `U`, which means 'up'.
 
 # DCHP Sample Configuration:
-----------------------------
+
+----------
 1. **Configure the Router as a DHCP Server**:
    To configure the Cisco router to provide DHCP services to clients, you need to define a DHCP pool with the range of IP addresses to be assigned to clients, along with other necessary parameters.
 
@@ -731,7 +751,8 @@ Here's a basic step-by-step guide to configure EtherChannel using LACP on a Cisc
    This shows a list of all IP addresses that have been leased to clients.
 
 # Configure and Verify NAT:
----------------------------
+
+----------
 Network Address Translation (NAT) is commonly used to translate private IP addresses to a single public IP address or a pool of public addresses. This is necessary to allow devices on a local network to access the Internet using a limited number of public IP addresses.
 
 1. **Define Inside and Outside Interfaces**:
@@ -780,14 +801,15 @@ Network Address Translation (NAT) is commonly used to translate private IP addre
 
 Remember to replace the interface identifiers (`GigabitEthernet0/0`, `GigabitEthernet0/1`), IP addresses
 
-------------
+----------
 
 Configure and verify basic IOS system monitoring tools on a Cisco device?
 
 Configuring and verifying basic IOS system monitoring tools on a Cisco device can involve several steps, depending on what specifically you need to monitor. Here are some common system monitoring tools and commands used on Cisco devices:
 
 # Configure Logging:
---------------------
+
+----------
 1. **Console Logging**:
    By default, Cisco devices log messages to the console terminal. You can configure the level of messages displayed:
 
@@ -920,7 +942,8 @@ This command displays the logging configuration and the log buffer contents.
    Loose, Strict, Record, Timestamp, Verbose[none]:
    Sweep range of sizes [n]:
    ```
--------------
+
+----------
 # Cisco Discovery Protocol (CDP)
 
 CDP is a Cisco proprietary protocol that is enabled by default on most Cisco devices. It allows devices to discover and view detailed information about directly connected Cisco devices, including model number, IP address, connected interface, and software version.
@@ -957,7 +980,8 @@ CDP is a Cisco proprietary protocol that is enabled by default on most Cisco dev
    ```bash
    Router# show cdp neighbors detail
    ```
--------------
+
+----------
 # Link Layer Discovery Protocol (LLDP)
 
 LLDP is an industry-standard protocol similar to CDP that provides a method for network devices to advertise information about themselves to other devices on the network. LLDP is not enabled by default on Cisco devices.
@@ -1025,7 +1049,7 @@ If you need to disable these protocols for security or other reasons:
 
 When enabling or disabling these protocols, always ensure that the changes align with your network policy and security guidelines. Remember to replace `GigabitEthernet0/0` with the appropriate interface identifier on your device.
 
-------------
+----------
 
 # Verify the Default Gateway Configuration
 
@@ -1102,7 +1126,7 @@ When enabling or disabling these protocols, always ensure that the changes align
    ```
    The running configuration should display the default gateway that you have set.
 
----------
+----------
 
 ### Configure IPv4 Static Routes
 
@@ -1179,6 +1203,7 @@ When enabling or disabling these protocols, always ensure that the changes align
    ```bash
    Router# traceroute [destination-ip-address]
    ```
+
 ----------
 
 ### Configure IPv6 Static Routes
@@ -1256,7 +1281,8 @@ When enabling or disabling these protocols, always ensure that the changes align
    ```bash
    Router# traceroute ipv6 [ipv6-destination-address]
    ```
-------------
+
+----------
 ### Configure VLANs on a Cisco Switch
 
 1. **Enter Global Configuration Mode**:
@@ -1364,7 +1390,8 @@ When enabling or disabling these protocols, always ensure that the changes align
    ```bash
    Switch# show interface GigabitEthernet0/1 switchport
    ```
-------------
+
+----------
 
 ### Configure Inter-VLAN Routing on a Cisco Router (Router-on-a-Stick)
 
@@ -1480,7 +1507,8 @@ When enabling or disabling these protocols, always ensure that the changes align
    ```bash
    Switch# show ip route
    ```
-------------
+
+----------
 ### Configure Single-Area OSPF
 
 1. **Enter Global Configuration Mode**:
@@ -1562,7 +1590,8 @@ When enabling or disabling these protocols, always ensure that the changes align
 
 5. **Test Connectivity**:
    Ensure there is connectivity between the devices in the OSPF network by using ping or traceroute between different networks.
-------------
+
+----------
 
 
 ### Configure EtherChannel
@@ -1645,7 +1674,8 @@ When enabling or disabling these protocols, always ensure that the changes align
 
 5. **Test Connectivity**:
    Ensure there is connectivity across the EtherChannel link by using ping or other network tests. You should be able to see increased bandwidth and failover capabilities depending on your test methods and the number of links in the EtherChannel.
------------
+
+----------
 
 ### Configure IPv4 ACLs
 
@@ -1729,7 +1759,8 @@ When enabling or disabling these protocols, always ensure that the changes align
    Router# debug ip packet
    Router# show logging
    ```
-------------
+
+----------
 ### Configure Static NAT
 
 1. **Enter Global Configuration Mode**:
@@ -1795,6 +1826,7 @@ When enabling or disabling these protocols, always ensure that the changes align
    ```bash
    Router# show running-config | include ip nat
    ```
+
 ----------
 ### Configure Dynamic NAT
 
@@ -1892,7 +1924,8 @@ If instead you want to configure PAT to map multiple private IP addresses to a s
 
 5. **Check Access Control Lists and NAT Configuration**:
    To review the NAT configuration in the router's running configuration, including the ACLs and NAT
--------------
+
+----------
 
 ### Configure NTP
 
@@ -1967,7 +2000,8 @@ If instead you want to configure PAT to map multiple private IP addresses to a s
    ```
    Router# show running-config | include ntp
    ```
----------
+
+----------
 ### Configure System Message Logging
 
 1. **Enter Global Configuration Mode**:
@@ -2054,7 +2088,8 @@ If instead you want to configure PAT to map multiple private IP addresses to a s
 
 5. **Test Syslog Functionality**:
    To test if syslog messages are being generated, you can perform an action that triggers a log message, such as enabling or disabling an interface, and then check the logs.
-------------
+
+----------
 
 ### Configure Port Security
 
@@ -2147,7 +2182,7 @@ If instead you want to configure PAT to map multiple private IP addresses to a s
    ```
    You will see `switchport port-security mac-address sticky` followed by the learned MAC addresses.
 
-------------
+----------
 
 ### Configure an Open Wireless Network (Cisco Access Point)
 
@@ -2252,7 +2287,8 @@ If you're using a Cisco Wireless LAN Controller (WLC), the process will involve 
 
 5. **Save and Enable the WLAN**:
    Save the configuration and enable the WLAN.
------------
+
+----------
 
 To configure a WLAN with WPA2 Personal (also known as WPA2-PSK for Pre-Shared Key) on a Cisco wireless device, you need to set up an SSID with WPA2 encryption and a pre-shared key. Here's how you can do this on a Cisco standalone Access Point (AP) and on a Cisco Wireless LAN Controller (WLC):
 
@@ -2341,7 +2377,8 @@ To configure a WLAN with WPA2 Personal (also known as WPA2-PSK for Pre-Shared Ke
 
 3. **Test Connectivity**:
    Use a wireless client to search for the SSID, connect to it using the pre-shared key, and ensure you have network connectivity.
---------------
+
+----------
 
 ### Unprotected (Clear Text) Password
 
@@ -2404,9 +2441,10 @@ For stronger security, it's recommended to use the enable secret for privileged 
 
 Always replace "cisco" with a strong, unique password in a real-world configuration to maintain network security. Never use "cisco" as an actual password, as it is commonly used as an example and would be extremely insecure.
 
-------------
+----------
 # Steps to configure SSH on a Router:
--------------------------------------
+
+----------
 
 To configure SSH on a Cisco router and access it from a PC, follow these general steps. Note that you should have basic knowledge of Cisco IOS and networking concepts before proceeding.
 
@@ -2491,5 +2529,6 @@ Replace `admin` with the username you set up and `192.168.1.1` with the IP addre
 4. Enter the password when prompted.
 
 After following these steps, you should be connected to your Cisco router over SSH from your PC. If you encounter any issues, double-check the configuration on the router, ensure the PC is on the same network as the router, and that no firewall settings are blocking the SSH connection.
----------------
+
+----------
 

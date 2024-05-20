@@ -2,8 +2,7 @@ file:///Users/sajagana/Desktop/CCNA_2024/CCNA%20Labs/Cisco_CCNA_Lab_Guide_v200-3
 
 CCNA Sample Configs: https://www.flackbox.com/ccna-project-files
 
-
-------------
+---------
 
 #### 1. What is the default VLAN number in Cisco device’s and define it?
 
@@ -21,7 +20,7 @@ VLAN 1 has a special significance and serves several important functions:
 
 Despite being the default VLAN, it is considered a best practice to change the management VLAN to a different VLAN number for security reasons. This is because VLAN 1 is well-known and often targeted by attackers. Additionally, it is recommended to not use VLAN 1 for carrying user data traffic.
 
-------------
+---------
 
 #### 2. Define native vlan in Cisco device’s?
 
@@ -47,8 +46,7 @@ Switch(config-if)# switchport trunk native vlan <VLAN-ID>
 
 Here `<VLAN-ID>` is the VLAN number you want to assign as the native VLAN for the trunk port.
 
-
-------------
+---------
 
 #### 3. Default local host addresses for the IPv4 and IPv6?
 
@@ -60,7 +58,7 @@ In the context of computer networking, a "localhost" address is an IP address th
 
 When you access the localhost IP address on a computer, you are effectively communicating with the same device that you are using, as opposed to a remote device on the network. For example, developers often use localhost addresses to test web servers and applications on their own machines before deploying them to a live environment.
 
-------------
+---------
 
 #### 4. What is loopback address in Cisco devices?
 
@@ -90,8 +88,7 @@ In this example, `loopback 0` is the logical name of the loopback interface, `19
 
 In IPv6, the concept of a loopback address (`::1`) exists at the protocol level, similar to IPv4, but on Cisco devices, you would still assign a global unicast or unique local address to a loopback interface for the purposes of routing and management.
 
-
-------------
+---------
 
 #### 5. Is there any default MAC address in Cisco devices?
 
@@ -113,7 +110,7 @@ However, there are certain aspects related to MAC addresses in Cisco devices tha
 
 To view the MAC address of a Cisco device's interfaces, you can use the `show interfaces` or `show mac address-table` command in the Cisco command-line interface (CLI). Remember that these addresses are not defaults that apply across all devices but are unique identifiers for each specific interface on a given device.
 
-------------
+---------
 
 #### 6. Default IPv4 and IPv6 addresses for the Unicast traffic Cisco devices?
 
@@ -145,8 +142,7 @@ It's important to note that while there are no default unicast IP addresses on i
 
 Also, in IPv6, when an interface is enabled for IPv6 (`ipv6 enable`), it automatically generates a link-local address based on the EUI-64 format or using a random identifier for the interface in question. This link-local address is used for communication within the local link (subnet) and starts with `fe80::/10`, but it is not used for routing unicast traffic beyond the local network segment.
 
-
-------------
+---------
 
 #### 7. Default IPv4 and IPv6 addresses for the Multicast traffic Cisco devices?
 
@@ -171,7 +167,7 @@ Unlike unicast addressing, multicast addresses are not assigned to hosts or inte
 
 In summary, multicast addresses are not device-specific defaults but are defined by the IP standards and are used by devices, including Cisco devices, to participate in multicast networking.
 
-------------
+---------
 
 #### 8. Default IPv4 and IPv6 addresses for the Broadcast traffic Cisco devices?
 
@@ -189,7 +185,7 @@ For example, the multicast address FF02::1 is the all-nodes link-local multicast
 
 In summary, for IPv4, the default broadcast address is the last address in the subnet, and it is calculated based on the subnet mask. For IPv6, there is no concept of broadcast; instead, multicast addresses are used for similar purposes. There are no default "broadcast" addresses for Cisco devices in IPv6, and IPv4 broadcast addresses are defined by the network's addressing scheme, not by the device manufacturer.
 
-------------
+---------
 
 #### 9. Default Unicast MAC address in Cisco devices?
 
@@ -207,7 +203,7 @@ While each physical interface has its own unique MAC address, Cisco devices also
 
 In scenarios involving virtual interfaces, or when replacing devices to maintain network configurations, network administrators have the option to manually configure the MAC address on an interface with the `mac-address` command in the interface configuration mode on Cisco IOS. However, this practice should be managed carefully to avoid MAC address duplication on the network, which can lead to unexpected behavior and communication issues.
 
-------------
+---------
 
 #### 10. Default Multicast MAC address in Cisco devices?
 
@@ -227,7 +223,7 @@ For example, the IPv6 multicast address FF02::1:FFXX:XXXX would map to the multi
 
 These mappings are used by network switches and routers to efficiently forward multicast traffic only to interfaces that have listeners for a given multicast group, thus preventing unnecessary traffic on the network segments that do not have any interested receivers.
 
-------------
+---------
 
 #### 11. Default Broadcast MAC address in Cisco devices?
 
@@ -237,7 +233,7 @@ These mappings are used by network switches and routers to efficiently forward m
 
 In Cisco devices, like other vendors' network equipment, the broadcast MAC address is not configurable—it is a universal constant in Ethernet networking and does not vary from one manufacturer to another. **It's important to note that layer 2 broadcasts are limited to the local broadcast domain and are not routed across different subnets or VLANs**.
 
-------------
+---------
 
 #### 12. Define IPv4 class ranges and usage of the classes?
 
@@ -273,7 +269,7 @@ IPv4 addresses are divided into five classes: A, B, C, D, and E. These classes a
 
 It's important to note that while this classification system is based on the original design of the IP addressing architecture, modern networking largely uses CIDR (Classless Inter-Domain Routing) to allocate IP addresses. CIDR allows for more flexible subnetting by using a variable-length subnet mask, which overcomes the limitations of the rigid class-based system and better optimizes the limited IPv4 address space.
 
-------------
+---------
 
 #### 13. Octet to binary conversion?
 
@@ -306,8 +302,7 @@ So the binary representation of the decimal number 200 is:
 
 The process is systematic and follows the binary numbering system, where each place value represents a power of 2. By going through each power of 2 and deciding whether the decimal number contains that component, you can construct the binary representation bit by bit.
 
-
-------------
+---------
 
 #### 14. Octet IPv4 address to Binary conversion shortcuts techniques?
 
@@ -353,8 +348,7 @@ When converting IPv4 address octets to binary, there are some shortcut technique
 
 By using these shortcuts and techniques, you can convert IPv4 address octets to binary more quickly and with less effort. However, it still requires practice to become proficient, and for complex conversions or when in doubt, using a calculator or conversion tool can ensure accuracy.
 
-
-------------
+---------
 
 #### 15. List the protocols and port numbers in Cisco devices?
 
@@ -393,8 +387,7 @@ Cisco devices, like other network devices, use standard Internet protocols that 
 
 These are just a few examples of the protocols and their associated port numbers that might be configured or inspected on a Cisco device. Keep in mind that while these are the standard, well-known port numbers, services can be configured to run on non-standard ports for various reasons, such as security through obscurity. When working with Cisco devices, it's important to understand both the protocols and their standard port numbers, as well as how to view or change the port configurations as needed for your network.
 
-
-------------
+---------
 
 #### 16. Define OSPF and usage of OSPF in Cisco devices?
 
@@ -438,7 +431,7 @@ In this example, the router is configured to participate in OSPF process ID 1. I
 
 OSPF is widely used in enterprise networks and by internet service providers due to its scalability and fast convergence properties. It is suitable for both small and large network environments and is an important protocol for network engineers to understand when managing Cisco devices.
 
-------------
+---------
 
 #### 18. Binary to Octet conversion?
 
@@ -473,7 +466,7 @@ Now add up the non-zero results: 128 + 64 + 8 + 4 = 204.
 
 So, the binary sequence 11001100 converts to the decimal number 204. Thus, 11001100 is the binary (octet) representation of the decimal number 204.
 
-------------
+---------
 
 #### 19. Define OSI layers functionalities?
 
@@ -518,7 +511,7 @@ The Open Systems Interconnection (OSI) model is a conceptual framework used to u
 
 The OSI model serves as a useful reference tool for understanding and troubleshooting network functionality, but the actual implementation of networking standards does not always strictly adhere to the seven-layer model. Instead, many protocols might perform tasks at multiple OSI layers, and not all layers are always used in every communication session.
 
-------------
+---------
 
 #### 20. IPv4 reserved address ranges?
 
@@ -560,8 +553,7 @@ IPv4 reserved address ranges are segments of IP addresses that are set aside for
 
 It's important to note that these reserved IP address ranges are not routable on the public internet and are designed to be used within private networks or for specific functions that aid in the operation and management of IP networks.
 
-
-------------
+---------
 
 #### 21. IPv6 reserved address ranges?
 
@@ -603,8 +595,7 @@ IPv6, the successor to IPv4, provides a significantly larger address space and i
 
 There are other specific-purpose addresses and ranges, such as those reserved for protocol-specific applications, benchmarking, and network interconnect devices. IPv6 has been designed with a large address space not only to provide ample unique addresses but also to allow for efficient routing and address management for various functions and applications.
 
-
-------------
+---------
 
 #### 22. IPv4 private address ranges based on the classes?
 
@@ -628,7 +619,7 @@ It's important to note that these private address ranges are not strictly tied t
 
 Because private addresses are not globally unique and cannot be routed over the internet, any communication between private networks or between a private network and the internet requires address translation at a network boundary, typically performed by a router or firewall using Network Address Translation (NAT).
 
-------------
+---------
 
 #### 23. IPv6 private address ranges?
 
@@ -650,7 +641,7 @@ In addition to ULAs, IPv6 also has the concept of link-local addresses, which ar
 
 Remember, there are no "private" addresses in IPv6 as there are in IPv4; instead, ULAs serve the purpose of providing a range of addresses that can be safely used within private networks without the risk of conflicting with globally routable addresses.
 
-------------
+---------
 
 #### 24. Formula to calculate IPv4 available subnets and hosts for a given IP address?
 
@@ -688,8 +679,7 @@ So, each subnet has 62 usable host addresses.
 
 Remember that the number of subnets and hosts per subnet will vary depending on how many bits you borrow from the host part of the address to create additional subnets. It's important to note that the formulas provided are for traditional IPv4 subnetting. With the introduction of Classless Inter-Domain Routing (CIDR), the concept of classes (A, B, C) is no longer used when determining network and host capacity, and any subnet mask can be applied to any IP address.
 
-
-------------
+---------
 
 #### 25. Formula to calculate the IPv4 network and broadcast addresses for a given IP address?
 
@@ -747,7 +737,7 @@ Subnet Mask: `255.255.255.240` (or /28 in CIDR notation)
 
 So, with the given IP address `192.168.1.10` and the subnet mask `255.255.255.240`, the network address is `192.168.1.0` and the broadcast address is `192.168.1.15`. All hosts within this range (192.168.1.1 to 192.168.1.14) are part of the same subnet.
 
-------------
+---------
 
 #### Reference Link: Sample data for the IPv4 network and broadcast addresses for a given IP address
 
@@ -756,7 +746,8 @@ https://www.calculator.net/ip-subnet-calculator.html?cclass=any&csubnet=28&cip=1
 IPv4 Subnet Calculator Result:
 
 | IP Address:             | 192.168.1.10                        |
-| ----------------------- | ----------------------------------- |
+
+---------
 | Network Address:        | 192.168.1.0                         |
 | Usable Host IP Range:   | 192.168.1.1 - 192.168.1.14          |
 | Broadcast Address:      | 192.168.1.15                        |
@@ -781,7 +772,8 @@ IPv4 Subnet Calculator Result:
 All 16 of the Possible /28 Networks for 192.168.1.*
 
 | Network Address | Usable Host Range             | Broadcast Address: |
-| --------------- | ----------------------------- | ------------------ |
+
+---------
 | 192.168.1.0     | 192.168.1.1 - 192.168.1.14    | 192.168.1.15       |
 | 192.168.1.16    | 192.168.1.17 - 192.168.1.30   | 192.168.1.31       |
 | 192.168.1.32    | 192.168.1.33 - 192.168.1.46   | 192.168.1.47       |
@@ -799,8 +791,7 @@ All 16 of the Possible /28 Networks for 192.168.1.*
 | 192.168.1.224   | 192.168.1.225 - 192.168.1.238 | 192.168.1.239      |
 | 192.168.1.240   | 192.168.1.241 - 192.168.1.254 | 192.168.1.255      |
 
-
-------------
+---------
 
 
 
@@ -823,7 +814,7 @@ Ethernet protocols (IEEE 802.2 and IEEE 802.3)
 	Common Internet File System (CIFS)
 	DHCP
 
-------------
+---------
 
 Functions of a LAN
 LANs provide network users with communication and resource-sharing functions:
@@ -834,7 +825,7 @@ Resources: The resources that can be shared include input devices, such as camer
 
 Communication path to other networks: If a resource is not available locally, the LAN can provide connectivity via a gateway to remote resources, such as the internet.
 
-------------
+---------
 
 Switches have the following features and functions:
 
@@ -902,9 +893,7 @@ What are the three functions of a switch? (Choose three.)
 Which statement regarding switch characteristics is correct?
 	A generic CPU is too slow for forwarding traffic in a switch.
 
-
-
-------------
+---------
 
 Ethernet LAN Connection Media
 
@@ -1058,20 +1047,13 @@ Transceiver Types	Max Supported Speed		Supported Medium Types
 Which two connections were traditionally made by using crossover cables? (Choose two.)
 	switch-to-switch and router-to-router
 
+---------
 
-------------
+---------
 
+---------
 
-
-------------
-
-
-
-------------
-
-
-
-------------
+---------
 
 ## Lab Configuration Examples
 
@@ -1150,7 +1132,7 @@ Configuring and verifying basic IPv6 connectivity on a Cisco device involves sev
 
 Remember that IPv6 configuration and commands may vary slightly depending on the Cisco device and the IOS version it is running. Always refer to the specific documentation for your device for the most accurate and detailed information.
 
-------------
+---------
 Configure link aggregation using EtherChannel on a Cisco device?
 
 Configuring **link aggregation using EtherChannel on a Cisco switch involves bundling several physical Ethernet links to form a single logical link to provide higher bandwidth and redundancy**. EtherChannel can be configured to use either the Port Aggregation Protocol (PAgP), which is Cisco proprietary, or the Link Aggregation Control Protocol (LACP), which is an IEEE standard (802.3ad).
@@ -1211,7 +1193,7 @@ Here's a basic step-by-step guide to configure EtherChannel using LACP on a Cisc
 
 Please note that the specific commands and syntax might vary based on the Cisco IOS version and the specific switch model. Always refer to the official Cisco documentation or the switch's help command for the exact syntax needed for your environment. Additionally, make sure that both ends of the EtherChannel are configured consistently to ensure proper functionality.
 
-------------
+---------
 
 Configure and verify Internet access using Dynamic Host Configuration Protocol (DHCP) clients and explain and configure network address translation ( on a Cisco device?
 
@@ -1306,7 +1288,7 @@ Network Address Translation (NAT) is commonly used to translate private IP addre
 
 Remember to replace the interface identifiers (`GigabitEthernet0/0`, `GigabitEthernet0/1`), IP addresses
 
-------------
+---------
 
 Configure and verify basic IOS system monitoring tools on a Cisco device?
 
@@ -1449,7 +1431,7 @@ This command displays the logging configuration and the log buffer contents.
 
 By configuring and understanding
 
-------------
+---------
 
 Configure and verify an Interface on a Cisco Router on a Cisco device?
 
@@ -1535,8 +1517,7 @@ Configuring and verifying an interface on a Cisco router involves several steps.
 
 By following these steps, you can configure and verify an interface on a Cisco router. Make sure that you substitute the interface identifiers and IP addresses with those applicable to your network environment.
 
-
-------------
+---------
 
 Configure and verify and Verify Layer 2 Discovery Protocols on a Cisco device?
 
@@ -1646,8 +1627,7 @@ If you need to disable these protocols for security or other reasons:
 
 When enabling or disabling these protocols, always ensure that the changes align with your network policy and security guidelines. Remember to replace `GigabitEthernet0/0` with the appropriate interface identifier on your device.
 
-
-------------
+---------
 
 Configure and verify Default Gateway on a Cisco device?
 
@@ -1747,8 +1727,7 @@ For Layer 2 Cisco switches, you set up a default gateway that the switch will us
 
 Remember to replace the placeholders with the actual IP addresses and interface identifiers that correspond to your network setup.
 
-
-------------
+---------
 
 Configure and verify Basic IPv6 Connectivity on a Cisco device?
 
@@ -1833,7 +1812,7 @@ Configuring and verifying basic IPv6 connectivity on a Cisco device involves sev
 
 By following these steps, you should be able to configure basic IPv6 connectivity on a Cisco device and verify that it is functioning correctly. Remember that the specific interface names and IPv6 addresses used in this example should be replaced with those relevant to your network environment.
 
-------------
+---------
 
 Configure and verify and Verify IPv4 Static Routes on a Cisco device?
 
@@ -1917,8 +1896,7 @@ Configuring and verifying IPv4 static routes on a Cisco device is a straightforw
 
 By following these steps, you should be able to configure and verify IPv4 static routes on a Cisco device. Make sure to replace the placeholders such as `[destination-network]`, `[subnet-mask]`, `[next-hop-ip-address]`, or `[exit-interface]` with the actual values for your network scenario.
 
-
-------------
+---------
 
 Configure and verify IPv6 Static Routes on a Cisco device?
 
@@ -2002,7 +1980,7 @@ Configuring IPv6 static routes on a Cisco device is similar to configuring IPv4 
 
 By following these steps, you should be able to configure and verify IPv6 static routes on a Cisco device. Make sure to replace the placeholders such as `[ipv6-destination-prefix]`, `[prefix-length]`, `[ipv6-next-hop-address]`, or `[exit-interface]` with the actual values for your network scenario.
 
-------------
+---------
 
 Configure and verify VLANs and Trunk on a Cisco device?
 
@@ -2118,7 +2096,7 @@ Configuring VLANs (Virtual Local Area Networks) and trunks on a Cisco switch all
 
 By following these steps, you can configure and verify VLANs and trunk links on Cisco switches. Make sure to replace the interface names and VLAN numbers with those that are specific to your network environment.
 
-------------
+---------
 
 Configure and verify Inter-VLAN Routing on a Cisco device?
 
@@ -2241,8 +2219,7 @@ Inter-VLAN routing allows traffic to flow between different VLANs by using a rou
 
 By following these steps, you should
 
-
-------------
+---------
 
 Configure and verify and Verify Single-Area OSPF on a Cisco device?
 
@@ -2332,7 +2309,7 @@ Configuring and verifying Single-Area OSPF (Open Shortest Path First) on a Cisco
 
 By following these steps, you should be able to configure and verify Single-Area OSPF on a Cisco device. Remember that OSPF relies on IP connectivity; if there are issues with the OSPF configuration, first check the underlying IP connectivity, subnet masks, and interface statuses.
 
-------------
+---------
 
 Configure and verify and Verify EtherChannel on a Cisco device?
 
@@ -2421,7 +2398,7 @@ Configuring EtherChannel on a Cisco device involves bundling several physical Et
 
 By following these steps, you should be able to configure and verify EtherChannel on Cisco switches. Always ensure that the EtherChannel configurations on both ends of the link are consistent, and the protocols used (LACP or PAgP) are compatible between the connected devices.
 
-------------
+---------
 
 Configure and verify and Verify IPv4 ACLs on a Cisco device?
 
@@ -2512,7 +2489,7 @@ Access Control Lists (ACLs) are used to filter network traffic on Cisco devices.
 
 By following these steps, you should be able to configure and verify IPv4 ACLs on a Cisco device. Remember that ACLs are processed top-down, with the first match determining the fate of the packet. If no match is found, the implicit "deny any" at the end of every ACL will drop the packet. Always plan your ACLs carefully to avoid unintended traffic filtering.
 
-------------
+---------
 
 Configure and verify a Provider-Assigned IPv4 Address on a Cisco device?
 
@@ -2611,7 +2588,7 @@ Here's how to configure a Provider-Assigned IPv4 address on a Cisco router:
 
 By following these steps, you should be able to configure and verify a Provider-Assigned IPv4 address on a Cisco device, set up internet connectivity, and ensure proper routing for your network. Always ensure that the information provided by your ISP, such as the IP address, subnet mask, and gateway, is entered correctly to avoid connectivity issues.
 
-------------
+---------
 
 Configure and verify Static NAT on a Cisco device?
 
@@ -2685,7 +2662,7 @@ Static Network Address Translation (Static NAT) is used to map a private IP addr
 
 By following these steps, you should be able to configure and verify Static NAT on a Cisco device. Remember that each static NAT entry takes up one public IP address, so they must be used judiciously, especially if public IP addresses are scarce.
 
-------------
+---------
 
 Configure and verify Dynamic NAT and Port Address Translation (PAT) on a Cisco device?
 
@@ -2788,7 +2765,7 @@ If instead you want to configure PAT to map multiple private IP addresses to a s
 5. **Check Access Control Lists and NAT Configuration**:
    To review the NAT configuration in the router's running configuration, including the ACLs and NAT
 
-------------
+---------
 
 Configure and verify and Verify NTP on a Cisco device?
 
@@ -2871,7 +2848,7 @@ Network Time Protocol (NTP) is used to synchronize the clocks of network devices
 
 By following these steps, you should be able to configure and verify NTP on a Cisco device to ensure that it maintains accurate time, which is critical for functions like logging, debugging, and timestamping network transactions. If the device is not synchronizing time as expected, check connectivity to the NTP server and ensure any access control lists (ACLs) allow NTP traffic.
 
-------------
+---------
 
 Configure and verify System Message Logging on a Cisco device?
 
@@ -2966,8 +2943,7 @@ System message logging (syslog) is a facility that allows you to manage system m
 
 By following these steps, you should be able to configure and verify system message logging on a Cisco device. Properly configured syslog can provide valuable information for network management, security monitoring, and troubleshooting activities.
 
-
-------------
+---------
 
 Configure and verify and Verify Port Security on a Cisco device?
 
@@ -3066,7 +3042,7 @@ Port security is a feature on Cisco switches that limits the number of valid MAC
 
 By following these steps, you should be able to configure and verify port security on a Cisco switch. It's important to remember that if a port is configured to shut down on violation (the default), it will go into the error-disabled state if a violation occurs, and you will need to manually re-enable it unless you have configured automatic recovery. Always document the configured MAC addresses and understand the implications of each violation mode for your network security policy.
 
-------------
+---------
 
 Configure and verify an Open Wireless Network on a Cisco device?
 
@@ -3178,8 +3154,7 @@ If you're using a Cisco Wireless LAN Controller (WLC), the process will involve 
 
 Please note that open wireless networks are not secure. Any data transmitted over an open network can potentially be intercepted by unauthorized users. It is highly recommended to use secure wireless configurations for any network that will carry sensitive or private information.
 
-
-------------
+---------
 
 Configure and verify a WLAN to Use WPA2 PSK on a Cisco device?
 
@@ -3273,7 +3248,7 @@ To configure a WLAN with WPA2 Personal (also known as WPA2-PSK for Pre-Shared Ke
 
 By following these steps, you should be able to configure and verify WPA2-PSK on a Cisco wireless device. Remember to replace `YOUR_SSID` with the desired name of your wireless network and `YOUR_PSK` with a strong pre-shared key to maintain network security.
 
-------------
+---------
 
 On Cisco switches, passwords can be configured for various purposes such as console access, enable (privileged exec) mode, VTY access for Telnet/SSH, and more. There are different levels of password protection, with "unprotected" meaning that the password is stored in clear text in the configuration file, and "protected" meaning that the password is encrypted or hashed to conceal the actual password.
 
@@ -3340,34 +3315,7 @@ For stronger security, it's recommended to use the enable secret for privileged 
 
 Always replace "cisco" with a strong, unique password in a real-world configuration to maintain network security. Never use "cisco" as an actual password, as it is commonly used as an example and would be extremely insecure.
 
-------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-------------
+---------
 
 Objectives
 After taking this course, you should be able to:
@@ -3406,7 +3354,7 @@ Describe threat defense technologies
 Implement a basic security configuration of the device management plane
 Implement basic steps to harden network devices
 
-------------
+---------
 
 Outline:
 Exploring the Functions of Networking
@@ -3440,7 +3388,7 @@ Introducing System Monitoring
 Managing Cisco Devices
 Examining the Security Threat Landscape
 
-------------
+---------
 
 Lab outline:
 You cannot initialize labs in this version of the course. For full lab experience, upgrade your Cisco Learning Library subscription. Contact learning admin@cisco.com for purchase options.
