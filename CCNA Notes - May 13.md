@@ -257,18 +257,6 @@ Cisco IOS Software Modes:
 
 Take notes:
 
-Which APIs are used for communication between a **software-defined networking (SDN) application and a controller**?
-* Eastbound APIs
-* ** Northbound APIs**
-* Southbound APIs
-* Westbound APIs
-
-	**Northbound APIs**
-
-	Northbound APIs or northbound interfaces are responsible for the communication between the SDN controller and the services that run over the network. Northbound APIs enable your applications to manage and control the network. Therefore, rather than adjusting and tweaking your network repeatedly to get a service or application running correctly, you can set up a framework that allows the application to demand the network setup that it needs.
-
-----------
-
 Refer to the exhibit. Which two options are common **IPsec or SSL VPN** implementations? (Choose two.)
 
 * **option 1**
@@ -282,17 +270,6 @@ The correct answers are option 1 and option 5.
 An **IPsec Tunnel VPN** is typically established between **two network devices, connecting two or more remote networks**. 
 An **SSL VPN** is typically established between a **client and a network device.**
 **DMVPN and IPsec VTI VPN** are typically established **between network devices.**
-
-----------
-What are **two valid IPv6 address scopes for a unique local IPv6 address?** (Choose two.)
-* global
-* interface-local
-* link-local
-* **organization-local**
-* **site-local**
-
-Answer
-The correct answers are **organization-local and site-local.** **Unique local IPv6 addresses are equivalents of private IPv4 addresses.** They can be considered globally unique, because the probability of duplication is extremely low. Unique local IPv6 addresses are routable inside of a limited area, such as a site. Also, unique local IPv6 addresses may be routed between a limited set of sites (within an organization), but are not expected to be routable on the global internet.
 
 ----------
 When a **particular VLAN is deleted, what happens to interfaces that were assigned to the deleted VLAN?**
@@ -813,16 +790,6 @@ From PC2, connect to SW2 using Telnet. Examine the running configuration. **Whic
 	The correct answer is LJUB. When you issue the show running-config command, the outup displays the clock timezone LJUB 8 0. You can obtain the same information using the **show clock** command.
 
 ----------
-What are two field names corresponding to the **IPv4 header field and the IPv6 header field that contain Differentiated Services Code Point (DSCP) markings?** (Choose two.)
-
-* flow control
-* flow label
-* IP precedence
-* offset
-* **traffic class**
-* **type of service (ToS)**
-
-----------
 
 Which three of the following application characteristic values are determined in the **service level specification** phase **when designing the quality of service (QoS)** policy of a network? (Choose three.)
 
@@ -840,22 +807,6 @@ Which statement regarding a **small office/home office (SOHO)** of a remote work
 * It must be permanently connected to the main office.
 * It must follow the three-tier architecture model.
 * It typically uses dark fiber to connect to the main office.
-
-----------
-What is the network ID of the IPv6 address 2001:db8:deca:abce:45eb:27ff:feba:fa38/48?
-
-* 2001::
-* 2001:db8::
-* **2001:db8:deca::**
-* 2001:db8:deca:abce::
-
-	Answer: baiscally, one portion of the IPv6 address is consist of 16 bits.
-	The correct answer is 2001:db8:deca:: - has the /48 prefix.
-	**Each hexadecimal character represents 4 binary bits**. 
-	**The first 12 characters correspond to 48 bits.** 
-	2001:db8:deca:abce:: would have the /64 prefix.
-	2001:db8:: would have the /32 prefix.
-	2001: would have the /16 prefix.
 
 ----------
 From PC2, use SSH to access R1. Use AdminPC2 as the username and Cisco123 as the password. **What is the IPv4 address of the loopback interface?**
@@ -1162,14 +1113,6 @@ In an enterprise environment, which guideline should be **implemented to manage 
 * Passwords should NOT be used, because digital certificates are more secure and scale better.
 
 ----------
-Which command is used to assign IPv6 addresses to PC1 and PC2?
-
-* ipv6 address autoconfig
-* **ipv6 address autoconfig default**
-* ipv6 address dhcp
-* ipv6 address 2001:db8:0:1::/64 eui-64 on PC1 and ipv6 address 2001:db8:0:2::/64 eui-64 on PC2
-
-----------
 What is the purpose of the Cisco Wireless LAN Controller (WLC)?
 
 * ensuring that firewall rules are enforced on wireless networks
@@ -1184,13 +1127,6 @@ When configuring an IPv4 static route pointing to the **next-hop IPv4**, which c
 * ip route 172.16.1.0 net-mask 255.255.255.0 next-hop 172.16.2.1
 * ip route 172.16.1.0/24 172.16.2.1
 * ip route static 172.16.1.0 net-mask 255.255.255.0 next-hop 172.16.2.1
-
-----------
-Which type of address is **automatically assigned to a physical interface when IPv6 is enabled on that interface**?
-* global unicast address
-* **link-local address**
-* loopback address
-* unique local address
 
 ----------
 Which three operations can an **SNMP manager process perform in a network**? (Choose three.)
@@ -1456,26 +1392,6 @@ Which three are the **most reliable network practices used in Networking?** (Cho
 * **using version controls for all configuration changes**
 
 ----------
-What is the MAC address of the interface that autoconfigures itself to the IPv6 address of fe80::2a3:C2ff:fefc:4a5d?
-
-* **00:a3:c2:fc:4a:5d**
-* 02:a3:c2:fc:4a:5d
-* 02:a3:c2:ff:fe:fc
-* 2a:3c:2f:ff:ec:4a
-* c2:ff:fe:fc:4a:5d
-
-Answer
-The correct answer is **00:a3:c2:fc:4a:5d**. Autoconfiguration employs the modified EUI-64 format in order to determine the interface ID portion of the address. **The modified EUI-64 format uses the MAC address. The last 24 bits of the MAC address are preserved and become the last 24 bits of the autoconfigured IPv6 address**. **The first 24 bits of the MAC address have the seventh bit inverted**. Also, the **"fffe" sequence is appended to the end of the modified first 24 bits of the MAC address.** This new **40-bit structure is followed by the last 24 bits of the MAC address to form the IPv6 interface ID.**
-
-----------
-Which IPv6 network prefix is only intended for local links and cannot be routed?
-
-* ::ffff/80
-* 2001::/3
-* fc00::/7
-* **fe80::/10**
-
-----------
 Why are the SSH and HTTPS protocols preferred for management traffic?
 
 * Because more detailed logging is possible.
@@ -1516,18 +1432,6 @@ After receiving an Ethernet frame, a **switch examines the destination MAC addre
 
 Answer
 The correct answer is in **broadcast, multicast, and unicast communication**. An Ethernet switch forwards a frame out of all ports except the incoming port when the intended recipients are all devices in a network, like in broadcast communication. It also forwards a frame out of all ports except the incoming port when communication is sent to a specific group of hosts, which is the case in multicast communications. In unicast communication, the switch will forward the frame out of all ports except the incoming port only when it does not have the destination MAC address in its MAC table.
-
-----------
-When using the modified **EUI-64 format to create the interface ID of an IPv6 unicast address, which two portions of the Ethernet MAC are used unchanged**? (Choose two.)
-
-* Organizational Unique Identifier (OUI) octets
-* **network interface card (NIC) specific octets**
-* the universal/local bit
-* **the unicast/multicast bit**
-* the protocol type octet
-
-Answer
-The correct answers are **network interface card (NIC) specific octets** and **the unicast/multicast bit**. In an Ethernet MAC address structure, there is no specific type octet. The universal/local bit is the second-least significant bit in the MAC address. In the modified EUI-64 format, it is inverted. As this bit is part of the OUI octets, inverting it changes the value of the OUI octets as well.
 
 ----------
 Refer to the exhibit. **Which of the routes is a floating static route?**
@@ -1915,14 +1819,6 @@ server. Using traps configured at the correct level, the syslog server will stor
 network administrators to access the logs for troubleshooting and investigations.
 
 ----------
-A system administrator is configuring **IPv6 on the external interface of a web server and wants to ensure traffic from the Internet can be routed to the server.** Which type of
-Unicast address should be configured on the interface?
-
-**Global**
-
-Answer explanation: IPv6 **global unicast addresses are routable IP addresses similar to public IPv4 addresses.**
-
-----------
 Which of the following **commands creates a network route on a layer 3 device for the 10.0.10.0/24 subnet**?
 
 * **ip route 10.0.10.0 255.255.255.0 10.0.10.5**
@@ -2038,13 +1934,6 @@ Which of the following commands is used to **configure a network address transla
 Answer explanation: This will configure a single private IP address to map to a single public
 IP address. This is known as static mapping and is used when there is a need for a single
 device with a private IP to use a public IP provided for address translation purposes
-
-----------
-Which **command would correctly configure the IPv6 address on a router interface using the EUI-64** (Extended Unique Identifier) format for the interface ID?
-
-**Router(config-if)# ipv6 address 2001:0db8:19ab:1::/64 eui-64**
-
-Answer explanation: This command correctly sets the IPv6 address using the EUI-64 format on an interface.
 
 ----------
 To explain the **data center network segment she works in, an architect describes each service, the unified communications server (UCS), and how they connect to leafs of the application centric infrastructure (ACI).** Which of the following describes the network components that connect to the leafs?
@@ -2496,25 +2385,11 @@ A network engineer is **troubleshooting connectivity issues on a layer 2 switch.
 Answer explanation: **When traffic from a new device is seen for the first time traffic is forwarded out all interfaces and the burned-in or MAC address is added to the MAC address table.** If the switch was able to register the computer's and phone's MAC address would show up.
 
 ----------
-What **prefix length is used to create a static IPv6 host route?**
-
-**/128**
-
-Answer explanation: This prefix is used to designate a single IPv6 address and is needed to provide a host route.
-
-----------
 A network engineer is **deploying a new multilayer switch to an office and replacing the older edge router and switch to conserve space in the network closet**. What function does the **multilayer switch perform in this network segment?**
 
 **It provides open systems interconnect (OSI) layer 2 connectivity and layer 3 routing for the devices connected to the office network**
 
 Answer explanation: The switch can provide layer 2 connectivity for the local area network (LAN), but since the router has been removed, it also provides layer 3 connectivity for routing. OSI layer 2 connectivity will not replace the routing functionality of the router that was removed. A switch that allows for layer 3 functionality can replace both devices in this context.
-
-----------
-A system administrator is setting up a **streaming media application that will stream data from a server to multiple clients that are setup as receivers, but not to any clients that are not receivers.** Which IPv6 address type meets this requirement?
-
-**Multicast**
-
-Answer explanation: **Multicast addresses are used to send a message from one source to multiple destination interfaces at the same time.**
 
 ----------
 A **VXLAN tunnel is configured between two servers**. Which of the following **best defines the VXLAN tunnel in a controller-based network?**
@@ -2627,13 +2502,6 @@ vlan
 **The cut-sheet shutdown VLAN 1, causing the switch to lose connectivity and disconnecting the SSH session**
 
 Answer explanation: **All switchports are in the default VLAN and shutting down that VLAN would cause all connectivity to the switch to stop**. This would disconnect the SSH session. The engineer could reboot the switch to revert the changes since the changes were only in the running configuration and had not been saved.
-
-----------
-A system administrator wants to configure interfaces on a **group of distributed servers so that traffic is only routed to the closest server**. Which **IPv6** address type meets this requirement?
-
-**Anycast**
-
-Answer explanation: **Anycast addresses use the same address on multiple interfaces and only the closest interface will receive the traffic.**
 
 ----------
 Which of the following show configuration commands can **show multiple devices on one switchport, leverage sub-interfaces, and display the operating system information of connected devices by a Cisco switch?**
@@ -2903,14 +2771,6 @@ A client is using network devices with an **OS that doesn't support Puppet**, bu
 Answer explanation:**Puppet can help achieve this by using a proxy agent, which utilizes SSH.**
 
 ----------
-Which command is used to **correctly configure an IPv6 network route?**
-
-**ipv6 route 2001:dc6:1010:2::/64 s0/1/0**
-**Syntax:** ipv6 route <ipv6-prefix> / <prefix-length> { <**next-hop-ipv6-address**> | **interface-type interface-number** [<next-hop-ipv6-address>] } [administrative-distance] [<route-type>] [tag <tag-value>]
-
-Answer explanation:This creates a **network route that sends traffic destined for the ipv6 network to serial 0/1/0.**
-
-----------
 Which **IPsec protocol is responsible for providing encryption, authentication, and integrity for the payload of IP packets?**
 
 **ESP (Encapsulating Security Payload)**
@@ -2930,13 +2790,6 @@ An engineer needs to create a **point-to-point network to provide connectivity b
 **Router(config-if)# ip address 192.168.30.1 255.255.255.240**
 
 Answer explanation:With a **/28 subnet mask the usable addresses for the 192.168.30.0 network are 192.168.30.1-14**. This command correctly sets the IP address to lowest usable address in the range.
-
-----------
-A network administrator has been tasked with securing **simple network management protocol (SNMP) traffic and configurations.** **They will do this by ensuring that only specific SNMP servers send and receive SNMP traffic to network devices, that the traffic is encrypted, and that the server authenticates with the client.** What should network administrator do to meet these requirements?
-
-**Use SNMPv3 and IPv4 and IPv6 ACLs**
-
-Answer explanation:**SNMPv3 supports the encryption of traffic between client and server and the ability to use username and password authentication that is not sent in clear text.** Using IPv4 and IPv6 **ACLs ensures that the traffic between the SNMP network management servers (NMSs) and the SNMP clients is not allowed to pass over other network segments or be exposed to other NMSs and clients.**
 
 ----------
 Which type of network is represented in the given image?
@@ -3021,17 +2874,6 @@ What happens **when a packet arrives at a router but has multiple routes that it
 Answer explanation: **Routers use the longest match or most specific route to determine where a packet with overlapping routes is sent.** Generally this infers a host route and a network route exist that overlap.
 
 ----------
-Which of the **following statements are true for a controller-based network**? Select all that
-
-* **It uses north-bound and south-bound APIs to communicate between architectural layers**
-* **It moves the control plane to a central point**
-
-Answer explanation: Controller-based networking is a style of building computer networks
-that uses a **controller that centralizes some features and provides application programming interfaces (APIs) that allow for software interactions between applications and the controller (north-bound APIs) and between the controller and the network devices (south-bound APIs).**
-
-Answer explanation: Controller-based networking is a style of building computer networks that uses a controller that centralizes some features and provides **application programming interfaces (APIs) that allow for software interactions between applications and the controller (north-bound APIs) and between the controller and the network devices (south-bound APIs).**
-
-----------
 Which sequence **of commands will ensure that remote users use the newest version of secure shell (SSH), prevent insecure protocols for connectivity, and use md5 encryption to secure the enable secret?**
 
 **Ans:**
@@ -3047,14 +2889,6 @@ end
 copy run start
 ```
 Answer explanation: This **meets all the requirements listed**. It enables **SSHv2, encrypts the enable secret with md5, and only uses SSH for VTY connectivity.**
-
-----------
-Which command **would correctly configure the IPv6 address on a router interface using the EUI-64** (Extended Unique Identifier) format for the interface ID?
-
-**Router(config-if)# ipv6 address _2001:0db8:19ab:1::/64 eui-64_**
-**Note:** You should use the **/64 subnet** mask to configure the **EUI64 - IPv6 address.**
-
-Answer explanation: This command correctly sets the IPv6 address using the EUI-64 format on an interface.
 
 ----------
 An engineer has been asked to **enable Cisco Discovery Protocol (CDP) globally on a switch and disable it from running on all but those ports dedicated to phones and access points**. Which commands should the engineer run to accomplish this task?
@@ -3324,31 +3158,6 @@ A company wants to **interconnect all its branches. To ensure minimum downtime, 
 * single-mode fiber
 
 ----------
-Which three statements describes **characteristics of solicited-node IPv6 addresses**? (Choose three.)
-
-* There can be only one per device.
-* **They are automatically created by the device.**
-* They are created using the device's MAC address.
-* **They are multicast addresses.**
-* They are valid within an organization.
-* **They have a recognizable prefix.**
-
-Answer
-The correct answers are **They are automatically created by the device, They are multicast addresses, and They have a recognizable prefix.** A **solicited-node multicast IPv6 address is created using special mapping of the device's unicast address with the recognizable solicited-node multicast prefix of ff02:0:0:0:0:1:ff00::/104.** A **device can have multiple solicited-node multicast addresses, because the multicast addresses are automatically created for every unicast address on a device.**
-
-----------
-What is the **MAC address of the interface that autoconfigures itself to the IPv6 address of fe80::2a3:C2ff:fefc:4a5d?**
-
-* **00:a3:c2:fc:4a:5d**
-* 02:a3:c2:fc:4a:5d
-* 02:a3:c2:ff:fe:fc
-* 2a:3c:2f:ff:ec:4a
-* c2:ff:fe:fc:4a:5d
-
-Answer
-The correct answer is **00:a3:c2:fc:4a:5d**. Autoconfiguration employs the modified EUI-64 format in order to determine the interface ID portion of the address. The modified EUI-64 format uses the MAC address. **The last 24 bits of the MAC address are preserved and become the last 24 bits of the autoconfigured IPv6 address**. **The first 24 bits of the MAC address have the seventh bit inverted.** Also, the "**fffe**" sequence is appended to the end of the modified first 24 bits of the MAC address. **This new 40-bit structure is followed by the last 24 bits of the MAC address to form the IPv6 interface ID.**
-
-----------
 On a **Cisco switch**, which two commands would you use to **identify ports that are configured as trunks**? (Choose two.)
 
 * **show interfaces status**
@@ -3455,14 +3264,6 @@ If you want to use a **static route as a backup route when the primary route fai
 * neighbor discovery
 
 ----------
-On a **Cisco router, which command should you use to display the IPv6 routing table?**
-
-* show ipv6 neighbors
-* show ipv6 protocols
-* **show ipv6 route**
-* show ipv6 router
-
-----------
 Which of the following is the correct binary representation of the third octet of the IPv4 address 172.20.**170**.50?
 
 * 0001 1110
@@ -3547,19 +3348,6 @@ Which statement about the **HTTP PUT request method is correct**?
 * **HTTP PUT updates or modifies an existing resource.**
 
 ----------
-What is the **interface ID of the IPv6 address 2001:db8::a:a9cd:47ff:fe57:fe94/64?**
-
-* 47ff:fe57:fe94
-* a:a9cd:47ff:fe57:fe94
-* **a9cd:47ff:fe57:fe94**
-* fe57:fe94
-* 2001:db8
-* 2001:db8::a
-
-Answer
-The correct answer is a9cd:47ff:fe57:fe94. An **IPv6 address starting with the hexadecimal digits 2 or 3 falls into the category of global unicast addresses.** The **first 48 bits represent the Global Routing Prefix** and are **followed by a 16-bit Subnet ID.** The **remaining 64 bits represent the Interface ID, which is equivalent to the host portion of an IPv4 address.**
-
-----------
 Presuming **there are no specific obstacles on locations where you are setting up a WLAN network, for which location should you use a patch antenna?**
 
 * a big laboratory
@@ -3588,39 +3376,6 @@ What does a switch on an **Ethernet network do if it receives a unicast frame wi
 * **drop the frame**
 * flood the frame
 * forward the frame
-
-----------
-Which is the **correct subnet mask for a host route?**
-
-* 0.0.0.0
-* 255.254.0.0
-* 255.255.255.254
-* **255.255.255.255**
-
-Answer
-The correct answer is **255.255.255.255.** The host **route is a static route for a single host**. A single host is specified by the subnet mask of 255.255.255.255. **The host route has all the bits in the network mask set to 1, for IPv4 this can be 192.168.1.1/32, and for IPv6 it could be ::1/128.**
-
-----------
-You are configuring an **IPv6 static route using the link-local IPv6 address as the next-hop**. Which command has the correct syntax?
-
-* ipv6 route 2001:0db8:beef:: 2001:0db8:feed::1
-* ipv6 route 2001:0db8:beef:: fa1/0 fe80::2
-* ipv6 route 2001:0db8:beef::/32 2001:0db8:feed::1
-* **ipv6 route 2001:0db8:beef::/32 fa1/0 fe80::2**
-
-Answer
-The correct answer is **ipv6 route 2001:0db8:beef::/32 fa1/0 fe80::2**. A **static route gives an option for the link-local next hop address, which is specified with the "fe80" prefix**. When using a link-local address as the next hop, **you must use an exit interface, as this link-local address can be used on any interface. "2001:0db8:feed::1" shows a route to the network that points to the global IPv6 address**. **The answers ipv6 route 2001:0db8:beef:: 2001:0db8:feed::1 and ipv6 route 2001:0db8:beef:: fa1/0 fe80::2 are missing prefixes.**
-
-----------
-Which IPv6 **command on a Cisco router can be used to provide the name-to-IP address resolution in case the DNS service in the network fails?**
-
-* hostname TFTP-SERVER 2001:db8:a:a::69
-* ipv6 host TFTP-SERVER interface Gi0/0
-* **ipv6 host TFTP-SERVER 2001:db8:a:a::69 2001:db8:a:a::169**
-* ipv6 hostname TFTP-SERVER 2001:db8:a:a::69
-
-Answer
-The correct answer is **ipv6 host TFTP-SERVER 2001:db8:a:a::69 2001:db8:a:a::169**. To define a static host name to address mapping in the host name cache, use the ipv6 host name [port] ipv6-address command in global configuration mode. The syntax of the command requires that you enter the host's name followed by one or more associated IPv6 addresses. Optionally, you can specify the port number. To remove the hostname-to-address mapping, use the no form of this command.
 
 ----------
 Which part of the **Open Shortest Path First (OSPF) process is omitted if two routers are connected with a point-to-point link?**
@@ -3696,6 +3451,29 @@ In traditional networking, **every router makes its own decisions about forwardi
 **SDN Controller**
 
 Answer explanation: An **SDN Controller provides a centralized control plane, which uses a north-bound interface and south-bound interface to manage all devices.**
+
+----------
+Which of the **following statements are true for a controller-based network**? Select all that
+
+* **It uses north-bound and south-bound APIs to communicate between architectural layers**
+* **It moves the control plane to a central point**
+
+Answer explanation: Controller-based networking is a style of building computer networks
+that uses a **controller that centralizes some features and provides application programming interfaces (APIs) that allow for software interactions between applications and the controller (north-bound APIs) and between the controller and the network devices (south-bound APIs).**
+
+Answer explanation: Controller-based networking is a style of building computer networks that uses a controller that centralizes some features and provides **application programming interfaces (APIs) that allow for software interactions between applications and the controller (north-bound APIs) and between the controller and the network devices (south-bound APIs).**
+
+----------
+
+Which APIs are used for communication between a **software-defined networking (SDN) application and a controller**?
+* Eastbound APIs
+* **Northbound APIs**
+* Southbound APIs
+* Westbound APIs
+
+	**Northbound APIs**
+
+	Northbound APIs or northbound interfaces are responsible for the communication between the SDN controller and the services that run over the network. Northbound APIs enable your applications to manage and control the network. Therefore, rather than adjusting and tweaking your network repeatedly to get a service or application running correctly, you can set up a framework that allows the application to demand the network setup that it needs.
 
 ----------
 Which of the following **commands is used to configure a network address translation (NAT) router with a one-to-one mapping between a private and public IP address?**
@@ -3799,13 +3577,6 @@ end
 Answer explanation: The host route has a next hop address that is removed by deleting the original host route and then replaced by adding the updated host route back to the static route list.
 
 ----------
-When creating a **Modified EUI-64 (Extended Unique Identifier) IPv6 address, the two bytes FFFE are inserted into the middle of an address to create the 64-bit address**. Which data forms the upper and lower portion of the address?
-
-**The first and second half of the interface's MAC address**
-
-Answer explanation: To **create an EUI-64 address the 2 bytes 'FFFE' are inserted between the first 24-bits and last 24-bits of the interface's MAC address.**
-
-----------
 A new **switch is deployed to a network with redundant connectivity to the switch, one hop further into the network.** The network engineer **configuring the switch notices it is unable to pass traffic over one of its upstream ports**. Which **networking concept is causing the switch to only pass traffic over one port**?
 
 **Spanning tree is in a blocking state on the port**
@@ -3865,11 +3636,11 @@ What are two characteristics of an **anycast IPv6 address**? (Choose two.)
 ----------
 
 Which **four of the following are valid link-local IPv6 addresses?** (Choose four.)
-* ** fe80::1**
+* **fe80::1**
 * ff80::1
-* ** fe90::1**
-* ** feb1::1**
-* ** fea3::1**
+* **fe90::1**
+* **feb1::1**
+* **fea3::1**
 * fec3::1
 
 	* fe80::1
@@ -3878,6 +3649,236 @@ Which **four of the following are valid link-local IPv6 addresses?** (Choose fou
 	* fea3::1
 
 	All addresses encompassed by the **fe80::/10 prefix are considered valid link-local IPv6 addresses**. The **ff00::/8 prefix is the prefix of multicast IPv6 addresses**. Addresses starting with the hexadecimal digits fec3 do not belong to a link-local IPv6 address range.
+
+----------
+What is the **interface ID of the IPv6 address 2001:db8::a:a9cd:47ff:fe57:fe94/64?**
+
+* 47ff:fe57:fe94
+* a:a9cd:47ff:fe57:fe94
+* **a9cd:47ff:fe57:fe94**
+* fe57:fe94
+* 2001:db8
+* 2001:db8::a
+
+Answer
+The correct answer is a9cd:47ff:fe57:fe94. An **IPv6 address starting with the hexadecimal digits 2 or 3 falls into the category of global unicast addresses.** The **first 48 bits represent the Global Routing Prefix** and are **followed by a 16-bit Subnet ID.** The **remaining 64 bits represent the Interface ID, which is equivalent to the host portion of an IPv4 address.**
+
+
+----------
+What are **two valid IPv6 address scopes for a unique local IPv6 address?** (Choose two.)
+* global
+* interface-local
+* link-local
+* **organization-local**
+* **site-local**
+
+Answer
+The correct answers are **organization-local and site-local.** **Unique local IPv6 addresses are equivalents of private IPv4 addresses.** They can be considered globally unique, because the probability of duplication is extremely low. Unique local IPv6 addresses are routable inside of a limited area, such as a site. Also, unique local IPv6 addresses may be routed between a limited set of sites (within an organization), but are not expected to be routable on the global internet.
+
+----------
+What are two field names corresponding to the **IPv4 header field and the IPv6 header field that contain Differentiated Services Code Point (DSCP) markings?** (Choose two.)
+
+* flow control
+* flow label
+* IP precedence
+* offset
+* **traffic class**
+* **type of service (ToS)**
+
+----------
+What is the network ID of the IPv6 address 2001:db8:deca:abce:45eb:27ff:feba:fa38/48?
+
+* 2001::
+* 2001:db8::
+* **2001:db8:deca::**
+* 2001:db8:deca:abce::
+
+	Answer: baiscally, one portion of the IPv6 address is consist of 16 bits.
+	The correct answer is 2001:db8:deca:: - has the /48 prefix.
+	**Each hexadecimal character represents 4 binary bits**. 
+	**The first 12 characters correspond to 48 bits.** 
+	2001:db8:deca:abce:: would have the /64 prefix.
+	2001:db8:: would have the /32 prefix.
+	2001: would have the /16 prefix.
+
+----------
+Which command is used to assign IPv6 addresses to PC1 and PC2?
+
+* ipv6 address autoconfig
+* **ipv6 address autoconfig default**
+* ipv6 address dhcp
+* ipv6 address 2001:db8:0:1::/64 eui-64 on PC1 and ipv6 address 2001:db8:0:2::/64 eui-64 on PC2
+
+----------
+Which type of address is **automatically assigned to a physical interface when IPv6 is enabled on that interface**?
+* global unicast address
+* **link-local address**
+* loopback address
+* unique local address
+
+----------
+What is the MAC address of the **interface that autoconfigures itself to the IPv6 address of fe80::2a3:C2ff:fefc:4a5d?**
+
+* **00:a3:c2:fc:4a:5d**
+* 02:a3:c2:fc:4a:5d
+* 02:a3:c2:ff:fe:fc
+* 2a:3c:2f:ff:ec:4a
+* c2:ff:fe:fc:4a:5d
+
+Answer
+The correct answer is **00:a3:c2:fc:4a:5d**. Autoconfiguration employs the modified EUI-64 format in order to determine the interface ID portion of the address. **The modified EUI-64 format uses the MAC address. The last 24 bits of the MAC address are preserved and become the last 24 bits of the autoconfigured IPv6 address**. **The first 24 bits of the MAC address have the seventh bit inverted**. Also, the **"fffe" sequence is appended to the end of the modified first 24 bits of the MAC address.** This new **40-bit structure is followed by the last 24 bits of the MAC address to form the IPv6 interface ID.**
+
+----------
+Which IPv6 network prefix is only intended for local links and cannot be routed?
+
+* ::ffff/80
+* 2001::/3
+* fc00::/7
+* **fe80::/10**
+
+----------
+When using the modified **EUI-64 format to create the interface ID of an IPv6 unicast address, which two portions of the Ethernet MAC are used unchanged**? (Choose two.)
+
+* Organizational Unique Identifier (OUI) octets
+* **network interface card (NIC) specific octets**
+* the universal/local bit
+* **the unicast/multicast bit**
+* the protocol type octet
+
+Answer
+The correct answers are **network interface card (NIC) specific octets** and **the unicast/multicast bit**. In an Ethernet MAC address structure, there is no specific type octet. The universal/local bit is the second-least significant bit in the MAC address. In the modified EUI-64 format, it is inverted. As this bit is part of the OUI octets, inverting it changes the value of the OUI octets as well.
+
+----------
+A system administrator is configuring **IPv6 on the external interface of a web server and wants to ensure traffic from the Internet can be routed to the server.** Which type of
+Unicast address should be configured on the interface?
+
+**Global**
+
+Answer explanation: IPv6 **global unicast addresses are routable IP addresses similar to public IPv4 addresses.**
+
+----------
+Which **command would correctly configure the IPv6 address on a router interface using the EUI-64** (Extended Unique Identifier) format for the interface ID?
+
+**Router(config-if)# ipv6 address 2001:0db8:19ab:1::/64 eui-64**
+
+Answer explanation: This command correctly sets the IPv6 address using the EUI-64 format on an interface.
+
+----------
+What **prefix length is used to create a static IPv6 host route?**
+
+**/128**
+
+Answer explanation: This prefix is used to designate a single IPv6 address and is needed to provide a host route.
+
+----------
+A system administrator is setting up a **streaming media application that will stream data from a server to multiple clients that are setup as receivers, but not to any clients that are not receivers.** Which IPv6 address type meets this requirement?
+
+**Multicast**
+
+Answer explanation: **Multicast addresses are used to send a message from one source to multiple destination interfaces at the same time.**
+
+----------
+A system administrator wants to configure interfaces on a **group of distributed servers so that traffic is only routed to the closest server**. Which **IPv6** address type meets this requirement?
+
+**Anycast**
+
+Answer explanation: **Anycast addresses use the same address on multiple interfaces and only the closest interface will receive the traffic.**
+
+----------
+Which command is used to **correctly configure an IPv6 network route?**
+
+**ipv6 route 2001:dc6:1010:2::/64 s0/1/0**
+**Syntax:** ipv6 route <ipv6-prefix> / <prefix-length> { <**next-hop-ipv6-address**> | **interface-type interface-number** [<next-hop-ipv6-address>] } [administrative-distance] [<route-type>] [tag <tag-value>]
+
+Answer explanation:This creates a **network route that sends traffic destined for the ipv6 network to serial 0/1/0.**
+
+----------
+A network administrator has been tasked with securing **simple network management protocol (SNMP) traffic and configurations.** **They will do this by ensuring that only specific SNMP servers send and receive SNMP traffic to network devices, that the traffic is encrypted, and that the server authenticates with the client.** What should network administrator do to meet these requirements?
+
+**Use SNMPv3 and IPv4 and IPv6 ACLs**
+
+Answer explanation:**SNMPv3 supports the encryption of traffic between client and server and the ability to use username and password authentication that is not sent in clear text.** Using IPv4 and IPv6 **ACLs ensures that the traffic between the SNMP network management servers (NMSs) and the SNMP clients is not allowed to pass over other network segments or be exposed to other NMSs and clients.**
+
+----------
+Which command **would correctly configure the IPv6 address on a router interface using the EUI-64** (Extended Unique Identifier) format for the interface ID?
+
+**Router(config-if)# ipv6 address _2001:0db8:19ab:1::/64 eui-64_**
+**Note:** You should use the **/64 subnet** mask to configure the **EUI64 - IPv6 address.**
+
+Answer explanation: This command correctly sets the IPv6 address using the EUI-64 format on an interface.
+
+----------
+Which three statements describes **characteristics of solicited-node IPv6 addresses**? (Choose three.)
+
+* There can be only one per device.
+* **They are automatically created by the device.**
+* They are created using the device's MAC address.
+* **They are multicast addresses.**
+* They are valid within an organization.
+* **They have a recognizable prefix.**
+
+Answer
+The correct answers are **They are automatically created by the device, They are multicast addresses, and They have a recognizable prefix.** A **solicited-node multicast IPv6 address is created using special mapping of the device's unicast address with the recognizable solicited-node multicast prefix of ff02:0:0:0:0:1:ff00::/104.** A **device can have multiple solicited-node multicast addresses, because the multicast addresses are automatically created for every unicast address on a device.**
+
+----------
+What is the **MAC address of the interface that autoconfigures itself to the IPv6 address of fe80::2a3:C2ff:fefc:4a5d?**
+
+* **00:a3:c2:fc:4a:5d**
+* 02:a3:c2:fc:4a:5d
+* 02:a3:c2:ff:fe:fc
+* 2a:3c:2f:ff:ec:4a
+* c2:ff:fe:fc:4a:5d
+
+Answer
+The correct answer is **00:a3:c2:fc:4a:5d**. Autoconfiguration employs the modified EUI-64 format in order to determine the interface ID portion of the address. The modified EUI-64 format uses the MAC address. **The last 24 bits of the MAC address are preserved and become the last 24 bits of the autoconfigured IPv6 address**. **The first 24 bits of the MAC address have the seventh bit inverted.** Also, the "**fffe**" sequence is appended to the end of the modified first 24 bits of the MAC address. **This new 40-bit structure is followed by the last 24 bits of the MAC address to form the IPv6 interface ID.**
+
+----------
+On a **Cisco router, which command should you use to display the IPv6 routing table?**
+
+* show ipv6 neighbors
+* show ipv6 protocols
+* **show ipv6 route**
+* show ipv6 router
+
+----------
+Which is the **correct subnet mask for a host route?**
+
+* 0.0.0.0
+* 255.254.0.0
+* 255.255.255.254
+* **255.255.255.255**
+
+Answer
+The correct answer is **255.255.255.255.** The host **route is a static route for a single host**. A single host is specified by the subnet mask of 255.255.255.255. **The host route has all the bits in the network mask set to 1, for IPv4 this can be 192.168.1.1/32, and for IPv6 it could be ::1/128.**
+
+----------
+You are configuring an **IPv6 static route using the link-local IPv6 address as the next-hop**. Which command has the correct syntax?
+
+* ipv6 route 2001:0db8:beef:: 2001:0db8:feed::1
+* ipv6 route 2001:0db8:beef:: fa1/0 fe80::2
+* ipv6 route 2001:0db8:beef::/32 2001:0db8:feed::1
+* **ipv6 route 2001:0db8:beef::/32 fa1/0 fe80::2**
+
+Answer
+The correct answer is **ipv6 route 2001:0db8:beef::/32 fa1/0 fe80::2**. A **static route gives an option for the link-local next hop address, which is specified with the "fe80" prefix**. When using a link-local address as the next hop, **you must use an exit interface, as this link-local address can be used on any interface. "2001:0db8:feed::1" shows a route to the network that points to the global IPv6 address**. **The answers ipv6 route 2001:0db8:beef:: 2001:0db8:feed::1 and ipv6 route 2001:0db8:beef:: fa1/0 fe80::2 are missing prefixes.**
+
+----------
+Which IPv6 **command on a Cisco router can be used to provide the name-to-IP address resolution in case the DNS service in the network fails?**
+
+* hostname TFTP-SERVER 2001:db8:a:a::69
+* ipv6 host TFTP-SERVER interface Gi0/0
+* **ipv6 host TFTP-SERVER 2001:db8:a:a::69 2001:db8:a:a::169**
+* ipv6 hostname TFTP-SERVER 2001:db8:a:a::69
+
+Answer
+The correct answer is **ipv6 host TFTP-SERVER 2001:db8:a:a::69 2001:db8:a:a::169**. To define a static host name to address mapping in the host name cache, use the ipv6 host name [port] ipv6-address command in global configuration mode. The syntax of the command requires that you enter the host's name followed by one or more associated IPv6 addresses. Optionally, you can specify the port number. To remove the hostname-to-address mapping, use the no form of this command.
+
+----------
+When creating a **Modified EUI-64 (Extended Unique Identifier) IPv6 address, the two bytes FFFE are inserted into the middle of an address to create the 64-bit address**. Which data forms the upper and lower portion of the address?
+
+**The first and second half of the interface's MAC address**
+
+Answer explanation: To **create an EUI-64 address the 2 bytes 'FFFE' are inserted between the first 24-bits and last 24-bits of the interface's MAC address.**
 
 ----------
 

@@ -1,4 +1,6 @@
---------- 1 -----------
+
+----------- 1 -----------
+
 The devices in the topology are pre-configured with IP addressing and can communicate with each other. You need to configure and verify the time-related configuration which will allow devices to synchronize time in a pre-determined way.
 
 Perform the following tasks:
@@ -60,7 +62,7 @@ Ans:
 Ans:
    **SW# show ntp associations**
 
-   The correct answer is __*~198.51.100.2__. An asterisk (*) next to a configured peer represents that the device is synced to this peer and using it as the master clock. A tilde (~) next to a configured peer represents that this is a configured master server.
+   The correct answer is __*~198.51.100.2__. An asterisk (*) **next to a configured peer represents that the device is synced to this peer and using it as the master clock**. A **tilde (~) next to a configured peer represents that this is a configured master server.**
 
 ------------- 1 ends -----------
 
@@ -92,26 +94,27 @@ Lets assume:
 
    Create the vlan 65 and 80 on SW1 and SW2
 
-SW1# conf t
-SW1# int eth0/1
-SW1# switchport mode trunk
-SW1# switchport trunk allowed vlan 65
+VLAN - 65 Section:
+   SW1# conf t
+   SW1# int eth0/1
+   SW1# switchport mode trunk
+   SW1# switchport trunk allowed vlan 65
 
-VLAN - 65
-PC1 - Eth0/0 - 192.168.65.11 - SW1 eth0/1
+   VLAN - 65
+   PC1 - Eth0/0 - 192.168.65.11 - SW1 eth0/1
 
-PC2 - Eth0/0 - 192.168.65.12 - SW2 eth0/1
+   PC2 - Eth0/0 - 192.168.65.12 - SW2 eth0/1
 
-SW1# conf t
-SW1# int eth0/1
-SW1# switchport mode trunk
-SW1# switchport trunk allowed vlan 80
+VLAN - 80 Section:
+   SW1# conf t
+   SW1# int eth0/1
+   SW1# switchport mode trunk
+   SW1# switchport trunk allowed vlan 80
 
-VLAN - 80
-SV1 - Eth0/0 - 192.168.65.21 - SW1 eth0/2
+   VLAN - 80
+   SV1 - Eth0/0 - 192.168.65.21 - SW1 eth0/2
 
-SV2 - Eth0/0 - 192.168.65.22 - SW2 eth0/2
-
+   SV2 - Eth0/0 - 192.168.65.22 - SW2 eth0/2
 
 then finally try to ping each others.
 
@@ -457,7 +460,7 @@ Configure port security on SW1 on the ports that are connected to PC2 and the In
 
 **Correct Answer is: err-disabled**
 
-SW1#show interfaces eth0/3
+**SW1#show interfaces eth0/3**
 Ethernet0/3 is down, line protocol is down (**err-disabled**) 
   Hardware is AmdP2, address is aabb.cc00.0630 (bia aabb.cc00.0630)
   Description: ***Connected to Inventory server***
@@ -495,7 +498,7 @@ Ethernet0/3 is down, line protocol is down (**err-disabled**)
 
 **The correct answer is 1.**
 
-SW1#show port-security interface eth0/3
+**SW1#show port-security interface eth0/3**
 Port Security              : Enabled
 Port Status                : Secure-shutdown
 Violation Mode             : Shutdown
@@ -691,7 +694,7 @@ Configure PC1 and PC2 to auto-configure both their IPv6 addresses and their defa
 
 Configure the SW1 and SW2 IPv6 addresses and default gateways as listed in the Job Aids.
 
-Configure the routers with link-local addresses so that each interface on a router has the same link-local address.
+Configure the routers with **link-local addresses so that each interface on a router has the same link-local address.**
 
 For R1, use fe80::1.
 
@@ -723,7 +726,7 @@ Correct Ans: **fe80::3**
 Correct Ans: **2001:db8:0:2::2**
 
 Run **`show running-config`** command on R2 which is connected with SW2. **The R2 IPv6 address is the default gateway for SW2.**
-R2#show run
+**R2#show run**
 Building configuration...
 interface Ethernet0/0
  description Link to SW2
