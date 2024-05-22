@@ -387,6 +387,22 @@ The correct answer is **VLAN 20**. When you use the show spanning-tree command o
 | **debugging**     | **7** | Debugging messages               | **LOG_DEBUG**     |
 
 ----------
+
+### Routing Protocol
+| Default             | Administrative Distance |
+| ------------------- | ----------------------- |
+| Connected           | 0                       |
+| Static              | 1                       |
+| eBGP                | 20                      |
+| EIGRP summary route | 5                       |
+| EIGRP (internal)    | 90                      |
+| OSPF                | 110                     |
+| IS-IS               | 115                     |
+| RIP                 | 120                     |
+| EIGRP (external)    | 170                     |
+| iBGP                | 200                     |
+
+----------
 Which task controls the **download and deployment of software updates**?
 * compliance checks
 * data collection and telemetry
@@ -2186,20 +2202,6 @@ Here are some portions of traces from **wireshark, captured from two different p
 Answer explanation: Since the **MAC address 00:50:56:8e:ee:89 is corresponding to two different IP addresses**, it is **ARP spoofing, which can be prevented by using Dynamic Arp Inspection.**
 
 ----------
-Which **method does a wireless LAN controller (WLC) use to pass traffic to and from a lightweight access point when in local mode in a split-MAC architecture?**
-
-**CAPWAP tunneling uses a layer 3 address on the access point to form a layer 3 connection with the WLC and route traffic**
-
-Answer explanation: **CAPWAP tunneling over layer 3 allows the access point to route traffic for all SSIDs back to the WLC without needing an additional trunk configuration on the switch.**
-
-----------
-Which part of a **Cisco DNA Center software-defined access (SDA) fabric provides physical connectivity between nodes in the environment to support Virtual Extensible LAN (VXLAN) tunnels?**
-
-**Underlay**
-
-Answer explanation: **Underlays in the SDA fabric are the physical devices and connections between different nodes.** The **underlay generally uses a routed access layer design** to support the **VXLANs** that allow for **tunnling between the overlay nodes.**
-
-----------
 The command output of **show ip route from a layer 3 device is given. Which portion of the output represents a prefix that is connected via OSPF and has 256 addresses associated with it?** Output:
 	Gateway of last resort is 192.168.12.10 to network 0.0.0.0
 	10.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
@@ -2371,13 +2373,6 @@ What is the **minimum necessary configuration for a router running OSPF as a rou
 Answer explanation: For OSPF to function, **at least two layer 3 devices running OSPF must be connected, both configured with a network that is assigned to an area, a process-ID, and a router-ID to exchange routing information**. **Alternatively, to a router-ID, a router can be configured with an up-up loopback address** that has a unique IP address assigned to it.
 
 ----------
-What **advantage does an autonomous access point (AP) architecture provide when compared to an access point leveraging CAPWAP mode?** 
-
-**Autonomous AP architectures provide a more efficient path for data over wired and wireless networks they are part of**
-
-Answer explanation: **Autonomous APs manage traffic between clients connected on the same AP locally instead of sending that traffic back to a controller**. This makes for a simpler and more direct path for data to travel to the switch that AP is connected to, enhancing the performance and responsiveness of the network.
-
-----------
 A network engineer is **troubleshooting connectivity issues on a layer 2 switch.** An IP phone that shows as registered and passes traffic is connected to one of the ethernet ports on the switch. **However, a computer plugged into the phone's built-in switchport does not pass traffic on the corporate network over the computer's ethernet port.** What table can the engineer use to look up on the switch to see if the burned-in address of the computer and phone are registered?
 
 **Media access control (MAC) address table**
@@ -2390,18 +2385,6 @@ A network engineer is **deploying a new multilayer switch to an office and repla
 **It provides open systems interconnect (OSI) layer 2 connectivity and layer 3 routing for the devices connected to the office network**
 
 Answer explanation: The switch can provide layer 2 connectivity for the local area network (LAN), but since the router has been removed, it also provides layer 3 connectivity for routing. OSI layer 2 connectivity will not replace the routing functionality of the router that was removed. A switch that allows for layer 3 functionality can replace both devices in this context.
-
-----------
-A **VXLAN tunnel is configured between two servers**. Which of the following **best defines the VXLAN tunnel in a controller-based network?**
-
-**Overlay network**
-**Shaping**
-
-
-Answer explanation: Devices on **overlay** networks are interconnected through logical links, constituting overlay topologies. Tunnels are established between interconnected overlay devices. Overlay networks support various network protocols and standards, including virtual extensible local area network (VXLAN), Network ----------
-An engineer has a remote office that sends and receives data using a committed information rate (CIR) of 200 mbps from a service provider. The service provider discards traffic that exceeds the agreed-upon CIR from clients entering and exiting their network. A second remote site that often sends data to this office uses a CIR of 600 mbps from their service provider, often sending data at a rate that exceeds the CIR of 200 mbps. What can the engineer implement to ensure that the CIR for the remote office is not exceeded?
-
-Answer explanation: **Shaping** uses queuing to slow down packets that egress over a link with higher bandwidth than the CIR given to it. The shaper will allow for burst activity to not exceed the CIR given.
 
 ----------
 What is the **proper dotted decimal notion (DDN) for a subnet mask corresponding with a /27?**
@@ -2512,15 +2495,16 @@ Answer explanation: **Cisco Discovery Protocol (CDP) is a proprietary protocol t
 
 ----------
 Based on the following command output, **which route is chosen when a packet for 10.1.1.9 is sent to this router?** Output:
-	Router#show ip route
-	** omitted for brevity***
-	10.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
-	S 10.1.1.0/24 [1/0] via 172.16.12.15
-	S 10.1.1.9/32 is directly connected, GigabitEthernet0/0/0
-	Router#sh run | s ip route
-	ip route 10.1.1.9 255.255.255.255 GigabitEthernet0/0/0
-	ip route 10.1.1.0 255.255.255.0 172.16.12.15
-
+```
+Router#show ip route
+** omitted for brevity***
+10.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+S 10.1.1.0/24 [1/0] via 172.16.12.15
+S 10.1.1.9/32 is directly connected, GigabitEthernet0/0/0
+Router#sh run | s ip route
+ip route 10.1.1.9 255.255.255.255 GigabitEthernet0/0/0
+ip route 10.1.1.0 255.255.255.0 172.16.12.15
+```
 **It will route out interface Gigabit Ethernet 0/0/0**
 
 Answer explanation: The more **specific or longer network prefix of a /32 that is associated with a host route created to use Gigabit Ethernet 0/0/0 to pass on packets that are destined for that host will be used for routing any the packet described in the question.**
@@ -2560,6 +2544,7 @@ Answer explanation: Small office, home office (SOHO) **describes networks that a
 ----------
 What is the **next hop for the serial interface as displayed** by the given output of the show ip route command? Output:
 
+```
 Gateway of last resort is not set
 O 192.168.1.0/24 [110/65] via 192.168.6.1, 02:03:49, Serial0/1/0
 192.168.6.0/24 is variably subnetted, 2 subnets, 2 masks
@@ -2569,6 +2554,7 @@ L 192.168.6.2/32 is directly connected, Serial0/1/0
 O 192.168.10.1/32 [110/65] via 192.168.6.1, 02:03:49, Serial0/1/0
 192.168.13.0/32 is subnetted, 1 subnets
 O 192.168.13.1/32 [110/66] via 192.168.6.1, 02:03:49, Serial0/1/0
+```
 
 **192.168.6.1**
 
@@ -2793,6 +2779,7 @@ Answer explanation:With a **/28 subnet mask the usable addresses for the 192.168
 
 ----------
 Which type of network is represented in the given image?
+
 **packet -> R1(Data Plane) -> OSPF Packet -> R2(Data Plane) -> OSPF Packet -> R3(Data Plane) -> Packet**
 A **packet is being routed through the three routers.**
 
@@ -2913,27 +2900,28 @@ Answer explanation: Access **points contain one or more antennas and provide wir
 
 ----------
 An engineer has been assigned a task to verify that a port-channel has been configured and is up. Entering the following commands returns the following output, which shows the port-channel on both sides of the group is in the down state. What is the issue causing the port-channel not to form? Commands and output:
-	Switch1#sh etherchannel summary
-	----omitted for brevity----
-	Number of channel-groups in use: 1
-	Number of aggregators: 1
-	Group Port-channel Protocol Ports
+```
+Switch1#sh etherchannel summary
+----omitted for brevity----
+Number of channel-groups in use: 1
+Number of aggregators: 1
+Group Port-channel Protocol Ports
 
-	----------
-	1 Po1(SD) PAgP Fa0/1(I) Fa0/2(I) Fa0
+----------
+1 Po1(SD) PAgP Fa0/1(I) Fa0/2(I) Fa0
 
-	----------
-	Switch2#sh etherchannel summary
-	----omitted for brevity----
-	Number of channel-groups in use: 1
-	Number of aggregators: 1
-	Group Port-channel Protocol Ports
+----------
+Switch2#sh etherchannel summary
+----omitted for brevity----
+Number of channel-groups in use: 1
+Number of aggregators: 1
+Group Port-channel Protocol Ports
 
-	----------
-	1 Po1(SD) LACP Fa0/1(I) Fa0/2(I)
-
-**The protocols used to form the port-channel are different**
-**Note: SW1 uses PAgP and S2 uses LACP**
+----------
+1 Po1(SD) LACP Fa0/1(I) Fa0/2(I)
+```
+* **The protocols used to form the port-channel are different**
+* **Note: SW1 uses PAgP and S2 uses LACP**
 
 Answer explanation: In the output on **switch1, it states that PAgP is the protocol used, while LACP is used on switch2**. Using the same protocol on both should allow the port-channel to form.
 
@@ -2970,34 +2958,30 @@ PC1 and PC2 are connected to Switch 0 which in turn is connected to Router1. HTT
 server 2 are connected to Router1 via Switch1. Router1 is also connected to three web servers and a PC
 over the internet.
 Requirements:
-	Inside PC 1 on subnet 10.1.2.0/24 can only access HTTP servers 1 and 2 on
-	subnet 10.1.1.0/24 using HTTP and HTTPS
-	Inside PC 1 IP : 10.1.2.101
-	HTTP server 1 IP : 10.1.1.100
-	HTTP server 2 IP : 10.1.1.101
-
-**access-list 100 permit tcp host 10.1.2.101 10.1.1.100 0.0.0.1 eq www**
-**access-list 100 permit tcp host 10.1.2.101 10.1.1.100 0.0.0.1 eq 443**
+```
+Inside PC 1 on subnet 10.1.2.0/24 can only access HTTP servers 1 and 2 on
+subnet 10.1.1.0/24 using HTTP and HTTPS
+Inside PC 1 IP : 10.1.2.101
+HTTP server 1 IP : 10.1.1.100
+HTTP server 2 IP : 10.1.1.101
+```
+* **access-list 100 permit tcp host 10.1.2.101 10.1.1.100 0.0.0.1 eq www**
+* **access-list 100 permit tcp host 10.1.2.101 10.1.1.100 0.0.0.1 eq 443**
 
 Answer explanation: In this option, **we have asked the inverse mask to match the first three IP octets and ignore the fourth one, so Inside PC 1 will be able to reach a machine with IP 10.1.1.x.** It will therefore cover both servers, i.e., 10.1.1.100 and 10.1.1.101.
 
 ----------
-**VXLAN allows us to encapsulate data and deliver it to the destination**. On what layer does this encapsulation happen?
-
-**It encapsulates both Layer 2 and Layer 3 frames**
-
-Answer explanation: **VXLAN encapsulates the entire frame on both the layers.**
-
-----------
 Based on the following command output, which route is chosen **when a packet for 10.1.1.9 is sent to this router?** Output:
-	Router#show ip route
-	** omitted for brevity***
-	10.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
-	S 10.1.1.0/24 [1/0] via 172.16.12.15
-	S 10.1.1.9/32 is directly connected, GigabitEthernet0/0/0
-	Router#sh run | s ip route
-	ip route 10.1.1.9 255.255.255.255 GigabitEthernet0/0/0
-	ip route 10.1.1.0 255.255.255.0 172.16.12.15
+```	
+Router#show ip route
+** omitted for brevity***
+10.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+S 10.1.1.0/24 [1/0] via 172.16.12.15
+S 10.1.1.9/32 is directly connected, GigabitEthernet0/0/0
+Router#sh run | s ip route
+ip route 10.1.1.9 255.255.255.255 GigabitEthernet0/0/0
+ip route 10.1.1.0 255.255.255.0 172.16.12.15
+```
 
 **It will route out interface Gigabit Ethernet 0/0/0**
 
@@ -3034,25 +3018,29 @@ Answer explanation: The forwarding state allows traffic to pass for a port and i
 ----------
 Local authentication has been configured on a router, but when an attempt is made to log in to its console, the enable mode is seen and no authentication prompt is received. The router config is given. Which of the following changes will help resolve the issue? 
 Router config:
-	!
-	username xyz password 0 cisco
-	!
+```
+!
+username xyz password 0 cisco
+!
+```
 
 **Configure login local for the console interface**
 
 Answer explanation: To **enable a password check at login**, **use the login local command in line configuration mode**. Configure the **line console interface to enable local login by using the command login local.**
 
 ----------
-What is the **next hop for the serial interface as displayed by the given output of the show ip route command? **Output:
-	Gateway of last resort is not set
-	O 192.168.1.0/24 [110/65] via 192.168.6.1, 02:03:49, Serial0/1/0
-	192.168.6.0/24 is variably subnetted, 2 subnets, 2 masks
-	C 192.168.6.0/30 is directly connected, Serial0/1/0
-	L 192.168.6.2/32 is directly connected, Serial0/1/0
-	192.168.10.0/32 is subnetted, 1 subnets
-	O 192.168.10.1/32 [110/65] via 192.168.6.1, 02:03:49, Serial0/1/0
-	192.168.13.0/32 is subnetted, 1 subnets
-	O 192.168.13.1/32 [110/66] via 192.168.6.1, 02:03:49, Serial0/1/0
+What is the **next hop for the serial interface as displayed by the given output of the show ip route command?** Output:
+```
+Gateway of last resort is not set
+O 192.168.1.0/24 [110/65] via 192.168.6.1, 02:03:49, Serial0/1/0
+192.168.6.0/24 is variably subnetted, 2 subnets, 2 masks
+C 192.168.6.0/30 is directly connected, Serial0/1/0
+L 192.168.6.2/32 is directly connected, Serial0/1/0
+192.168.10.0/32 is subnetted, 1 subnets
+O 192.168.10.1/32 [110/65] via 192.168.6.1, 02:03:49, Serial0/1/0
+192.168.13.0/32 is subnetted, 1 subnets
+O 192.168.13.1/32 [110/66] via 192.168.6.1, 02:03:49, Serial0/1/0
+```
 
 **192.168.6.1**
 
@@ -3303,10 +3291,10 @@ In Cisco **PVST+, how many root ports per VLAN are allowed on a device?**
 ----------
 What are the **default OSPF hello and dead timer values on point-to-point links?**
 
-Hello value is 10 seconds, dead value is 20 seconds.
-**Hello value is 10 seconds, dead value is 40 seconds.**
-Hello value is 20 seconds, dead value is 50 seconds.
-Hello value is 30 seconds, dead value is 120 seconds.
+* Hello value is 10 seconds, dead value is 20 seconds.
+* **Hello value is 10 seconds, dead value is 40 seconds.**
+* Hello value is 20 seconds, dead value is 50 seconds.
+* Hello value is 30 seconds, dead value is 120 seconds.
 
 ----------
 After a **designated router (DR) and backup designated router (BDR) are selected on the multi-access segment** in an OSPF routing domain, **what is the OSPF state of the routers that are not elected as DR or BDR?**
@@ -3471,9 +3459,7 @@ Which APIs are used for communication between a **software-defined networking (S
 * Southbound APIs
 * Westbound APIs
 
-	**Northbound APIs**
-
-	Northbound APIs or northbound interfaces are responsible for the communication between the SDN controller and the services that run over the network. Northbound APIs enable your applications to manage and control the network. Therefore, rather than adjusting and tweaking your network repeatedly to get a service or application running correctly, you can set up a framework that allows the application to demand the network setup that it needs.
+	**Northbound APIs** or **northbound interfaces are responsible for the communication between the SDN controller and the services that run over the network**. Northbound APIs enable your applications to manage and control the network. Therefore, rather than adjusting and tweaking your network repeatedly to get a service or application running correctly, you can set up a framework that allows the application to demand the network setup that it needs.
 
 ----------
 Which of the following **commands is used to configure a network address translation (NAT) router with a one-to-one mapping between a private and public IP address?**
@@ -3501,13 +3487,14 @@ Answer explanation: Using **nonoverlapping channels will reduce radio frequency 
 ----------
 A user tries to log in to the **Privileged mode of Router1 with the password cisco , but the login fails.** Running the command show run on Router1 displays the following output. What should the user have done diferently for the login attempt to be successful?
 Output:
-	!
-	hostname Router1 
-	! 
-	! 
-	! 
-	enable secret 5 $1$mERr$5.a6P4JqbNiMX01usIfka/ enable password cisco
-
+```
+!
+hostname Router1 
+! 
+! 
+! 
+enable secret 5 $1$mERr$5.a6P4JqbNiMX01usIfka/ enable password cisco
+```
 **They should have checked with the admin to find out the enable secret**
 
 Answer explanation: The user needs to find the decrypted enable secret. If the user configures the enable secret command, it takes precedence over the enable password command; the two commands cannot be in effect simultaneously.
@@ -3574,7 +3561,7 @@ end
 ```
 **The _host_ route for _192.168.12.6_ has its next hop address replaced**
 
-Answer explanation: The host route has a next hop address that is removed by deleting the original host route and then replaced by adding the updated host route back to the static route list.
+Answer explanation: **The host route has a next hop address that is _removed by deleting the original host route_ and then _replaced by adding the updated host route back_ to the static route list.**
 
 ----------
 A new **switch is deployed to a network with redundant connectivity to the switch, one hop further into the network.** The network engineer **configuring the switch notices it is unable to pass traffic over one of its upstream ports**. Which **networking concept is causing the switch to only pass traffic over one port**?
@@ -3663,7 +3650,6 @@ What is the **interface ID of the IPv6 address 2001:db8::a:a9cd:47ff:fe57:fe94/6
 Answer
 The correct answer is a9cd:47ff:fe57:fe94. An **IPv6 address starting with the hexadecimal digits 2 or 3 falls into the category of global unicast addresses.** The **first 48 bits represent the Global Routing Prefix** and are **followed by a 16-bit Subnet ID.** The **remaining 64 bits represent the Interface ID, which is equivalent to the host portion of an IPv4 address.**
 
-
 ----------
 What are **two valid IPv6 address scopes for a unique local IPv6 address?** (Choose two.)
 * global
@@ -3686,7 +3672,7 @@ What are two field names corresponding to the **IPv4 header field and the IPv6 h
 * **type of service (ToS)**
 
 ----------
-What is the network ID of the IPv6 address 2001:db8:deca:abce:45eb:27ff:feba:fa38/48?
+What is **the network ID** of the **IPv6 address 2001:db8:deca:abce:45eb:27ff:feba:fa38/48?**
 
 * 2001::
 * 2001:db8::
@@ -3881,5 +3867,154 @@ When creating a **Modified EUI-64 (Extended Unique Identifier) IPv6 address, the
 Answer explanation: To **create an EUI-64 address the 2 bytes 'FFFE' are inserted between the first 24-bits and last 24-bits of the interface's MAC address.**
 
 ----------
+
+| Hex | Binary |
+| --- | ------ |
+| 0   | 0000   |
+| 1   | 0001   |
+| 2   | 0010   |
+| 3   | 0011   |
+| 4   | 0100   |
+| 5   | 0101   |
+| 6   | 0110   |
+| 7   | 0111   |
+| 8   | 1000   |
+| 9   | 1001   |
+| A   | 1010   |
+| B   | 1011   |
+| C   | 1100   |
+| D   | 1101   |
+| E   | 1110   |
+| F   | 1111   |
+
+**Example**
+Convert hex 6C16 to binary:
+
+6C16 = 6 C = 0110 1100 = 11011002
+
+To extract a MAC address from an IPv6 EUI-64 address, you can follow these steps:
+* Split the 48-bit MAC address into two 24-bit parts: the OUI (Organizationally Unique Identifier) and the local identifier
+* Put the OUI in the leftmost 24 bits of the EUI-64 address and the local identifier in the rightmost 24 bits
+* Insert the value "11111111 11111110" ("FFFE" in hexadecimal) into the middle 16 bits of the EUI-64 address
+* Change the seventh bit from the left from 0 to 1 
+
+**Sample:**
+
+ether 3e:1e:46:df:5e:1a
+inet6 **fe80**::3c1e:46ff:fedf:5e1a prefixlen 64 in this **fe80** - indicates link local address.
+
+3c1e:46ff:fedf:5e1a (Interface ID) => Remove **fffe** from the interface ID => 3c:1e:46:df:5e:1a
+
+**The last 24 bits is "df:5e:1a"**
+
+The **first 24 bits is "3c:1e:46"** => **Invert the seventh bit of the first 24 bits. 3c => 0011(3) 1100(c) => 0011(3) 1110(e)**
+
+So the original MAC address will be **3e:1e:46:df:5e:1a**
+
+----------
+
+Which of the following is the correct usable host range of 173.29.229.144/18?
+* 173.29.192.0 - 173.29.255.255
+* **173.29.192.1 - 173.29.255.254**
+* 173.29.224.0 - 173.29.255.255
+* 173.29.128.1 - 173.29.255.254
+Correct Answer: B
+Reference: https://www.calcip.com/173.29.229.144/18
+
+----------
+
+A network architect needs to create a subnet for a new office room accommodating 25 users. What subnet mask should the network architect utilize to minimize the wastage of IPv4 addresses?
+* 255.255.255.25
+* 255.255.255.128
+* 255.255.255.192
+* **255.255.255.224**
+Correct Answer: D
+
+Reference: https://www.calcip.com/subnet-mask-calculator/25
+
+----------
+
+Which address and subnet mask combination represents a summary of the following routes?
+  - 192.168.15.114/30
+  - 192.168.15.116/30
+  - 192.168.15.124/30
+
+* **192.168.15.112/28**
+* 192.168.15.112/29
+* 192.168.15.112/30
+* 192.168.15.112/31
+
+Correct Answer: A
+
+----------
+
+A network administrator is configuring a new IPv6 address 2001:0FC9:00F1:4400:0001:0000:0000:0884/64. The administrator has decided to compress the IPv6 address. Which IPv6 address should the network administrator configure?
+* 2001:FC9:F1:44:1::884/64
+* 2001:FC9:F1:4400:1:0000:884/64
+* **2001:FC9:F1:4400:1::884/64**
+* 21:FC9:F1:4400:1::884/6
+Correct Answer: C
+
+----------
+
+Router 2's g0/0, with MAC address **12-B0-CD-DD-00-01**, needs to be set up with an IPv6 address using the **EUI-64** format. What interface ID should be assigned?
+
+* **10B0:CDFF:FEDD:1**
+* 5432:79FF:FF89:9
+* 12B0:CDFF:FEDD:1
+* 2340:CDFF:FEDD:1
+Correct Answer: A
+
+----------
+Which option on a wireless LAN Controller (WLC) graphical user interface (GUI) provides the location to configure a **switched virtual interface (SVI)** for a service set identifier (SSID)?
+
+**Controller>interfaces>edit**
+
+Answer explanation: This configuration option allows for the creation and editing of the **virtual local area network (VLAN) setting on the WLC**, including SVI information.
+
+----------
+Which **method does a wireless LAN controller (WLC) use to pass traffic to and from a lightweight access point when in local mode in a split-MAC architecture?**
+
+**CAPWAP tunneling uses a layer 3 address on the access point to form a layer 3 connection with the WLC and route traffic**
+
+Answer explanation: **CAPWAP tunneling over layer 3 allows the access point to route traffic for all SSIDs back to the WLC without needing an additional trunk configuration on the switch.**
+
+----------
+What **advantage does an autonomous access point (AP) architecture provide when compared to an access point leveraging CAPWAP mode?** 
+
+**Autonomous AP architectures provide a more efficient path for data over wired and wireless networks they are part of**
+
+Answer explanation: **Autonomous APs manage traffic between clients connected on the same AP locally instead of sending that traffic back to a controller**. This makes for a simpler and more direct path for data to travel to the switch that AP is connected to, enhancing the performance and responsiveness of the network.
+
+----------
+
+An engineer has a **remote office that sends and receives data using a committed information rate (CIR) of 200 mbps** from a service provider. The **service provider discards traffic that exceeds the agreed-upon CIR from clients entering and exiting their network.** A second remote site that often sends data to this office uses a CIR of 600 mbps from their service provider, often sending data at a rate that exceeds the CIR of 200 mbps.  **What can the engineer implement to ensure that the CIR for the remote office is not exceeded?**
+
+**Shaping**
+
+Answer explanation: Shaping uses queuing to slow down packets that egress over a link with higher bandwidth than the CIR given to it. The shaper will allow for burst activity to not exceed the CIR given.
+
+----------
+
+**A VXLAN tunnel is configured between two servers**.  Which of the following best defines the VXLAN tunnel in a controller-based network?
+
+**Overlay network** # Note: Tunnel uses Overlay network
+
+Answer explanation: Devices on overlay networks are interconnected through logical links, constituting overlay topologies. Tunnels are established between interconnected overlay devices. Overlay networks support various network protocols and standards, including virtual extensible local area network (VXLAN), Network Virtualisation using Generic Routing Encapsulation (NVGRE), single spanning tree (SST), GRE, Network Virtualisation over Layer 3 (NVO3), and Ethernet Virtual Private Network (EVPN).
+
+----------
+
+Which part of a **Cisco DNA Center software-defined access (SDA) fabric provides physical connectivity between nodes in the environment to support Virtual Extensible LAN (VXLAN) tunnels?**
+
+**Underlay** # Note: Physical connectivity uses Underlay
+
+Answer explanation: **Underlays in the SDA fabric are the physical devices and connections between different nodes.** The **underlay generally uses a routed access layer design** to support the **VXLANs** that allow for **tunnling between the overlay nodes.**
+
+----------
+**VXLAN allows us to encapsulate data and deliver it to the destination**. On what layer does this encapsulation happen?
+
+**It encapsulates both Layer 2 and Layer 3 frames**
+
+Answer explanation: **VXLAN encapsulates the entire frame on both the layers.**
 
 ----------

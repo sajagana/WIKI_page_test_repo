@@ -240,30 +240,30 @@ In Cisco devices, like other vendors' network equipment, the broadcast MAC addre
 IPv4 addresses are divided into five classes: A, B, C, D, and E. These classes are defined based on the first few bits of the address and are used to create a range of addresses suitable for different network sizes. Here are the definitions and usages for each class:
 
 **Class A:**
-**- First bit is "0"**
+- **First bit is "0"**
 - Address Range: 0.0.0.0 to 127.255.255.255
 - Default Subnet Mask: 255.0.0.0 (or /8 prefix)
 - Usage: Intended for very large networks, such as multinational corporations. The first 8 bits are used for the network portion, while the remaining 24 bits are for host addresses within that network. Notably, the range 0.0.0.0 to 0.255.255.255 is reserved for special purposes, and 127.0.0.0 to 127.255.255.255 is reserved for loopback addresses.
 
 **Class B:**
-**- First two bits are "10"**
+- **First two bits are "10"**
 - Address Range: 128.0.0.0 to 191.255.255.255
 - Default Subnet Mask: 255.255.0.0 (or /16 prefix)
 - Usage: Used for medium-sized networks, like universities or large businesses. The first 16 bits are the network portion, with the remaining 16 bits available for host addresses.
 
 **Class C:**
-**- First three bits are "110"**
+- **First three bits are "110"**
 - Address Range: 192.0.0.0 to 223.255.255.255
 - Default Subnet Mask: 255.255.255.0 (or /24 prefix)
 - Usage: Designed for small-sized networks, such as small businesses. Class C provides up to 256 addresses, with the first 24 bits used for the network and the last 8 bits for hosts.
 
 **Class D:**
-**- First four bits are "1110"**
+- **First four bits are "1110"**
 - Address Range: 224.0.0.0 to 239.255.255.255
 - Usage: Reserved for multicast groups. These addresses are used to deliver traffic to multiple hosts in a group simultaneously, rather than to a single recipient.
 
 **Class E:**
-**- First four bits are "1111"**
+- **First four bits are "1111"**
 - Address Range: 240.0.0.0 to 255.255.255.255
 - Usage: Reserved for experimental purposes, research, or future use. This class is not used in public networks.
 
